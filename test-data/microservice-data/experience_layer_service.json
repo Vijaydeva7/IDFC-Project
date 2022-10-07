@@ -1,0 +1,43 @@
+{
+    "Aadhar_Authentication":{
+        "aadharAuthenticationValidData_request":{
+             "uid": "FU3wFvFcF2luDmhXDBGuuw==",
+             "uniqueIdentifier": "9404779400"
+        },
+        "aadharAuthenticationValidData_response":{
+            "status": "SUCCESS",
+            "message": "Aadhar number verified successfully..."
+        },
+        "aadharAuthenticationVid_request":{
+            "uid": "sCt+8bOJ6epJq7BhF4Vhg78778",
+            "uniqueIdentifier": "7986767546"
+        },
+        "aadharAuthenticationVid_response":{
+            "status": "ERROR"
+        },
+        "aadharAuthenticationIncompleteData_request":{
+            "uid": "sCt+==",
+            "uniqueIdentifier": "9423572416"
+        },
+        "aadharAuthenticationIncompleteData_response":{
+            "status": "ERROR" 
+        },
+        "aadharAuthenticationWrongData_request":{
+            "uid": "sCt+8bOJ6epJq7BhF4VR5w==",
+            "uniqueIdentifier": "9423572416"
+        },
+        "aadharAuthenticationWrongData_response":{
+             "status": "ERROR"
+        },
+        "aadharAuthenticationWithoutUid_request":{
+            "uid": "sCt+8bOJ6epJq7BhF4VR5w==",
+            "uniqueIdentifier": "9423572416"
+        },
+        "aadharAuthenticationWithoutUid_response":{
+             "status": "ERROR"
+        }
+        
+    },
+    "Aadhar_Otp_Validation":{},
+    "Fraud_Check":{}
+}

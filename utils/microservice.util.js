@@ -47,6 +47,9 @@ class MicroserviceUtil {
   }
   async postApiCall(url, data) {
     //const token = tokenStorage.token;
+
+    const clientId = "WZMcKKwROSuUUAnBFw8ZWQ==";
+
     var returnFormat = {
       method: "",
       url: "",
@@ -60,6 +63,7 @@ class MicroserviceUtil {
       const response = await axios.post(url, data, {
         headers: {
           Authorization: `${token}`,
+          clientId: clientId
         },
       });
       returnFormat.data = response.data;
@@ -78,6 +82,6 @@ class MicroserviceUtil {
 
       return returnFormat;
     }
-  } 
+  }
 }
 module.exports = new MicroserviceUtil();

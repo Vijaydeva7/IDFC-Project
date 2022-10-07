@@ -3,7 +3,8 @@
 module.exports = {
   timeout: 90000,
   spec: [
-   "./test/specs/microservices/Company_List/getAllCompanies.js"
+    // "./test/specs/microservices/Company_List/getAllCompanies.js", 
+    "./test/specs/microservices/experience-layer-service/aadhar_authentication.js"
   ],
   reporter: "node_modules/mochawesome",
   "reporter-option": [
