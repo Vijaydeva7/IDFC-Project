@@ -38,6 +38,29 @@
         }
         
     },
-    "Aadhar_Otp_Validation":{},
+    "Aadhar_Otp_Validation":{
+        "AOV_ValidData_request":{
+            "uid": "FU3wFvFcF2luDmhXDBGuuw==",
+            "otpTxn": "2022100717040440637e14",
+            "emailId":"gandhias01@gmail.com",
+            "panNumber":"3MgIrYplFUxMXNMYUZNSxg==",
+            "otp": "858731",
+            "mobileNumber": "9404779400"
+        },
+        "AOV_ValidData_response":{
+            "status": "SUCCESS",
+            "message": "Aadhar OTP verified successfully..."
+        },
+        "AOV_InvalidData_request":{},
+        "AOV_InvalidData_resopnse":{},
+        "AOV_WithoutPan_request":{},
+        "AOV_WithoutPan_resopnse":{},
+        "AOV_WithoutMobile_request":{},
+        "AOV_WithoutMobile_resopnse":{},
+        "AOV_WithoutOtpTxn_request":{},
+        "AOV_WithoutOtpTxn_resopnse":{},
+        "AOV_WithoutUid_request":{},
+        "AOV_WithoutUid_resopnse":{}
+    },
     "Fraud_Check":{}
 }

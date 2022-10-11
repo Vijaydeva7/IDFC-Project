@@ -1,0 +1,93 @@
+{
+    "Mobile_Verification":{
+        "validMobileNumber_Request":{
+            "mobileNumber": "9404779400",
+            "droppedJourney": true
+        },
+        "validMobileNumber_Response":{
+            "status": "SUCCESS",
+            "message": "OTP generated successfully...."
+        },
+        "MobileNumberMoreThanTenDigit_Request":{
+            "mobileNumber": "9404779400222",
+            "droppedJourney": true
+        },
+        "MobileNumberMoreThanTenDigit_Response":{
+            "status": "ERROR",
+        "message": "Invalid input"
+        },
+        "WhenDroppedJourneyTrue_Request":{
+            "mobileNumber": "9404779400",
+            "droppedJourney": true
+        },
+        "WhenDroppedJourneyTrue_Response":{
+            "status": "SUCCESS",
+            "message": "OTP generated successfully...."
+        },
+        "WhenDroppedJourneyFalse_Request":{
+            "mobileNumber": "9404779400",
+            "droppedJourney": true
+        },
+        "WhenDroppedJourneyFalse_Response":{
+            "status": "SUCCESS",
+            "message": "OTP generated successfully...."
+        },
+        "WithoutMobileNumber_Request":{
+            "mobileNumber": "",
+            "droppedJourney": true
+        },
+        "WithoutMobileNumber_Response":{
+            "status": "ERROR",
+            "message": "Invalid input"
+
+        },
+        "MobileWithCharcters_Request":{
+            "mobileNumber": "9404779400aaa",
+            "droppedJourney": true
+        },
+        "MobileWithCharcters_Response":{
+            "status": "ERROR",
+            "message": "Invalid input"
+        },
+        "MobileAsAllZeroNumbers_Request":{
+            "mobileNumber": "00000000000000",
+            "droppedJourney": true
+        },
+        "MobileAsAllZeroNumbers_Response":{
+            "status": "ERROR",
+            "message": "Invalid input"
+        }
+    },
+
+    
+    "PAN_Validation":{
+        "VerifyPANUsingValidData_Request":{
+            "userId": "3208",
+            "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
+        },
+        "VerifyPANUsingValidData_Response":{
+
+        },
+        "VerifyPANWithBlankData_Request":{
+            "userId": "3208",
+            "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
+        },
+        "VerifyPANWithBlankData_Response":{
+
+        },
+        "VerifyPANWithoutPAN_Request":{
+            "userId": "3208",
+            "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
+        },
+        "VerifyPANWithoutPAN_Response":{
+
+        },
+        "VerifyPANWithoutUserID_Request":{
+            "userId": "3208",
+            "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
+        },
+        "VerifyPANWithoutUserID_Response":{
+
+        }
+    }
+}
