@@ -12,4 +12,39 @@ describe("Aadhar OTP Validation", function(){
 
         await expect(response.status).to.be.eql(200);
     })
+    it("Validating Aadhar by OTP with Blank Data", async function(){
+        const response = await util.postApiCall(process.env.AADHAR_VALIDATE,expLayerData.Aadhar_Otp_Validation.AOV_ValidData_request);
+        console.log(response);
+        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
+    })
+    it("Validating Aadhar with Wrong OTP", async function(){
+        const response = await util.postApiCall(process.env.AADHAR_VALIDATE,expLayerData.Aadhar_Otp_Validation.AOV_ValidData_request);
+        console.log(response);
+        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
+    })
+    it("Validating Aadhar by OTP with Characters", async function(){
+        const response = await util.postApiCall(process.env.AADHAR_VALIDATE,expLayerData.Aadhar_Otp_Validation.AOV_ValidData_request);
+        console.log(response);
+        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
+    })
+    it("Validating Aadhar by OTP without Reference Number", async function(){
+        const response = await util.postApiCall(process.env.AADHAR_VALIDATE,expLayerData.Aadhar_Otp_Validation.AOV_ValidData_request);
+        console.log(response);
+        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
+    })
+    it("Validating Aadhar by OTP without OTP and Reference Number", async function(){
+        const response = await util.postApiCall(process.env.AADHAR_VALIDATE,expLayerData.Aadhar_Otp_Validation.AOV_ValidData_request);
+        console.log(response);
+        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
+    })
 })

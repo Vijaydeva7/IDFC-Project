@@ -89,5 +89,33 @@
         "VerifyPANWithoutUserID_Response":{
 
         }
+    },
+
+    "Email_Dedupe":{
+        "ValidEmailID_Request":{},
+        "ValidEmailID_Response":{},
+        "EmailIDWithoutDomain_Request":{},
+        "EmailIDWithoutDomain_Response":{},
+        "DuplicateEmailID_Request":{},
+        "DuplicateEmailID_Response":{},
+        "WithoutMobileNumber_Request":{},
+        "WithoutMobileNumber_Response":{},
+        "WithoutReferalCode_Request":{},
+        "WithoutReferalCode_Response":{},
+        "WithIncorrectReferalCode_Request":{},
+        "WithIncorrectReferalCode_Response":{},
+        "WithoutEmailID_Request":{},
+        "WithoutEmailID_Response":{}
+    },
+
+    "Mobile_Dedupe":{
+        "ValidMobile_Request":{},
+        "ValidMobile_Response":{},
+        "InvalidMobile_Request":{},
+        "InvalidMobile_Response":{},
+        "BlankDetails_Request":{},
+        "BlankDetails_Response":{},
+        "WithoutCardType_Request":{},
+        "WithoutCardType_Response":{}
     }
 }

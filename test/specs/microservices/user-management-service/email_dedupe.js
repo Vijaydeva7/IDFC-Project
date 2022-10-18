@@ -3,40 +3,48 @@ require("dotenv").config();
 const util = require("../../../../utils/microservice.util");
 const userManageData = require("../../../../test-data/microservice-data/user_management_service.json");
 
-describe("Validating PAN ", function(){
-    it(" Verifying PAN using valid data", async function(){
+describe("Email Dedupe ", function(){
+    it(" Check with valid Email ID", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
 
         await expect(response.status).to.be.eql(200);
     })
-    it(" Verifying PAN with blank data", async function(){
+    it(" Check with Email ID without domain", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
     })
-    it(" Verifying PAN without PAN", async function(){
+    it(" Check with duplicate Email ID", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
     })
-    it(" Verifying PAN without UserID", async function(){
+    it(" Check without mobile number", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
     })
-    it(" Verifying PAN using incomplete PAN", async function(){
+    it(" Check without Email ID", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
     })
-    it(" Verifying PAN using wrong format", async function(){
+    it(" Check without Referal Code", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
     })
-    it(" Verifying PAN using first name only", async function(){
+    it(" Check with incorrect Referal Code", async function(){
         const response = await util.postApiCall();
         await util.mochaAddContext(this, response);
-    })
-    it(" Verifying PAN using first name and last name", async function(){
-        const response = await util.postApiCall();
-        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.be.eql(200);
     })
     
 })
