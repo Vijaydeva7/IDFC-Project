@@ -1,0 +1,34 @@
+{
+    "Create_Account":{
+        "createAccountWithVannilaFlow_request":{
+            
+    },
+       "createAccountWithVannilaFlow_response":{
+          
+    },
+        
+    
+       "createAccountWithfraudnotPassedData_request":{
+            
+    },
+       
+       "createAccountWithfraudnotPassedData_response":{
+            
+    },
+       "createAccountWithSelfServiceable_request":{
+       
+    },
+       "createAccountWithSelfServiceable_response":{
+       
+    },
+
+       "createAccountWithPreferredBranch_request":{
+       
+    },
+
+       "createAccountWithPreferredBranch_response":{
+       
+    },
+
+    }
+}
