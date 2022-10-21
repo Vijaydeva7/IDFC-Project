@@ -1,54 +1,43 @@
 {
-  
-    "Connect_Now" : {
+  "Connect_Now": {
+    "connectNowBefore9am_request": {},
+    "connectNowBefore9am_response": {},
 
-    "connectNowBefore9am_request":{},
-    "connectNowBefore9am_response":{},
+    "connectNowAfter9pm_request": {},
+    "connectNowAfter9pm_reresponse": {},
 
-    "connectNowAfter9pm_request":{},
-    "connectNowAfter9pm_reresponse":{},
-
-    "connectNowValidTiming_request":{},
-    "connectNowValidTiming_response":{}
-
+    "connectNowValidTiming_request": {},
+    "connectNowValidTiming_response": {}
   },
 
+  "Shedule_Later": {
+    "sheduleLaterwithValidData_request": {},
+    "sheduleLaterwithValidData_response": {},
 
+    "sheduleLaterwithoutTiming_request": {},
+    "sheduleLaterwithoutTiming_response": {},
 
+    "sheduleLaterwithoutDate_request": {},
+    "sheduleLaterwithoutDate_response": {},
 
-  "Shedule_Later" : {
+    "sheduleLaterwithBlankData_request": {},
+    "sheduleLaterwithBlankData_response": {},
 
-    "sheduleLaterwithValidData_request":{}, 
-    "sheduleLaterwithValidData_response":{},
+    "sheduleLaterwithPreviousDate_request": {},
+    "sheduleLaterwithPreviousDate_response": {},
 
-    "sheduleLaterwithoutTiming_request":{},
-    "sheduleLaterwithoutTiming_response":{},
-
-    "sheduleLaterwithoutDate_request":{},
-    "sheduleLaterwithoutDate_response":{},
-
-    "sheduleLaterwithBlankData_request":{},
-    "sheduleLaterwithBlankData_response":{},
-
-    "sheduleLaterwithPreviousDate_request":{},
-    "sheduleLaterwithPreviousDate_response":{},
-
-    "sheduleLaterwithSlotAfterTwodays_request":{},
-    "sheduleLaterwithSlotAfterTwodays_response":{}
-
-
+    "sheduleLaterwithSlotAfterTwodays_request": {},
+    "sheduleLaterwithSlotAfterTwodays_response": {}
   },
 
-  "In_Person_Verify" : {
+  "In_Person_Verify": {
+    "IPVwhenSheduleLaterisDone_request": {},
+    "IPVwhenSheduleLaterisDone_response": {},
 
-    "IPVwhenSheduleLaterisDone_request":{},
-    "IPVwhenSheduleLaterisDone_response":{},
+    "IPVTransactionFreeze_request": {},
+    "IPVTransactionFreeze_response": {},
 
-    "IPVTransactionFreeze_request":{},
-    "IPVTransactionFreeze_response":{},
-
-    "IPVwhenBOCrejected_request":{},
-    "IPVwhenBOCrejected_response":{}
-
+    "IPVwhenBOCrejected_request": {},
+    "IPVwhenBOCrejected_response": {}
   }
 }
