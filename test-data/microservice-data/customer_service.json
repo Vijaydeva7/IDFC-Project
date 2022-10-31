@@ -50,5 +50,18 @@
     "IPVwhenBOCrejected_request":{},
     "IPVwhenBOCrejected_response":{}
 
+  },
+  "Cheque_pickup":{
+    "chequePickupWithValidUserId_request":{},
+    "chequePickupWithValidUserId_response":{},
+
+    "chequePickupWithExpiredUserId_request":{},
+    "chequePickupWithExpiredUserId_response":{},
+
+    "chequePickupWithoutUserId_request":{},
+    "chequePickupWithoutUserId_response":{}
+
+
+
   }
 }

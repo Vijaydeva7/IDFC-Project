@@ -13,6 +13,7 @@ class MicroserviceUtil {
   }
 
   async getApiCall(url) {
+    const clientId = "2ObGT+MSwnvnbxrdfngHmQ==";
     var returnFormat = {
       method: "",
       url: "",
@@ -26,6 +27,7 @@ class MicroserviceUtil {
       const response = await axios.get(url, {
         headers: {
           Authorization: `${token}`,
+          clientId: clientId
         },
       });
       returnFormat.data = response.data;
