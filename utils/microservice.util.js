@@ -1,15 +1,16 @@
 const addContext = require("mochawesome/addContext");
 const axios = require("axios");
+const dynamicData = require("../test-data/microservice-data/dynamic_data.json");
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 class MicroserviceUtil {
   mochaAddContext(test, response) {
-    addContext(test, `Request Method Type : ${response.method}`);
+    addContext(test, `Request Method Type : ${response.method || "Not Available"}`);
     addContext(test, "Request URL");
-    addContext(test, response.url);
+    addContext(test, response.url || "Not Available");
     addContext(test, "Request Body");
     addContext(test, response.reqBody || "Not Available");
     addContext(test, "Response");
-    addContext(test, JSON.stringify(response.data));
+    addContext(test, JSON.stringify(response.data) || "Not Available");
   }
 
   async getApiCall(url) {
@@ -46,9 +47,8 @@ class MicroserviceUtil {
     }
   }
   async postApiCall(url, data) {
-    //const token = tokenStorage.token;
-
-    const clientId = "WZMcKKwROSuUUAnBFw8ZWQ==";
+    const token = dynamicData.authToken;
+    const clientId = dynamicData.clientId;
 
     var returnFormat = {
       method: "",
@@ -57,8 +57,7 @@ class MicroserviceUtil {
       data: "",
       status: "",
     };
-    const token =
-      "Bearer uSKfEIHgyb8783aqB2nEx5Gxha71IJITFVDcOQvnrC0.c5UcwuIOahA5-bkxZoFq9pQ6pju3KdK_3kYAcqkbSf8";
+
     try {
       const response = await axios.post(url, data, {
         headers: {

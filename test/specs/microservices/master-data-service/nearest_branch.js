@@ -3,9 +3,13 @@ const { expect } = require("chai");
 const util = require("../../../../utils/microservice.util");
 const masterData = require("../../../../test-data/microservice-data/master_data.json");
 
+const dynamicData = require("../../../../test-data/microservice-data/dynamic_data.json");
+
+
 describe("Nearest branch validations", function () {
     it("Validate whether getting list of nearest branches with valid pincode", async function () {
         const response = await util.getApiCall(`${process.env.NEAREST_BRANCH}?${masterData.Nearest_Branch.validPincode_request}`);
+
         await util.mochaAddContext(this, response);
         await expect(response.status).to.be.eql(200);
 
