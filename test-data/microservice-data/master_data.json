@@ -14,9 +14,267 @@
     "emptyPincode_request": "pincode=",
     "emptyPincode_response": {},
 
-    "invalidPincode_request": "pincode=869756",
-    "invalidPincode_response": {}
+    "invalidPincode_request": "pincode=000000",
+    "invalidPincode_response": {
+      "status": "ERROR",
+      "message": "Pincode not found."
+    }
   },
-  "State_Master": {},
+  "State_Master": {
+    "state_master_response" : [
+      {
+          "id": "31",
+          "value": "19",
+          "displayText": "ANDAMAN AND NICOBAR ISLANDS",
+          "country": "IN"
+      },
+      {
+          "id": "2",
+          "value": "80",
+          "displayText": "ANDHRA PRADESH",
+          "country": "IN"
+      },
+      {
+          "id": "20",
+          "value": "09",
+          "displayText": "ARUNACHAL PRADESH",
+          "country": "IN"
+      },
+      {
+          "id": "3",
+          "value": "01",
+          "displayText": "ASSAM",
+          "country": "IN"
+      },
+      {
+          "id": "42",
+          "value": "800",
+          "displayText": "BELGIUM",
+          "country": "IN"
+      },
+      {
+          "id": "9",
+          "value": "06",
+          "displayText": "BIHAR",
+          "country": "IN"
+      },
+      {
+          "id": "45",
+          "value": "502",
+          "displayText": "CALIFORNIA",
+          "country": "IN"
+      },
+      {
+          "id": "33",
+          "value": "39",
+          "displayText": "CHANDIGARH",
+          "country": "IN"
+      },
+      {
+          "id": "10",
+          "value": "71",
+          "displayText": "CHHATTISGARH",
+          "country": "IN"
+      },
+      {
+          "id": "23",
+          "value": "69",
+          "displayText": "DADRA AND NAGAR HAVELI",
+          "country": "IN"
+      },
+      {
+          "id": "21",
+          "value": "67",
+          "displayText": "DAMAN AND DIU",
+          "country": "IN"
+      },
+      {
+          "id": "22",
+          "value": "29",
+          "displayText": "DELHI",
+          "country": "IN"
+      },
+      {
+          "id": "34",
+          "value": "68",
+          "displayText": "GOA",
+          "country": "IN"
+      },
+      {
+          "id": "19",
+          "value": "54",
+          "displayText": "GUJARAT",
+          "country": "IN"
+      },
+      {
+          "id": "16",
+          "value": "34",
+          "displayText": "HARYANA",
+          "country": "IN"
+      },
+      {
+          "id": "13",
+          "value": "46",
+          "displayText": "HIMACHAL PRADESH",
+          "country": "IN"
+      },
+      {
+          "id": "17",
+          "value": "44",
+          "displayText": "JAMMU AND KASHMIR",
+          "country": "IN"
+      },
+      {
+          "id": "18",
+          "value": "07",
+          "displayText": "JHARKHAND",
+          "country": "IN"
+      },
+      {
+          "id": "8",
+          "value": "84",
+          "displayText": "KARNATAKA",
+          "country": "IN"
+      },
+      {
+          "id": "41",
+          "value": "509",
+          "displayText": "KATHMANDU",
+          "country": "IN"
+      },
+      {
+          "id": "5",
+          "value": "96",
+          "displayText": "KERALA",
+          "country": "IN"
+      },
+      {
+          "id": "6",
+          "value": "89",
+          "displayText": "LAKSHADWEEP",
+          "country": "IN"
+      },
+      {
+          "id": "15",
+          "value": "70",
+          "displayText": "MADHYA PRADESH",
+          "country": "IN"
+      },
+      {
+          "id": "11",
+          "value": "60",
+          "displayText": "MAHARASHTRA",
+          "country": "IN"
+      },
+      {
+          "id": "30",
+          "value": "15",
+          "displayText": "MANIPUR",
+          "country": "IN"
+      },
+      {
+          "id": "32",
+          "value": "02",
+          "displayText": "MEGHALAYA",
+          "country": "IN"
+      },
+      {
+          "id": "38",
+          "value": "500",
+          "displayText": "MINNESOTA",
+          "country": "IN"
+      },
+      {
+          "id": "26",
+          "value": "03",
+          "displayText": "MIZORAM",
+          "country": "IN"
+      },
+      {
+          "id": "29",
+          "value": "14",
+          "displayText": "NAGALAND",
+          "country": "IN"
+      },
+      {
+          "id": "39",
+          "value": "501",
+          "displayText": "NEW JERSEY",
+          "country": "IN"
+      },
+      {
+          "id": "25",
+          "value": "16",
+          "displayText": "ODISHA",
+          "country": "IN"
+      },
+      {
+          "id": "43",
+          "value": "508",
+          "displayText": "ONTARIO",
+          "country": "IN"
+      },
+      {
+          "id": "7",
+          "value": "99",
+          "displayText": "PUDUCHERRY",
+          "country": "IN"
+      },
+      {
+          "id": "27",
+          "value": "30",
+          "displayText": "PUNJAB",
+          "country": "IN"
+      },
+      {
+          "id": "28",
+          "value": "50",
+          "displayText": "RAJASTHAN",
+          "country": "IN"
+      },
+      {
+          "id": "35",
+          "value": "17",
+          "displayText": "SIKKIM",
+          "country": "IN"
+      },
+      {
+          "id": "24",
+          "value": "90",
+          "displayText": "TAMIL NADU",
+          "country": "IN"
+      },
+      {
+          "id": "4",
+          "value": "81",
+          "displayText": "TELANGANA",
+          "country": "IN"
+      },
+      {
+          "id": "36",
+          "value": "18",
+          "displayText": "TRIPURA",
+          "country": "IN"
+      },
+      {
+          "id": "1",
+          "value": "20",
+          "displayText": "UTTAR PRADESH",
+          "country": "IN"
+      },
+      {
+          "id": "14",
+          "value": "21",
+          "displayText": "UTTARAKHAND",
+          "country": "IN"
+      },
+      {
+          "id": "12",
+          "value": "10",
+          "displayText": "WEST BENGAL",
+          "country": "IN"
+      }
+  ]
+  },
   "City_Master": {}
 }
