@@ -2,6 +2,7 @@
   "stats": {
     "suites": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "tests": 3,
     "passes": 3,
     "pending": 0,
@@ -22,6 +23,17 @@
     "testsRegistered": 6,
     "passPercent": 0,
 >>>>>>> vijay_changes
+=======
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-08T09:07:08.047Z",
+    "end": "2022-11-08T09:07:09.515Z",
+    "duration": 1468,
+    "testsRegistered": 6,
+    "passPercent": 100,
+>>>>>>> giri_changes
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -31,10 +43,14 @@
   "results": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "uuid": "6e26be29-a9e7-48e1-bca5-b5e565f158a2",
 =======
       "uuid": "649bfead-a8fb-418e-8860-77109ad635af",
 >>>>>>> vijay_changes
+=======
+      "uuid": "c7faa8d3-7b1b-4d3f-920a-ebe2c8a20275",
+>>>>>>> giri_changes
       "title": "",
       "fullFile": "",
       "file": "",
@@ -43,6 +59,7 @@
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
           "uuid": "f5e6dfa1-52b5-4619-8aee-712e2281455a",
           "title": "Master Branch of City",
@@ -54,20 +71,34 @@
           "fullFile": "D:\\NTB_SA_Automation\\NTB_SA_Automation\\test\\specs\\microservices\\customer-service\\shedule_later.js",
           "file": "\\test\\specs\\microservices\\customer-service\\shedule_later.js",
 >>>>>>> vijay_changes
+=======
+          "uuid": "bfd67449-1667-4795-a337-cc39273b88e3",
+          "title": "Shedule later Service validation",
+          "fullFile": "D:\\SA Automation\\NTB_SA_Automation\\test\\specs\\microservices\\customer-service\\shedule_later.js",
+          "file": "\\test\\specs\\microservices\\customer-service\\shedule_later.js",
+>>>>>>> giri_changes
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "title": "Get Master branch of City with valid name",
               "fullTitle": "Master Branch of City Get Master branch of City with valid name",
               "timedOut": false,
               "duration": 399,
+=======
+              "title": "Verify whether shedule later with valid data",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later with valid data",
+              "timedOut": false,
+              "duration": 357,
+>>>>>>> giri_changes
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
+<<<<<<< HEAD
               "context": "[\n  \"Request Method Type : GET\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/city?state=GOA\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"[{\\\"id\\\":\\\"555\\\",\\\"value\\\":\\\"690\\\",\\\"displayText\\\":\\\"NORTH GOA\\\",\\\"state\\\":\\\"68\\\"},{\\\"id\\\":\\\"554\\\",\\\"value\\\":\\\"692\\\",\\\"displayText\\\":\\\"SOUTH GOA\\\",\\\"state\\\":\\\"68\\\"}]\"\n]",
               "code": "",
               "err": {},
@@ -92,6 +123,13 @@
               },
               "uuid": "e02e74c0-92ca-4f85-84ac-589b86a61739",
               "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
+=======
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-01-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "6ea07597-062e-4e77-8f8d-41e228ee0bde",
+              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+>>>>>>> giri_changes
               "isHook": false,
               "skipped": false
             },
@@ -99,6 +137,7 @@
               "title": "Verify whether shedule later without timing",
               "fullTitle": "Shedule later Service validation Verify whether shedule later without timing",
               "timedOut": false,
+<<<<<<< HEAD
               "duration": 603,
               "state": "failed",
               "speed": null,
@@ -124,11 +163,15 @@
               "fullTitle": "Master Branch of City Get Master branch of City without state name",
               "timedOut": false,
               "duration": 182,
+=======
+              "duration": 238,
+>>>>>>> giri_changes
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
+<<<<<<< HEAD
               "context": "[\n  \"Request Method Type : GET\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/city?state=\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"Not Available\"\n]",
               "code": "",
               "err": {},
@@ -154,10 +197,18 @@
               "uuid": "ab10607f-a719-4d08-8445-5b13552b3ada",
               "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
 >>>>>>> vijay_changes
+=======
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-03-09\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "97ec34bf-831d-4091-9ffa-58dc4f1b0878",
+              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+>>>>>>> giri_changes
               "isHook": false,
               "skipped": false
             },
             {
+<<<<<<< HEAD
 <<<<<<< HEAD
               "title": "Get Master branch of City with invalid state name",
               "fullTitle": "Master Branch of City Get Master branch of City with invalid state name",
@@ -192,6 +243,40 @@
               },
               "uuid": "f2045f4b-eec0-43aa-8556-784f65ab0e37",
               "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
+=======
+              "title": "Verify whether shedule later without date",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later without date",
+              "timedOut": false,
+              "duration": 219,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "4ebf736f-4367-4482-beb8-cbe27abe9cc0",
+              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether shedule later with blank data",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later with blank data",
+              "timedOut": false,
+              "duration": 217,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "8dcc3818-5445-485b-9c21-0f47a521d1c5",
+              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+>>>>>>> giri_changes
               "isHook": false,
               "skipped": false
             },
@@ -199,6 +284,7 @@
               "title": "Verify whether shedule later with previous date",
               "fullTitle": "Shedule later Service validation Verify whether shedule later with previous date",
               "timedOut": false,
+<<<<<<< HEAD
               "duration": 1283,
               "state": "failed",
               "speed": null,
@@ -214,6 +300,19 @@
               },
               "uuid": "11121cf8-28de-4c99-9b8f-b96edee2fdf4",
               "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
+=======
+              "duration": 215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-03-09T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "f7b1b45b-e18d-4548-8254-df7922c840b5",
+              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+>>>>>>> giri_changes
               "isHook": false,
               "skipped": false
             },
@@ -221,6 +320,7 @@
               "title": "Verify whether shedule later with slot after two days",
               "fullTitle": "Shedule later Service validation Verify whether shedule later with slot after two days",
               "timedOut": false,
+<<<<<<< HEAD
               "duration": 560,
               "state": "failed",
               "speed": null,
@@ -237,6 +337,19 @@
               "uuid": "7be2d8c4-6ede-4cd2-8efa-e5fb6f2b2583",
               "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
 >>>>>>> vijay_changes
+=======
+              "duration": 210,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-03-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "556a8c73-d804-4393-a7b9-54b8dd2f7905",
+              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+>>>>>>> giri_changes
               "isHook": false,
               "skipped": false
             }
@@ -244,6 +357,7 @@
           "suites": [],
 <<<<<<< HEAD
           "passes": [
+<<<<<<< HEAD
             "0a68111f-e3d7-4522-8112-ce33a7a01b81",
             "e30310f7-6492-49f3-a6d5-566701450d18",
             "76531d65-7c53-4fb0-92f9-13776442cbcd"
@@ -257,15 +371,27 @@
             "11121cf8-28de-4c99-9b8f-b96edee2fdf4",
             "7be2d8c4-6ede-4cd2-8efa-e5fb6f2b2583"
 >>>>>>> vijay_changes
+=======
+            "6ea07597-062e-4e77-8f8d-41e228ee0bde",
+            "97ec34bf-831d-4091-9ffa-58dc4f1b0878",
+            "4ebf736f-4367-4482-beb8-cbe27abe9cc0",
+            "8dcc3818-5445-485b-9c21-0f47a521d1c5",
+            "f7b1b45b-e18d-4548-8254-df7922c840b5",
+            "556a8c73-d804-4393-a7b9-54b8dd2f7905"
+>>>>>>> giri_changes
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
           "duration": 771,
 =======
           "duration": 4460,
 >>>>>>> vijay_changes
+=======
+          "duration": 1456,
+>>>>>>> giri_changes
           "root": false,
           "rootEmpty": false,
           "_timeout": 90000

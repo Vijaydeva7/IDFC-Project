@@ -73,7 +73,7 @@ class MicroserviceUtil {
       returnFormat.method = response.config.method.toUpperCase();
       returnFormat.url = response.config.url;
       returnFormat.reqBody = response.config.data;
-
+      
       return returnFormat;
     } catch (error) {
       returnFormat.data = error.response.data.errors;
@@ -81,7 +81,7 @@ class MicroserviceUtil {
       returnFormat.method = error.response.config.method.toUpperCase();
       returnFormat.url = error.response.config.url;
       returnFormat.reqBody = error.response.config.data;
-
+     
       return returnFormat;
     }
   }
