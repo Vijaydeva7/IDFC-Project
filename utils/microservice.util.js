@@ -21,12 +21,14 @@ class MicroserviceUtil {
       data: "",
       status: "",
     };
-    const token =
-      "Bearer ccLFc6_K5KMx3sbn1zvtvu7K2zU4A12oxxS5g9afpO0.ARSXzsxehQVKZSmIBc0nLlE5Ox90JtlQOmSaYxBqEUg";
+    const clientId = dynamicData.clientId;
+    const token = dynamicData.authToken;
+    
     try {
       const response = await axios.get(url, {
         headers: {
           Authorization: `${token}`,
+          clientId: clientId
         },
       });
       returnFormat.data = response.data;
