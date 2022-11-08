@@ -14,6 +14,7 @@ class MicroserviceUtil {
   }
 
   async getApiCall(url) {
+    const clientId = dynamicData.clientId;
     var returnFormat = {
       method: "",
       url: "",

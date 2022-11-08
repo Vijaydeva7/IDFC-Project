@@ -1,43 +1,127 @@
 {
   "Connect_Now": {
     "connectNowBefore9am_request": {},
-    "connectNowBefore9am_response": {},
+    "connectNowBefore9am_response": {
+      "status": "SUCCESS",
+      "message": "Profile link fetched successfully..."
+    },
 
     "connectNowAfter9pm_request": {},
-    "connectNowAfter9pm_reresponse": {},
+    "connectNowAfter9pm_reresponse": {
+      "status": "SUCCESS",
+      "message": "Profile link fetched successfully..."
+    
+
+    },
 
     "connectNowValidTiming_request": {},
-    "connectNowValidTiming_response": {}
+    "connectNowValidTiming_response": {
+      "status": "SUCCESS",
+      "message": "Profile link fetched successfully..."
+    
+    }
   },
 
   "Shedule_Later": {
-    "sheduleLaterwithValidData_request": {},
-    "sheduleLaterwithValidData_response": {},
+    "sheduleLaterwithValidData_request": {
+      "userId": "4705",
+      "scheduledTime": "2022-04-11T13:00:00"
+    },
+    "sheduleLaterwithValidData_response": {
+       
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithoutTiming_request": {},
-    "sheduleLaterwithoutTiming_response": {},
+    "sheduleLaterwithoutTiming_request": {
+      "userId": "4705",
+      "scheduledTime": "2022-04-11T13:00:00"
+    },
+    "sheduleLaterwithoutTiming_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithoutDate_request": {},
-    "sheduleLaterwithoutDate_response": {},
+    "sheduleLaterwithoutDate_request": {
+      "userId": "4705",
+      "scheduledTime": "2022-04-11T13:00:00"
+    },
+    "sheduleLaterwithoutDate_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithBlankData_request": {},
-    "sheduleLaterwithBlankData_response": {},
+    "sheduleLaterwithBlankData_request": {
+      "userId": "4705",
+      "scheduledTime": "2022-04-11T13:00:00"
+    },
+    "sheduleLaterwithBlankData_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithPreviousDate_request": {},
-    "sheduleLaterwithPreviousDate_response": {},
+    "sheduleLaterwithPreviousDate_request": {
+      "userId": "4705",
+      "scheduledTime": "2022-04-11T13:00:00"
+    },
+    "sheduleLaterwithPreviousDate_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithSlotAfterTwodays_request": {},
-    "sheduleLaterwithSlotAfterTwodays_response": {}
+    "sheduleLaterwithSlotAfterTwodays_request": {
+      "userId": "4705",
+      "scheduledTime": "2022-04-11T13:00:00"
+    },
+    "sheduleLaterwithSlotAfterTwodays_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    }
   },
 
   "In_Person_Verify": {
     "IPVwhenSheduleLaterisDone_request": {},
     "IPVwhenSheduleLaterisDone_response": {},
 
-    "IPVTransactionFreeze_request": {},
-    "IPVTransactionFreeze_response": {},
+    "IPVTransactionFreeze_request": {
+      "userId": "4175",
+      "accountDetails": "PhVSM2YPmhcXalenFrd+1ScPTqKlSFOPmKf6pElYI2Yd4CRad8ZBGxkObSgnJ1T642rN6OJ65ZTjEFtz/YZw1p2s9y8MQMpPfM5+DZLxplGCH1CvykRmer1t0F/umFan5up5YXC16aP600SufVgBPmRiRwKklajfY1LdPuAjhD7FnBX0awMxSvubKRxZHpXVH41mVUAJgvpMaa0R2MMwS8D0dVTE/K4H76efV5+vfAk0pu6JWNUw72vvap+anrPIkAGmUxcCSW1hKG6Qk3NFtFOxnsXGoLNpngQqRusnLPspOhoVvRtL8qFGAAS4JEyJq/sENTqhjN9v4YvMi2nH794qyk5rMCIeIfrjVCZZUm5+ASjeQY1n6FjDFr7kgk3MEHJe7DFjW6HA/pEBiymZtTwxt3VbfLdISB0W0i177MJdc/UwwLSUSL0vdOqZVQzPfZselmeesxflmrZ1Ogs6jNWuVLsYXcx2Io6b+RZNHKXYR6A6gCAPjbGOGeOyuQheVlQXh1tUdMnOa+aLNyOQQk97W56DerT3RhT4r+xsZP9OusGuleBKAbsxJKfx2XzYUL1+zBMMSf0VJcJ48Z3WTMMheBiU2XFzhhyz/YHpotZUZGEm3gCNP7aaZlE4V1nqn+kXvIZrZBcxCriqtyQTEQhDObNsUq9f63WVHei8iUZfmNAnF3xalT+QJs4FiZoFzsC7Gvop27/zX5ebEz6oIdKAFbEzeW1P58Icm5pkFjhCcO5NEobiCrYHYsL+4zAt8cY/+Ql86wlreQureD4OW9pyS5GLsR/8ZiMW/0z7GkQjEVZ41HyO4IQTr2o8+Dcyl2txsG4pM3GQEo2Q/yjhDROcqBWS+S/zRlfCOWDRPmQI7N+mgGflewo7xU7ZUlDBVwMvGwOPUoMwCZeV5OXTzzmNvHjW3epkLKqeOTP4SgLFjm96kHrVtm2TqUQhNngK+L6iNkuv4blOXaz6Z6w04l/iNyK/K5PvszMzZzlmTzvTfozZjEG1jwnPlGcf71iOjz/21SbQY8fxm2OukEtxJ2VK9iK50Xu9J46CqYI37F1b7Njg+JJ28w2hgGsCOHqYROvROuleLAwr6DH+JzTjVw=="
 
-    "IPVwhenBOCrejected_request": {},
-    "IPVwhenBOCrejected_response": {}
+
+    },
+    "IPVTransactionFreeze_response": {
+      "status": "SUCCESS",
+      "message": "In person verified successfully"
+    },
+
+    "IPVwhenBOCrejected_request":{
+      "userId": "4175",
+      "accountDetails": "PhVSM2YPmhcXalenFrd+1ScPTqKlSFOPmKf6pElYI2Yd4CRad8ZBGxkObSgnJ1T642rN6OJ65ZTjEFtz/YZw1p2s9y8MQMpPfM5+DZLxplGCH1CvykRmer1t0F/umFan5up5YXC16aP600SufVgBPmRiRwKklajfY1LdPuAjhD7FnBX0awMxSvubKRxZHpXVH41mVUAJgvpMaa0R2MMwS8D0dVTE/K4H76efV5+vfAk0pu6JWNUw72vvap+anrPIkAGmUxcCSW1hKG6Qk3NFtFOxnsXGoLNpngQqRusnLPspOhoVvRtL8qFGAAS4JEyJq/sENTqhjN9v4YvMi2nH794qyk5rMCIeIfrjVCZZUm5+ASjeQY1n6FjDFr7kgk3MEHJe7DFjW6HA/pEBiymZtTwxt3VbfLdISB0W0i177MJdc/UwwLSUSL0vdOqZVQzPfZselmeesxflmrZ1Ogs6jNWuVLsYXcx2Io6b+RZNHKXYR6A6gCAPjbGOGeOyuQheVlQXh1tUdMnOa+aLNyOQQk97W56DerT3RhT4r+xsZP9OusGuleBKAbsxJKfx2XzYUL1+zBMMSf0VJcJ48Z3WTMMheBiU2XFzhhyz/YHpotZUZGEm3gCNP7aaZlE4V1nqn+kXvIZrZBcxCriqtyQTEQhDObNsUq9f63WVHei8iUZfmNAnF3xalT+QJs4FiZoFzsC7Gvop27/zX5ebEz6oIdKAFbEzeW1P58Icm5pkFjhCcO5NEobiCrYHYsL+4zAt8cY/+Ql86wlreQureD4OW9pyS5GLsR/8ZiMW/0z7GkQjEVZ41HyO4IQTr2o8+Dcyl2txsG4pM3GQEo2Q/yjhDROcqBWS+S/zRlfCOWDRPmQI7N+mgGflewo7xU7ZUlDBVwMvGwOPUoMwCZeV5OXTzzmNvHjW3epkLKqeOTP4SgLFjm96kHrVtm2TqUQhNngK+L6iNkuv4blOXaz6Z6w04l/iNyK/K5PvszMzZzlmTzvTfozZjEG1jwnPlGcf71iOjz/21SbQY8fxm2OukEtxJ2VK9iK50Xu9J46CqYI37F1b7Njg+JJ28w2hgGsCOHqYROvROuleLAwr6DH+JzTjVw=="
+  
+    },
+    "IPVwhenBOCrejected_response":{
+      "status": "ERROR",
+      "message": "In person verify request has raised already!"
+    }
+
+  },
+  "Cheque_pickup":{
+    "chequePickupWithValidUserId_request":{},
+    "chequePickupWithValidUserId_response":{},
+
+    "chequePickupWithExpiredUserId_request":{},
+    "chequePickupWithExpiredUserId_response":{},
+
+    "chequePickupWithoutUserId_request":{},
+    "chequePickupWithoutUserId_response":{}
+
+
+
   }
 }
