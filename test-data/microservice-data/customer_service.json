@@ -11,23 +11,65 @@
   },
 
   "Shedule_Later": {
-    "sheduleLaterwithValidData_request": {},
-    "sheduleLaterwithValidData_response": {},
+    "sheduleLaterwithValidData_request": {
+      "userId": "",
+    "scheduledTime": "2022-01-11T13:00:00"
+    },
+    "sheduleLaterwithValidData_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithoutTiming_request": {},
-    "sheduleLaterwithoutTiming_response": {},
+    "sheduleLaterwithoutTiming_request": {
+      "userId": "",
+      "scheduledTime": "2022-03-09"
+    },
+    "sheduleLaterwithoutTiming_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithoutDate_request": {},
-    "sheduleLaterwithoutDate_response": {},
+    "sheduleLaterwithoutDate_request": {
+      "userId": "",
+      "scheduledTime": "T13:00:00"
+    },
+    "sheduleLaterwithoutDate_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithBlankData_request": {},
-    "sheduleLaterwithBlankData_response": {},
+    "sheduleLaterwithBlankData_request": {
+      "userId": "",
+    "scheduledTime": ""
+    },
+    "sheduleLaterwithBlankData_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithPreviousDate_request": {},
-    "sheduleLaterwithPreviousDate_response": {},
+    "sheduleLaterwithPreviousDate_request": {
+      "userId": "",
+    "scheduledTime": "2022-03-09T13:00:00"
+    },
+    "sheduleLaterwithPreviousDate_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    },
 
-    "sheduleLaterwithSlotAfterTwodays_request": {},
-    "sheduleLaterwithSlotAfterTwodays_response": {}
+    "sheduleLaterwithSlotAfterTwodays_request": {
+      "userId": "",
+    "scheduledTime": "2022-03-11T13:00:00"
+    },
+    "sheduleLaterwithSlotAfterTwodays_response": {
+      "status": "ERROR",
+      "message": "Please wait while we get your details ready for video KYC.",
+      "responseCd": "VKYC2"
+    }
   },
 
   "In_Person_Verify": {
