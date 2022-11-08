@@ -1,4 +1,4 @@
-require.("dotenv").config();
+require("dotenv").config();
 const { expect } = require("chai");
 const util = require("./../../../../utils/microservice.util");
 const customerSerData = require("../../../../test-data/microservice-data/customer_service.json");

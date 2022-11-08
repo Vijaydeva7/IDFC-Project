@@ -276,5 +276,22 @@
       }
   ]
   },
-  "City_Master": {}
+  "City_Master": {
+    "validStateNameRequest" : "state=GOA",
+    "validStateNameResponse" : [
+        {
+            "id": "555",
+            "value": "690",
+            "displayText": "NORTH GOA",
+            "state": "68"
+        },
+        {
+            "id": "554",
+            "value": "692",
+            "displayText": "SOUTH GOA",
+            "state": "68"
+        }
+    ],
+    "InvalidStateNameRequest" : "state=MP"
+  }
 }
