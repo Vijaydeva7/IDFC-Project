@@ -10,6 +10,7 @@ describe("Verify Company List", () => {
     it("Verify whether status code is 200", async function () {
         const response = await util.getApiCall(process.env.ALL_COMPANIES);
         await util.mochaAddContext(this, response);
+        
         await expect(response.status).to.be.eql(200);
     });
 

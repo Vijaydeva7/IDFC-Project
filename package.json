@@ -39,7 +39,9 @@
   "scripts": {
     "test-microservice-dev": "env-cmd -f dev.env mocha --config ./config/microservice.config.js",
     "test-microservice-qa": "env-cmd -f qa.env mocha --config ./config/microservice.config.js",
-    "test-microservice-uat": "env-cmd -f uat.env mocha --config ./config/microservice.config.js "
+    "test-microservice-uat": "env-cmd -f uat.env mocha --config ./config/microservice.config.js ",
+    "test-web-ui": "npx wdio ./config/salesforce.config.js",
+    "test-mobile-ui": "npx wdio ./config/android.emulator.config.js"
   },
   "keywords": [],
   "author": "",

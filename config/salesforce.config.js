@@ -38,39 +38,8 @@ exports.config = {
   // },
 
   specs: [
-    "./test/specs/sfdc/end_2_end_flow/maker_accept_all_checker_accept_all_checkpoints_rcu_clear_all.js",
+    "./test/specs/web/module.js"
   ],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_accept_all_checker_reject_all_checkpoints.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_accept_all_checker_reject_some_checkpoints.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_reject_all_checker_reject_some_checkpoints.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_reject_all_checker_reject_all_checkpoints.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_reject_all_checker_accept_all_checkpoints_rcu_hold_all.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_reject_some_checker_accept_all_checkpoints_rcu_sampled_all.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_reject_some_checker_reject_all_checkpoints.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_reject_some_checker_reject_some_checkpoints.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_accept_all_without_CRILC_checker_accept_all_checkpoints_rcu_hold_some.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_accept_all_checker_accept_all_checkpoints_rcu_sampled_some.js"],
-  //specs: ["./test/specs/sfdc/end_2_end_flow/login_MakerUser.js"],
-
-  //AutoAllocation flows below
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow1.js"],
-
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow3.js"],
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow4.js"],
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow5.js"],
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow6.js"],
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow7.js"],
-  // specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow8.js"],
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow9.js"],
-  // specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow10.js"],
-  // specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow11.js"],
-  //specs: ["./test/specs/sfdc/attendance_autoallocation_flows/maker_autoallocation_flow12.js"],
-
-  //Bulk testing flows below
-  //specs: ["./test/specs/sfdc/bulk testing flow/bulk_testing_flow.js"],
-
-  // CBS Integration flow
-  //specs: ["./test/specs/sfdc/end_2_end_flow/maker_accept_all_checker_accept_all_checkpoints_rcu_clear_all_cbs.js"],
 
   exclude: [
     // 'path/to/excluded/files'
@@ -146,8 +115,11 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: process.env.SFDC_QA_URL,
-  //
+  // baseUrl: process.env.SFDC_QA_URL
+
+
+  baseUrl: "https://idfcfirstcurrentfsc--qa.sandbox.my.salesforce.com",
+  //  
   // Default timeout for all waitFor* commands.
   waitforTimeout: 30000,
   //

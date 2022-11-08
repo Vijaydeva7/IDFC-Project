@@ -28,8 +28,7 @@ exports.config = {
   // will be called from there.
   //
   specs: [
-    "./test/specs/mobile-ui/flows/screen-level-validation/app_all_screen_level_validation.js",
-    //"./test/specs/mobile-ui/flows/end-to-end-flow/Testing_Case_Push.js",
+    "./test/specs/mobile-ui/welcome.spec.js",
   ],
   // Patterns to exclude.
   exclude: [
@@ -80,7 +79,7 @@ exports.config = {
       avd: "Appium",
       platformVersion: "11.0",
       app: path.resolve(
-        "app/ca-journey-21-Sep-QA-VSM512-release-intune-v33 (1).apk"
+        "app/ca-journey-01-Nov-UAT-VSM351-release-intune-v37.apk"
       ),
       appActivity: "com.cajourney.MainActivity",
       //
