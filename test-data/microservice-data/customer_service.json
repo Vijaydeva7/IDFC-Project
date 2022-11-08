@@ -112,5 +112,23 @@
 
     "chequePickupWithoutUserId_request": {},
     "chequePickupWithoutUserId_response": {}
+   
+  },
+
+  "CHEQUE_PICKUP": {
+    "ChequePickUpWithValidUserId_request": {
+      "userId":3683
+    },
+    "ChequePickUpWithValidUserId_response": {},
+
+    "ChequePickUpWithsessionexpiredUserId_request": {
+      "userId":1234
+    },
+    "ChequePickUpWithsessionexpiredUserId_response": {},
+
+    "ChequePickUpWithoutUserId_request": {
+      "userId":""
+    },
+    "ChequePickUpWithoutUserId_response": {}
   }
 }

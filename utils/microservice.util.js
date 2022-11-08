@@ -68,6 +68,7 @@ class MicroserviceUtil {
           clientId: clientId
         },
       });
+      //await console.log(response) 
       returnFormat.data = response.data;
       returnFormat.status = response.status;
       returnFormat.method = response.config.method.toUpperCase();
@@ -76,6 +77,7 @@ class MicroserviceUtil {
       
       return returnFormat;
     } catch (error) {
+     // console.log(error)
       returnFormat.data = error.response.data.errors;
       returnFormat.status = error.response.status;
       returnFormat.method = error.response.config.method.toUpperCase();
