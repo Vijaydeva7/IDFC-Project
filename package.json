@@ -4,7 +4,7 @@
     "allure-commandline": "^2.17.2",
     "axios": "^0.26.1",
     "chai": "^4.3.4",
-    "chromedriver": "^105.0.1",
+    "chromedriver": "^107.0.1",
     "env-cmd": "^10.1.0",
     "mochawesome": "^6.3.1",
     "npm": "^8.19.2",
@@ -39,7 +39,8 @@
   "scripts": {
     "test-microservice-dev": "env-cmd -f dev.env mocha --config ./config/microservice.config.js",
     "test-microservice-qa": "env-cmd -f qa.env mocha --config ./config/microservice.config.js",
-    "test-microservice-uat": "env-cmd -f uat.env mocha --config ./config/microservice.config.js "
+    "test-microservice-uat": "env-cmd -f uat.env mocha --config ./config/microservice.config.js ",
+    "test-web-ui": "env-cmd -f uat.env npx wdio ./config/salesforce.config.js "
   },
   "keywords": [],
   "author": "",
