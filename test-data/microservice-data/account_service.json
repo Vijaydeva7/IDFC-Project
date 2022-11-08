@@ -1,34 +1,41 @@
 {
-    "Create_Account":{
-        "createAccountWithVannilaFlow_request":{
-            
+  "Create_Account": {
+    "createAccountWithVannilaFlow_request": {
+      "userId": "3530",
+      "basicDetails": "1MMrqLIZTtV+cBXv+69MbW4a0SOKPdLrZcwzkCdRNgZfPgzy/DGQ7wjkuihOaWNzUQ0B120PtTvWZKVJAqW50BNxk8vMMC/mKaQnoanuAN2KD0yDHD1k9cFEYW3uGd/ZYlV4R4n5LHopvu87zYPQ+/yLY2iIpMKf2WfjCPEQaOi9VAR83aFwoYyQhTpRBd8Ig/wj0/bSGVfUA4TN1xSMtdx+rCbb/q1oWTgZXknNdsIiCCRMAPAjXUFy4NzAdK2EDvdOHj6InK5jzmPOTT2u+1IEKQ13/L2wQfRVphA8Cy2F9cNmcJrJCP3jB0fozun66qcOkYB1xL/Eo8LRi/6ngySK9MgRoSocXaJ9a7x/7HL4Wm9sntBmN4X/CbYJHXLALGXvqj1fRKH2h7on2QkoDwDezqK3eaehIBAH9naX9e/SynRl8IgSMjbSFKKqxRCFd2xGsQRBUKTTyQaIde3Mbagc0Vlb6eMuWgAA0bO/b5A+CyKdzu8GuemfHS7v9lrEc7K+v4TWkUghblCDCAfHmmTghE7yeHonX5o1PLGVxQyqisi16Uf/fkG6sByAE86TyfJAlY5c+tdjjWd/LwpA9ifiMzV83otugLWGVJQu4D8PhoMip878Q2ELNmqUZWCb89TX7fuvylZzuXRied2xswyCZI3dgwCsMGPwwvjEay9JKcbprtjxkOYxNC3Hax55AjQ78aBlUkjnLuzJ9kuLAA=="
     },
-       "createAccountWithVannilaFlow_response":{
-          
-    },
-        
-    
-       "createAccountWithfraudnotPassedData_request":{
-            
-    },
-       
-       "createAccountWithfraudnotPassedData_response":{
-            
-    },
-       "createAccountWithSelfServiceable_request":{
-       
-    },
-       "createAccountWithSelfServiceable_response":{
-       
+    "createAccountWithVannilaFlow_response": {
+      "status": "SUCCESS",
+      "message": "Account created successfully...."
     },
 
-       "createAccountWithPreferredBranch_request":{
-       
+    "createAccountWithfraudnotPassedData_request": {
+      "userId": "3530",
+      "basicDetails": "1MMrqLIZTtV+cBXv+69MbW4a0SOKPdLrZcwzkCdRNgZfPgzy/DGQ7wjkuihOaWNzUQ0B120PtTvWZKVJAqW50BNxk8vMMC/mKaQnoanuAN2KD0yDHD1k9cFEYW3uGd/ZYlV4R4n5LHopvu87zYPQ+/yLY2iIpMKf2WfjCPEQaOi9VAR83aFwoYyQhTpRBd8Ig/wj0/bSGVfUA4TN1xSMtdx+rCbb/q1oWTgZXknNdsIiCCRMAPAjXUFy4NzAdK2EDvdOHj6InK5jzmPOTT2u+1IEKQ13/L2wQfRVphA8Cy2F9cNmcJrJCP3jB0fozun66qcOkYB1xL/Eo8LRi/6ngySK9MgRoSocXaJ9a7x/7HL4Wm9sntBmN4X/CbYJHXLALGXvqj1fRKH2h7on2QkoDwDezqK3eaehIBAH9naX9e/SynRl8IgSMjbSFKKqxRCFd2xGsQRBUKTTyQaIde3Mbagc0Vlb6eMuWgAA0bO/b5A+CyKdzu8GuemfHS7v9lrEc7K+v4TWkUghblCDCAfHmmTghE7yeHonX5o1PLGVxQyqisi16Uf/fkG6sByAE86TyfJAlY5c+tdjjWd/LwpA9ifiMzV83otugLWGVJQu4D8PhoMip878Q2ELNmqUZWCb89TX7fuvylZzuXRied2xswyCZI3dgwCsMGPwwvjEay9JKcbprtjxkOYxNC3Hax55AjQ78aBlUkjnLuzJ9kuLAA=="
     },
 
-       "createAccountWithPreferredBranch_response":{
-       
+    "createAccountWithfraudnotPassedData_response": {},
+    "createAccountWithSelfServiceable_request": {
+      "userId": "3530",
+      "basicDetails": "1MMrqLIZTtV+cBXv+69MbW4a0SOKPdLrZcwzkCdRNgZfPgzy/DGQ7wjkuihOaWNzUQ0B120PtTvWZKVJAqW50BNxk8vMMC/mKaQnoanuAN2KD0yDHD1k9cFEYW3uGd/ZYlV4R4n5LHopvu87zYPQ+/yLY2iIpMKf2WfjCPEQaOi9VAR83aFwoYyQhTpRBd8Ig/wj0/bSGVfUA4TN1xSMtdx+rCbb/q1oWTgZXknNdsIiCCRMAPAjXUFy4NzAdK2EDvdOHj6InK5jzmPOTT2u+1IEKQ13/L2wQfRVphA8Cy2F9cNmcJrJCP3jB0fozun66qcOkYB1xL/Eo8LRi/6ngySK9MgRoSocXaJ9a7x/7HL4Wm9sntBmN4X/CbYJHXLALGXvqj1fRKH2h7on2QkoDwDezqK3eaehIBAH9naX9e/SynRl8IgSMjbSFKKqxRCFd2xGsQRBUKTTyQaIde3Mbagc0Vlb6eMuWgAA0bO/b5A+CyKdzu8GuemfHS7v9lrEc7K+v4TWkUghblCDCAfHmmTghE7yeHonX5o1PLGVxQyqisi16Uf/fkG6sByAE86TyfJAlY5c+tdjjWd/LwpA9ifiMzV83otugLWGVJQu4D8PhoMip878Q2ELNmqUZWCb89TX7fuvylZzuXRied2xswyCZI3dgwCsMGPwwvjEay9JKcbprtjxkOYxNC3Hax55AjQ78aBlUkjnLuzJ9kuLAA=="
+   
+    },
+    "createAccountWithSelfServiceable_response": {
+      "status": "SUCCESS",
+      "message": "Account created successfully...."
+   
     },
 
+    "createAccountWithPreferredBranch_request": {
+      "userId": "3530",
+      "basicDetails": "1MMrqLIZTtV+cBXv+69MbW4a0SOKPdLrZcwzkCdRNgZfPgzy/DGQ7wjkuihOaWNzUQ0B120PtTvWZKVJAqW50BNxk8vMMC/mKaQnoanuAN2KD0yDHD1k9cFEYW3uGd/ZYlV4R4n5LHopvu87zYPQ+/yLY2iIpMKf2WfjCPEQaOi9VAR83aFwoYyQhTpRBd8Ig/wj0/bSGVfUA4TN1xSMtdx+rCbb/q1oWTgZXknNdsIiCCRMAPAjXUFy4NzAdK2EDvdOHj6InK5jzmPOTT2u+1IEKQ13/L2wQfRVphA8Cy2F9cNmcJrJCP3jB0fozun66qcOkYB1xL/Eo8LRi/6ngySK9MgRoSocXaJ9a7x/7HL4Wm9sntBmN4X/CbYJHXLALGXvqj1fRKH2h7on2QkoDwDezqK3eaehIBAH9naX9e/SynRl8IgSMjbSFKKqxRCFd2xGsQRBUKTTyQaIde3Mbagc0Vlb6eMuWgAA0bO/b5A+CyKdzu8GuemfHS7v9lrEc7K+v4TWkUghblCDCAfHmmTghE7yeHonX5o1PLGVxQyqisi16Uf/fkG6sByAE86TyfJAlY5c+tdjjWd/LwpA9ifiMzV83otugLWGVJQu4D8PhoMip878Q2ELNmqUZWCb89TX7fuvylZzuXRied2xswyCZI3dgwCsMGPwwvjEay9JKcbprtjxkOYxNC3Hax55AjQ78aBlUkjnLuzJ9kuLAA=="
+   
+    },
+
+    "createAccountWithPreferredBranch_response": {
+      "status": "SUCCESS",
+      "message": "Account created successfully...."
+   
     }
+  }
 }

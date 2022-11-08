@@ -1,28 +1,28 @@
 {
-   "Apply_Crosssell":{
-       "validData_request":{
-            "userId":"107",
-            "productType":"TERM_LIFE_INSURANCE"
-        },
-       "validData_response":{},
+  "Apply_Crosssell": {
+    "validData_request": {
+      "userId": "107",
+      "productType": "TERM_LIFE_INSURANCE"
+    },
+    "validData_response": {},
 
-       "withoutUserId_request":{
-        "userId":"",
-        "productType":"TERM_LIFE_INSURANCE"
-        },
-       "withoutUserId_response":{},
+    "withoutUserId_request": {
+      "userId": "",
+      "productType": "TERM_LIFE_INSURANCE"
+    },
+    "withoutUserId_response": {},
 
-       "withoutProductType_request":{
-            "userId":"107",
-            "productType":""
-        },
-       "withoutProductType_response":{},
+    "withoutProductType_request": {
+      "userId": "107",
+      "productType": ""
+    },
+    "withoutProductType_response": {},
 
-       "invalidData_request":{
-            "userId":"abc",
-            "productType":"TERM_LIFE_INSURA"
-        },
-       "invalidData_response":{},
+    "invalidData_request": {
+      "userId": "abc",
+      "productType": "TERM_LIFE_INSURA"
+    },
+    "invalidData_response": {},
 
        "blankData_request":{
             "userId":"",

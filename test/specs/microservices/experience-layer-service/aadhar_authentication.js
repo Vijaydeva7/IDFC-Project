@@ -3,30 +3,28 @@ require("dotenv").config();
 const util = require("../../../../utils/microservice.util");
 const expLayerData = require("../../../../test-data/microservice-data/experience_layer_service.json");
 
+const dynamicData = require("../../../../test-data/microservice-data/dynamic_data.json");
+
+
 describe("Aadhar authentication validation", function () {
     it("Verify whether aadhar authentictication is successful with valid data", async function () {
         const response = await util.postApiCall(process.env.AADHAR_AUTHENTICATION, expLayerData.Aadhar_Authentication.aadharAuthenticationValidData_request);
-        
-        await util.mochaAddContext(this, response);
 
+        await util.mochaAddContext(this, response);
 
         await expect(response.status).to.be.eql(200);
 
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationValidData_response.status);
 
         await expect(response.data.message).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationValidData_response.message);
-
     });
     it("Verify whether error response is received with VID", async function () {
         const response = await util.postApiCall(process.env.AADHAR_AUTHENTICATION, expLayerData.Aadhar_Authentication.aadharAuthenticationVid_request);
-
-        await console.log(response);
 
         await util.mochaAddContext(this, response);
 
         await expect(response.status).to.not.eql(200);
     });
-
     it("Verify whether error response is received with incomplete data given as input", async function () {
         const response = await util.postApiCall(process.env.AADHAR_AUTHENTICATION, expLayerData.Aadhar_Authentication.aadharAuthenticationIncompleteData_request);
 

@@ -3,6 +3,9 @@ const { expect } = require("chai");
 const util = require("../../../../utils/microservice.util");
 const prodMngtServData = require("../../../../test-data/microservice-data/product_managment_service.json");
 
+const dynamicData = require("../../../../test-data/microservice-data/dynamic_data.json");
+
+
 describe("Apply Cross sell validation", function () {
     it("Validate whether cross sell api is giving success response with valid data", async function () {
         const response = await util.postApiCall(process.env.APPLY_CROSSSELL, prodMngtServData.Apply_Crosssell.validData_request);

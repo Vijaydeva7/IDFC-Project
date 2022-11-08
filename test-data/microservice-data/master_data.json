@@ -1,18 +1,18 @@
 {
-    "Nearest_Branch":{
-        "validPincode_request":"pincode=834001",
-        "validPincode_response":{
-            "defaultBranchDetails": {
-                "displayText": "RANCHI BRANCH",
-                "value": "60341",
-                "branchName": "RANCHI BRANCH",
-                "branchCode": "60341",
-                "ifscCode": "IDFB0060341"
-            }
-        },
+  "Nearest_Branch": {
+    "validPincode_request": "pincode=834001",
+    "validPincode_response": {
+      "defaultBranchDetails": {
+        "displayText": "RANCHI BRANCH",
+        "value": "60341",
+        "branchName": "RANCHI BRANCH",
+        "branchCode": "60341",
+        "ifscCode": "IDFB0060341"
+      }
+    },
 
-        "emptyPincode_request":"pincode=",
-        "emptyPincode_response":{},
+    "emptyPincode_request": "pincode=",
+    "emptyPincode_response": {},
 
         "invalidPincode_request":"pincode=869756",
         "invalidPincode_response":{}
@@ -272,7 +272,7 @@
         "value": "10",
         "displayText": "WEST BENGAL",
         "country": "IN"
-    }
+    },
 
         },
     
