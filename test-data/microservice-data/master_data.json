@@ -3,11 +3,11 @@
     "validPincode_request": "pincode=834001",
     "validPincode_response": {
       "defaultBranchDetails": {
-        "displayText": "RANCHI BRANCH",
-        "value": "60341",
-        "branchName": "RANCHI BRANCH",
-        "branchCode": "60341",
-        "ifscCode": "IDFB0060341"
+        "displayText": "RANCHI - LALPUR BRANCH",
+        "value": "60344",
+        "branchName": "RANCHI - LALPUR BRANCH",
+        "branchCode": "60344",
+        "ifscCode": "IDFB0060344"
       }
     },
 

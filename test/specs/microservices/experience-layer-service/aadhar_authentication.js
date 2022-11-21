@@ -34,6 +34,14 @@ describe("Aadhar authentication validation", function () {
 
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationIncompleteData_response.status);
     });
+    it("Verify whether error response is received without client_id data given as input", async function () {
+        const response = await util.postApiCall(process.env.AADHAR_AUTHENTICATION, expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutclient_id_request);
+
+        await util.mochaAddContext(this, response);
+
+        await expect(response.status).to.not.eql(200);
+        await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutclient_id_response.status);
+    });
     it("Verify whether error response is received with wrong data given as input", async function () {
         const response = await util.postApiCall(process.env.AADHAR_AUTHENTICATION, expLayerData.Aadhar_Authentication.aadharAuthenticationWrongData_request);
 

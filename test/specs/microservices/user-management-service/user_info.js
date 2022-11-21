@@ -5,7 +5,7 @@ const customerSerData = require("../../../../test-data/microservice-data/custome
 
 describe("Get User Info", function(){
     it("Get User Info with valid Data", async function(){
-        const response = util.getApiCall(`${process.env.USER_INFO}/3230`);
+        const response = util.getApiCall(`${process.env.USER_INFO}/6584`);
         await util.mochaAddContext(this,response);
         await expect(response.status).to.be.eql(200);
     })
