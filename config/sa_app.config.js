@@ -38,14 +38,9 @@ exports.config = {
   // },
 
   specs: [
-<<<<<<< HEAD
-    "./test/specs/web/module.js"
+    "./test/specs/web/homepage.spec.js",
   ],
-=======
-    "./test/specs/web/login.spec.js",
-  ],
-  
->>>>>>> shraddha_changes
+
 
   exclude: [
     // 'path/to/excluded/files'
@@ -121,17 +116,9 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-<<<<<<< HEAD
-  // baseUrl: process.env.SFDC_QA_URL
-
-
-  baseUrl: "https://idfcfirstcurrentfsc--qa.sandbox.my.salesforce.com",
-  //  
-=======
   //baseUrl: process.env.SFDC_QA_URL,
-  baseUrl: "https://login.salesforce.com/",
+  baseUrl: "https://qa-opt.idfcfirstbank.com",
   //
->>>>>>> shraddha_changes
   // Default timeout for all waitFor* commands.
   waitforTimeout: 30000,
   //
@@ -175,9 +162,9 @@ exports.config = {
     [
       "html-nice",
       {
-        outputDir: "./test-execution_report/sfdc/html-reports",
+        outputDir: "./test-execution_report/web/html-reports",
         filename: "report.html",
-        reportTitle: "CA Operation Automation Test Execution Report",
+        reportTitle: "SA Automation Test Execution Report",
         linkScreenshots: true,
         //to show the report in a browser when done
         showInBrowser: true,
