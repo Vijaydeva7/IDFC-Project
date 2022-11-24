@@ -38,9 +38,9 @@ exports.config = {
   // },
 
   specs: [
-    "./test/specs/web/login.spec.js",
+    "./test/specs/web/homepage.spec.js",
   ],
-  
+
 
   exclude: [
     // 'path/to/excluded/files'
@@ -117,7 +117,7 @@ exports.config = {
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
   //baseUrl: process.env.SFDC_QA_URL,
-  baseUrl: "https://login.salesforce.com/",
+  baseUrl: "https://qa-opt.idfcfirstbank.com",
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 30000,
@@ -162,9 +162,9 @@ exports.config = {
     [
       "html-nice",
       {
-        outputDir: "./test-execution_report/sfdc/html-reports",
+        outputDir: "./test-execution_report/web/html-reports",
         filename: "report.html",
-        reportTitle: "CA Operation Automation Test Execution Report",
+        reportTitle: "SA Automation Test Execution Report",
         linkScreenshots: true,
         //to show the report in a browser when done
         showInBrowser: true,

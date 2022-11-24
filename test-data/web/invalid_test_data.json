@@ -1,0 +1,8 @@
+{
+  "mobileNumber": {
+    "toTestPlus91": "9123114708",
+    "containingAlphabets": "KYHRFJG",
+    "containingSplChars": "%$&%*%()-",
+    "lengthMoreThan10Digits": "766719755912345"
+  }
+}
