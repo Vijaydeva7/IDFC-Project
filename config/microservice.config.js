@@ -3,18 +3,15 @@
 module.exports = {
   timeout: 90000,
   spec: [
-<<<<<<< HEAD
     //"./test/specs/microservices/product-management-service/apply_hospicash.js"
     //"./test/specs/microservices/experience-layer-service/aadhar_authentication.js"
-    "./test/specs/microservices/customer-service/shedule_later.js"
-=======
+    //"./test/specs/microservices/customer-service/shedule_later.js"
     //"./test/specs/microservices/product-management-service/apply_crosssell.js",
     //"./test/specs/microservices/experience-layer-service/aadhar_authentication.js",
     //"./test/specs/microservices/customer-service/cheque_pickup.js",
-   "./test/specs/microservices/product-management-service/apply_creditcard.js",
- // "./test/specs/microservices/customer-service/in_person_verify.js",
-
->>>>>>> shraddha_changes
+   //"./test/specs/microservices/product-management-service/apply_creditcard.js",
+ //"./test/specs/microservices/customer-service/in_person_verify.js",
+  // "./test/specs/microservices/experience-layer-service/fraudcheck.js"
   ],
   reporter: "node_modules/mochawesome",
   "reporter-option": [

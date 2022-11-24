@@ -1,4 +1,4 @@
-const loginPage = require("../../pages/web/login.page");
+const loginPage = require("../../pages/web/createAccount.page");
 
 describe("Login Page", function () {
     it("Set Username", async () => {

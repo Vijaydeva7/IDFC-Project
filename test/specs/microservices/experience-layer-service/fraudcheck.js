@@ -12,7 +12,7 @@ describe("Fraudcheck validation", function () {
       const response = await util.postApiCall(process.env.FRAUD_CHECK, expLayerData.Fraud_Check.fraudcheckwithvalidcustomer_request);
       await util.mochaAddContext(this, response);
 
-      await expect(response.status).to.be.eql(401);
+      await expect(response.status).to.be.eql(200);
 
       await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidcustomer_response.status);
       await expect(response.data.message).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidcustomer_response.message);
