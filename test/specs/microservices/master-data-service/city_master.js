@@ -21,7 +21,7 @@ describe("Master Branch of City", function () {
     });
 
     it("Get Master branch of City with Two state names", async function () {
-        const response = await util.getApiCall(process.env.CITY_MASTER + "MAHARASHTRA&KARNATAKA");
+        const response = await util.getApiCall(process.env.CITY_MASTER + "=MAHARASHTRA&KARNATAKA");
         await util.mochaAddContext(this, response);
 
         console.log(response);

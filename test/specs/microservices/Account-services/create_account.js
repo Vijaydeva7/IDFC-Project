@@ -18,7 +18,7 @@ describe("Account Service Validation", function () {
       await expect(response.data.message).to.be.eql(dynamicData.Create_Account.createAccountWithVannilaFlow_response.message);
       
    });
-   it("Verify whether account create with fraud not passeddata ", async function () {
+   it("Verify whether account create with fraud not passed data ", async function () {
       accServiceData.Create_Account.createAccountWithfraudnotPassedData_request.userId = dynamicData.userId;
       const response = await util.postApiCall(process.env.ACCOUNT_SERVICE, accServiceData.Create_Account.createAccountWithfraudnotPassedData_request);
       await util.mochaAddContext(this, response);

@@ -23,7 +23,7 @@
       "status": "ERROR"
     },
     "aadharAuthenticationWrongData_request": {
-      "uid": "sCt+8bOJ6epJq7BhF4VR5w==",
+      "uid": "sCt+fhfgjhfjjhjk==",
       "uniqueIdentifier": "9423572416"
     },
     "aadharAuthenticationWrongData_response": {
@@ -31,14 +31,14 @@
     },
     "aadharAuthenticationWithoutUid_request": {
       "uid": "sCt+8bOJ6epJq7BhF4VR5w==",
-      "uniqueIdentifier": "9423572416"
+      "uniqueIdentifier": ""
     },
     "aadharAuthenticationWithoutUid_response": {
       "status": "ERROR"
     },
     "aadharAuthenticationWithoutclient_id_request": {
-      "uid": "sCt+8bOJ6ep",
-      "uniqueIdentifier": "9423572416"
+      "uid": "sCt+==",
+    "uniqueIdentifier": "9404779400"
     },
     "aadharAuthenticationWithoutclient_id_response": {
       "status": "ERROR"
