@@ -15,6 +15,7 @@ class MicroserviceUtil {
 
   async getApiCall(url) {
     const clientId = dynamicData.clientId;
+    const token = dynamicData.authToken;
     var returnFormat = {
       method: "",
       url: "",
@@ -22,8 +23,8 @@ class MicroserviceUtil {
       data: "",
       status: "",
     };
-    const clientId = dynamicData.clientId;
-    const token = dynamicData.authToken;
+    
+ 
     
     try {
       const response = await axios.get(url, {

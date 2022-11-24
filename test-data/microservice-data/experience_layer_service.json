@@ -35,7 +35,15 @@
     },
     "aadharAuthenticationWithoutUid_response": {
       "status": "ERROR"
+    },
+    "aadharAuthenticationWithoutclient_id_request": {
+      "uid": "sCt+8bOJ6ep",
+      "uniqueIdentifier": "9423572416"
+    },
+    "aadharAuthenticationWithoutclient_id_response": {
+      "status": "ERROR"
     }
+
   },
   "Aadhar_Otp_Validation": {},
 

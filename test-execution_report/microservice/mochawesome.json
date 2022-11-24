@@ -1,51 +1,15 @@
 {
   "stats": {
     "suites": 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "tests": 3,
-    "passes": 3,
-    "pending": 0,
-    "failures": 0,
-    "start": "2022-11-08T05:04:02.795Z",
-    "end": "2022-11-08T05:04:03.578Z",
-    "duration": 783,
-    "testsRegistered": 3,
-    "passPercent": 100,
-=======
-    "tests": 6,
+    "tests": 4,
     "passes": 0,
     "pending": 0,
-    "failures": 6,
-    "start": "2022-11-04T10:26:16.832Z",
-    "end": "2022-11-04T10:26:21.312Z",
-    "duration": 4480,
-    "testsRegistered": 6,
+    "failures": 4,
+    "start": "2022-11-21T06:46:24.434Z",
+    "end": "2022-11-21T06:46:24.511Z",
+    "duration": 77,
+    "testsRegistered": 4,
     "passPercent": 0,
->>>>>>> vijay_changes
-=======
-    "tests": 6,
-    "passes": 6,
-    "pending": 0,
-    "failures": 0,
-    "start": "2022-11-08T09:07:08.047Z",
-    "end": "2022-11-08T09:07:09.515Z",
-    "duration": 1468,
-    "testsRegistered": 6,
-    "passPercent": 100,
->>>>>>> giri_changes
-=======
-    "tests": 5,
-    "passes": 3,
-    "pending": 0,
-    "failures": 2,
-    "start": "2022-11-07T06:15:43.159Z",
-    "end": "2022-11-07T06:15:49.247Z",
-    "duration": 6088,
-    "testsRegistered": 5,
-    "passPercent": 60,
->>>>>>> shraddha_changes
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -54,19 +18,7 @@
   },
   "results": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "uuid": "6e26be29-a9e7-48e1-bca5-b5e565f158a2",
-=======
-      "uuid": "649bfead-a8fb-418e-8860-77109ad635af",
->>>>>>> vijay_changes
-=======
-      "uuid": "c7faa8d3-7b1b-4d3f-920a-ebe2c8a20275",
->>>>>>> giri_changes
-=======
-      "uuid": "f3f7c21b-894d-42ac-a864-4761ef021d8a",
->>>>>>> shraddha_changes
+      "uuid": "d02d3ae2-190e-4477-957b-7d85892b6d32",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -75,449 +27,113 @@
       "tests": [],
       "suites": [
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "uuid": "f5e6dfa1-52b5-4619-8aee-712e2281455a",
-          "title": "Master Branch of City",
-          "fullFile": "D:\\NTB_SA_Automation\\test\\specs\\microservices\\master-data-service\\city_master.js",
-          "file": "\\test\\specs\\microservices\\master-data-service\\city_master.js",
-=======
-          "uuid": "98877418-65da-48ea-b9de-e63e17b0c88b",
-          "title": "Shedule later Service validation",
-          "fullFile": "D:\\NTB_SA_Automation\\NTB_SA_Automation\\test\\specs\\microservices\\customer-service\\shedule_later.js",
-          "file": "\\test\\specs\\microservices\\customer-service\\shedule_later.js",
->>>>>>> vijay_changes
-=======
-          "uuid": "bfd67449-1667-4795-a337-cc39273b88e3",
-          "title": "Shedule later Service validation",
-          "fullFile": "D:\\SA Automation\\NTB_SA_Automation\\test\\specs\\microservices\\customer-service\\shedule_later.js",
-          "file": "\\test\\specs\\microservices\\customer-service\\shedule_later.js",
->>>>>>> giri_changes
-=======
-          "uuid": "fd892f12-edf7-4b4e-b0f0-43352e8c18c8",
-          "title": "Apply Credit card validation",
-          "fullFile": "D:\\SA Automation\\NTB_SA_Automation\\test\\specs\\microservices\\product-management-service\\apply_creditcard.js",
-          "file": "\\test\\specs\\microservices\\product-management-service\\apply_creditcard.js",
->>>>>>> shraddha_changes
+          "uuid": "0814d226-7dd2-4a08-90bb-b18430c81316",
+          "title": "Get User Info",
+          "fullFile": "D:\\SA Automation\\NTB_SA_Automation\\test\\specs\\microservices\\user-management-service\\user_info.js",
+          "file": "\\test\\specs\\microservices\\user-management-service\\user_info.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "title": "Get Master branch of City with valid name",
-              "fullTitle": "Master Branch of City Get Master branch of City with valid name",
+              "title": "Get User Info with valid Data",
+              "fullTitle": "Get User Info Get User Info with valid Data",
               "timedOut": false,
-              "duration": 399,
-=======
-              "title": "Verify whether shedule later with valid data",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later with valid data",
-              "timedOut": false,
-              "duration": 357,
->>>>>>> giri_changes
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-<<<<<<< HEAD
-              "context": "[\n  \"Request Method Type : GET\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/city?state=GOA\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"[{\\\"id\\\":\\\"555\\\",\\\"value\\\":\\\"690\\\",\\\"displayText\\\":\\\"NORTH GOA\\\",\\\"state\\\":\\\"68\\\"},{\\\"id\\\":\\\"554\\\",\\\"value\\\":\\\"692\\\",\\\"displayText\\\":\\\"SOUTH GOA\\\",\\\"state\\\":\\\"68\\\"}]\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "0a68111f-e3d7-4522-8112-ce33a7a01b81",
-              "parentUUID": "f5e6dfa1-52b5-4619-8aee-712e2281455a",
-=======
-              "title": "Verify whether shedule later with valid data",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later with valid data",
-              "timedOut": false,
-              "duration": 893,
-=======
-              "title": "Validate whether Credit card api is giving success response with valid data",
-              "fullTitle": "Apply Credit card validation Validate whether Credit card api is giving success response with valid data",
-              "timedOut": false,
-              "duration": 1225,
->>>>>>> shraddha_changes
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-<<<<<<< HEAD
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"4705\\\",\\\"scheduledTime\\\":\\\"2022-04-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {
-                "message": "TypeError: Cannot read property 'sheduleLaterwithValidData_response' of undefined",
-                "estack": "TypeError: Cannot read property 'sheduleLaterwithValidData_response' of undefined\n    at Context.<anonymous> (test\\specs\\microservices\\customer-service\\shedule_later.js:15:80)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": null
-              },
-              "uuid": "e02e74c0-92ca-4f85-84ac-589b86a61739",
-              "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
-=======
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-01-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "6ea07597-062e-4e77-8f8d-41e228ee0bde",
-              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
->>>>>>> giri_changes
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Verify whether shedule later without timing",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later without timing",
-              "timedOut": false,
-<<<<<<< HEAD
-              "duration": 603,
+              "duration": 67,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"4705\\\",\\\"scheduledTime\\\":\\\"2022-04-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "context": "[\n  \"Request Method Type : Not Available\",\n  \"Request URL\",\n  \"Not Available\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"Not Available\"\n]",
               "code": "",
               "err": {
-                "message": "TypeError: Cannot read property 'sheduleLaterwithoutTiming_response' of undefined",
-                "estack": "TypeError: Cannot read property 'sheduleLaterwithoutTiming_response' of undefined\n    at Context.<anonymous> (test\\specs\\microservices\\customer-service\\shedule_later.js:26:80)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "message": "AssertionError: expected undefined to deeply equal 200",
+                "estack": "AssertionError: expected undefined to deeply equal 200\n    at Context.<anonymous> (test\\specs\\microservices\\user-management-service\\user_info.js:10:45)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
                 "diff": null
               },
-              "uuid": "e126913d-bc40-4760-bc72-0db6294947e8",
-              "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
->>>>>>> vijay_changes
+              "uuid": "28d340e0-7d30-4776-a315-0abc24fd1400",
+              "parentUUID": "0814d226-7dd2-4a08-90bb-b18430c81316",
               "isHook": false,
               "skipped": false
             },
             {
-<<<<<<< HEAD
-              "title": "Get Master branch of City without state name",
-              "fullTitle": "Master Branch of City Get Master branch of City without state name",
+              "title": "Get User Info without User ID",
+              "fullTitle": "Get User Info Get User Info without User ID",
               "timedOut": false,
-              "duration": 182,
-=======
-              "duration": 238,
->>>>>>> giri_changes
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-<<<<<<< HEAD
-              "context": "[\n  \"Request Method Type : GET\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/city?state=\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"Not Available\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "e30310f7-6492-49f3-a6d5-566701450d18",
-              "parentUUID": "f5e6dfa1-52b5-4619-8aee-712e2281455a",
-=======
-              "title": "Verify whether shedule later without date",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later without date",
-              "timedOut": false,
-              "duration": 542,
+              "duration": 1,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"4705\\\",\\\"scheduledTime\\\":\\\"2022-04-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "context": "[\n  \"Request Method Type : Not Available\",\n  \"Request URL\",\n  \"Not Available\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"Not Available\"\n]",
               "code": "",
               "err": {
-                "message": "TypeError: Cannot read property 'sheduleLaterwithoutDate_response' of undefined",
-                "estack": "TypeError: Cannot read property 'sheduleLaterwithoutDate_response' of undefined\n    at Context.<anonymous> (test\\specs\\microservices\\customer-service\\shedule_later.js:37:80)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "message": "AssertionError: expected undefined to deeply equal 200",
+                "estack": "AssertionError: expected undefined to deeply equal 200\n    at Context.<anonymous> (test\\specs\\microservices\\user-management-service\\user_info.js:15:45)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
                 "diff": null
               },
-              "uuid": "ab10607f-a719-4d08-8445-5b13552b3ada",
-              "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
->>>>>>> vijay_changes
-=======
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-03-09\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "97ec34bf-831d-4091-9ffa-58dc4f1b0878",
-              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
->>>>>>> giri_changes
-=======
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/applyCreditCard\",\n  \"Request Body\",\n  \"{\\\"userId\\\":4,\\\"cardType\\\":\\\"EAVC\\\",\\\"ccApplicationDetails\\\":\\\"T6CTQcHDLpccUAeoYwqJCIZDI1TO1kNGhY3bCdJeu4qI804Y29W8PZ0OyOYTzACWJC+ZuNZfoZpexKMnmo3jtyQ/NBI4njmAp4kRUbd84kM7sPZs5xeVjPhQ67qZBV1JN2IxzNF/fZYl3u9S8GqhjC4BnGwh7Soyo7Z6V/qu/VqgDethfa17EUMV7XBAjHgFQb+5aYbcq+cuk8HXllTJ97pr/Gb+zPUXLgDCaIhbruQGaJ5X7oKFsDNuTIAuZS9skIyqu/xS+gZyITJZ+i7HpBpzjDWdHEtDTg4qev4FVFtVD6L+dhbNmzGSHO1StNvf2uXmRY20ddeHPQ6Ap482qdVizcp8yXn4Ik4eRNjAZC79JUe/q8LCI9HxSnXCKp04Ju25Q57vNiVKbr/fkeET30WdV+SyfYl/G9/uQio3mVWePpw/OmZNNxzctZAGoBB9n4cEFClkGFqLVT+XvCFr7pl6txInGkAAWIUpOHGb3uRkNFy2xpxY0FMO8tHvQ1iquAMNdzk83FvsSWPdVIOX1Xzq8/LbRUbFTWq65ZAClfsYrQ3nBW52b3g0+ZThOGxA9MXt2ygjXPzaH2XvIC12vOUmizcLJpgocMzAjwJB8OoWzeB0SiLn/C8+jrOJzKLmwS4YejKBtn60dwDTpJJVtx3hfAc1jjEri3+ik/F+/wgc4ocRgaTXIolR5b6Mp32rjtDA08wh8SyMLrcswU6fOf+FqsnKANeRCbqBWEQSzN884bilob5o/9jbgipVqSDFsr0JXT7Sn7YL7H6savD9kf87ylCHvCENh+yBHu8cx6EmkvOjXvxVfLunNozKj0TPSrW4FtbOLOHgPpE5+sif1XI8IfNF/H1+AmDkTOcoFIkpN9E6Y6Tyoia16rDnjbzoP6lFC/0YHdwG50k2UYzqQxNPvjLqTSECe+LEhJfVFlSwiXco3GUnTUahMTyQcijo2Dn1IjU27WNk5a6JHv17NZ3Q27FYVHtCKvWC2/AX9pVh/LCtgnt4PS2s5mrGjjRXqQcV81ZXO7sMQv2GAqEqyEQwaIfbbD0qSzPazEd/BPOh+sXCvbxj32H86Qv6QLjEy8fvX8lVf1aogP6t9Jeb/npvsbAKi5xpfmmbzTStBeoiqlZ5TXgIFnrfVMwyni2dEvbiVQH473fdNPSG5R5scM8j2Cm67frAIYpim5mKiTWlHOFygjrb/Vw7zngHroBGs7PtZU9QZ28wB8xKdgrXEPzgkWS1Jaaz9cDUAWNIdHVNXdiIseHS2btIJYcrROe286x9JU0HMTnCwDObF5G460M/aEpvu2dksve+I6YeDFcVciu9Byk41b4tV85BMKUgCad53BfaUbYVvNJyZ8rSgv+iqRmnNy88xOO4Vh/xyeyUfKY81nNVKz+s4AlBTm7V+m0BpJnXkx7glxYD0Xz9VXjV0K+2d73281ERCNtaC8QltrJw1yANgxWdSUWaEa/A83BHPsSMHY/52RPmHzVthvUH7dh6uLaXFzVjOnWP44Eb/7EeJqety11Ou5gJvHtTOYP7LIJCdUuiFBRHhOC9+V2m025eU+zaNPceBqixsue8Pel28GtPK0jC52b6Ce05FZkkTCoo5q3E7XQVFqQsyw==\\\"}\",\n  \"Response\",\n  \"Not Available\"\n]",
-              "code": "",
-              "err": {
-                "message": "AssertionError: expected 401 to deeply equal 200",
-                "estack": "AssertionError: expected 401 to deeply equal 200\n    at Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_creditcard.js:10:45)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 401\n+ 200\n"
-              },
-              "uuid": "cff34ddf-fea4-4cfd-adb6-79fac4f03a8d",
-              "parentUUID": "fd892f12-edf7-4b4e-b0f0-43352e8c18c8",
->>>>>>> shraddha_changes
+              "uuid": "32ce6c09-2620-4288-9cd2-a37a2fdc1e66",
+              "parentUUID": "0814d226-7dd2-4a08-90bb-b18430c81316",
               "isHook": false,
               "skipped": false
             },
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "title": "Get Master branch of City with invalid state name",
-              "fullTitle": "Master Branch of City Get Master branch of City with invalid state name",
+              "title": "Get User Info with String Data",
+              "fullTitle": "Get User Info Get User Info with String Data",
               "timedOut": false,
-              "duration": 190,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : GET\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/city?state=MP\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"[]\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "76531d65-7c53-4fb0-92f9-13776442cbcd",
-              "parentUUID": "f5e6dfa1-52b5-4619-8aee-712e2281455a",
-=======
-              "title": "Verify whether shedule later with blank data",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later with blank data",
-              "timedOut": false,
-              "duration": 579,
-=======
-              "title": "Validate whether Credit card api is giving error with Invalid data",
-              "fullTitle": "Apply Credit card validation Validate whether Credit card api is giving error with Invalid data",
-              "timedOut": false,
-              "duration": 1182,
->>>>>>> shraddha_changes
+              "duration": 1,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-<<<<<<< HEAD
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"4705\\\",\\\"scheduledTime\\\":\\\"2022-04-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "context": "[\n  \"Request Method Type : Not Available\",\n  \"Request URL\",\n  \"Not Available\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"Not Available\"\n]",
               "code": "",
               "err": {
-                "message": "TypeError: Cannot read property 'sheduleLaterwithBlankData_response' of undefined",
-                "estack": "TypeError: Cannot read property 'sheduleLaterwithBlankData_response' of undefined\n    at Context.<anonymous> (test\\specs\\microservices\\customer-service\\shedule_later.js:48:80)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "message": "AssertionError: expected undefined to deeply equal 200",
+                "estack": "AssertionError: expected undefined to deeply equal 200\n    at Context.<anonymous> (test\\specs\\microservices\\user-management-service\\user_info.js:20:45)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
                 "diff": null
               },
-              "uuid": "f2045f4b-eec0-43aa-8556-784f65ab0e37",
-              "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
-=======
-              "title": "Verify whether shedule later without date",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later without date",
-              "timedOut": false,
-              "duration": 219,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "4ebf736f-4367-4482-beb8-cbe27abe9cc0",
-              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
+              "uuid": "99f915ac-9886-40f3-acd5-1dadd2f2336d",
+              "parentUUID": "0814d226-7dd2-4a08-90bb-b18430c81316",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "Verify whether shedule later with blank data",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later with blank data",
+              "title": "Get User Info with Blank Data",
+              "fullTitle": "Get User Info Get User Info with Blank Data",
               "timedOut": false,
-              "duration": 217,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "8dcc3818-5445-485b-9c21-0f47a521d1c5",
-              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
->>>>>>> giri_changes
-=======
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/applyCreditCard\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"abc\\\",\\\"cardType\\\":\\\"123\\\",\\\"ccApplicationDetails\\\":\\\"T6CTQcHAeoYwqJCI3bCdJeu4qI804Y29W8PZ0OyOYTzACWJC+ZuNZfoZpexKMnmo3jtyQ/NBI4njmAp4kRUbd84kM7sPZs5xeVjPhQ67qZBV1JN2IxzNF/fZYl3u9S8GqhjC4BnGwh7Soyo7Z6V/qu/VqgDethfa17EUMV7XBAjHgFQb+5aYbcq+cuk8HXllTJ97pr/Gb+zPUXLgDCaIhbruQGaJ5X7oKFsDNuTIAuZS9skIyqu/xS+gZyITJZ+i7HpBpzjDWdHEtDTg4qev4FVFtVD6L+dhbNmzGSHO1StNvf2uXmRY20ddeHPQ6Ap482qdVizcp8yXn4Ik4eRNjAZC79JUe/q8LCI9HxSnXCKp04Ju25Q57vNiVKbr/fkeET30WdV+SyfYl/G9/uQio3mVWePpw/OmZNNxzctZAGoBB9n4cEFClkGFqLVT+XvCFr7pl6txInGkAAWIUpOHGb3uRkNFy2xpxY0FMO8tHvQ1iquAMNdzk83FvsSWPdVIOX1Xzq8/LbRUbFTWq65ZAClfsYrQ3nBW52b3g0+ZThOGxA9MXt2ygjXPzaH2XvIC12vOUmizcLJpgocMzAjwJB8OoWzeB0SiLn/C8+jrOJzKLmwS4YejKBtn60dwDTpJJVtx3hfAc1jjEri3+ik/F+/wgc4ocRgaTXIolR5b6Mp32rjtDA08wh8SyMLrcswU6fOf+FqsnKANeRCbqBWEQSzN884bilob5o/9jbgipVqSDFsr0JXT7Sn7YL7H6savD9kf87ylCHvCENh+yBHu8cx6EmkvOjXvxVfLunNozKj0TPSrW4FtbOLOHgPpE5+sif1XI8IfNF/H1+AmDkTOcoFIkpN9E6Y6Tyoia16rDnjbzoP6lFC/0YHdwG50k2UYzqQxNPvjLqTSECe+LEhJfVFlSwiXco3GUnTUahMTyQcijo2Dn1IjU27WNk5a6JHv17NZ3Q27FYVHtCKvWC2/AX9pVh/LCtgnt4PS2s5mrGjjRXqQcV81ZXO7sMQv2GAqEqyEQwaIfbbD0qSzPazEd/BPOh+sXCvbxj32H86Qv6QLjEy8fvX8lVf1aogP6t9Jeb/npvsbAKi5xpfmmbzTStBeoiqlZ5TXgIFnrfVMwyni2dEvbiVQH473fdNPSG5R5scM8j2Cm67frAIYpim5mKiTWlHOFygjrb/Vw7zngHroBGs7PtZU9QZ28wB8xKdgrXEPzgkWS1Jaaz9cDUAWNIdHVNXdiIseHS2btIJYcrROe286x9JU0HMTnCwDObF5G460M/aEpvu2dksve+I6YeDFcVciu9Byk41b4tV85BMKUgCad53BfaUbYVvNJyZ8rSgv+iqRmnNy88xOO4Vh/xyeyUfKY81nNVKz+s4AlBTm7V+m0BpJnXkx7glxYD0Xz9VXjV0K+2d73281ERCNtaC8QltrJw1yANgxWdSUWaEa/A83BHPsSMHY/52RPmHzVthvUH7dh6uLaXFzVjOnWP44Eb/7EeJqety11Ou5gJvHtTOYP7LIJCdUuiFBRHhOC9+V2m025eU+zaNPceBqixsue8Pel28GtPK0jC52b6Ce05FZkkTCoo5q3E7XQVFqQsyw==\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Sorry, our system is facing a technical error. Please retry after sometime..\\\",\\\"responseCd\\\":\\\"05\\\"}\"\n]",
-              "code": "",
-              "err": {
-                "message": "AssertionError: expected 200 to not deeply equal 200",
-                "estack": "AssertionError: expected 200 to not deeply equal 200\n    at Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_creditcard.js:18:46)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": ""
-              },
-              "uuid": "f3754582-88b2-478e-a62a-3f7325abfc43",
-              "parentUUID": "fd892f12-edf7-4b4e-b0f0-43352e8c18c8",
->>>>>>> shraddha_changes
-              "isHook": false,
-              "skipped": false
-            },
-            {
-<<<<<<< HEAD
-              "title": "Verify whether shedule later with previous date",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later with previous date",
-              "timedOut": false,
-<<<<<<< HEAD
-              "duration": 1283,
+              "duration": 1,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"4705\\\",\\\"scheduledTime\\\":\\\"2022-04-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "context": "[\n  \"Request Method Type : Not Available\",\n  \"Request URL\",\n  \"Not Available\",\n  \"Request Body\",\n  \"Not Available\",\n  \"Response\",\n  \"Not Available\"\n]",
               "code": "",
               "err": {
-                "message": "TypeError: Cannot read property 'sheduleLaterwithPreviousDate_response' of undefined",
-                "estack": "TypeError: Cannot read property 'sheduleLaterwithPreviousDate_response' of undefined\n    at Context.<anonymous> (test\\specs\\microservices\\customer-service\\shedule_later.js:59:80)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "message": "AssertionError: expected undefined to deeply equal 200",
+                "estack": "AssertionError: expected undefined to deeply equal 200\n    at Context.<anonymous> (test\\specs\\microservices\\user-management-service\\user_info.js:25:45)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
                 "diff": null
               },
-              "uuid": "11121cf8-28de-4c99-9b8f-b96edee2fdf4",
-              "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
-=======
-              "duration": 215,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-03-09T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "f7b1b45b-e18d-4548-8254-df7922c840b5",
-              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
->>>>>>> giri_changes
-=======
-              "title": "Validate whether Credit card api is giving error with blank data",
-              "fullTitle": "Apply Credit card validation Validate whether Credit card api is giving error with blank data",
-              "timedOut": false,
-              "duration": 1102,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/applyCreditCard\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"\\\",\\\"cardType\\\":\\\"\\\",\\\"ccApplicationDetails\\\":\\\"T6CTQcHDLpccUAeoYwqJCIZDI1TO1kNGhY3bCdJeu4qI804Y29W8PZ0OyOYTzACWJC+ZuNZfoZpexKMnmo3jtyQ/NBI4njmAp4kRUbd84kM7sPZs5xeVjPhQ67qZBV1JN2IxzNF/fZYl3u9S8GqhjC4BnGwh7Soyo7Z6V/qu/VqgDethfa17EUMV7XBAjHgFQb+5aYbcq+cuk8HXllTJ97pr/Gb+zPUXLgDCaIhbruQGaJ5X7oKFsDNuTIAuZS9skIyqu/xS+gZyITJZ+i7HpBpzjDWdHEtDTg4qev4FVFtVD6L+dhbNmzGSHO1StNvf2uXmRY20ddeHPQ6Ap482qdVizcp8yXn4Ik4eRNjAZC79JUe/q8LCI9HxSnXCKp04Ju25Q57vNiVKbr/fkeET30WdV+SyfYl/G9/uQio3mVWePpw/OmZNNxzctZAGoBB9n4cEFClkGFqLVT+XvCFr7pl6txInGkAAWIUpOHGb3uRkNFy2xpxY0FMO8tHvQ1iquAMNdzk83FvsSWPdVIOX1Xzq8/LbRUbFTWq65ZAClfsYrQ3nBW52b3g0+ZThOGxA9MXt2ygjXPzaH2XvIC12vOUmizcLJpgocMzAjwJB8OoWzeB0SiLn/C8+jrOJzKLmwS4YejKBtn60dwDTpJJVtx3hfAc1jjEri3+ik/F+/wgc4ocRgaTXIolR5b6Mp32rjtDA08wh8SyMLrcswU6fOf+FqsnKANeRCbqBWEQSzN884bilob5o/9jbgipVqSDFsr0JXT7Sn7YL7H6savD9kf87ylCHvCENh+yBHu8cx6EmkvOjXvxVfLunNozKj0TPSrW4FtbOLOHgPpE5+sif1XI8IfNF/H1+AmDkTOcoFIkpN9E6Y6Tyoia16rDnjbzoP6lFC/0YHdwG50k2UYzqQxNPvjLqTSECe+LEhJfVFlSwiXco3GUnTUahMTyQcijo2Dn1IjU27WNk5a6JHv17NZ3Q27FYVHtCKvWC2/AX9pVh/LCtgnt4PS2s5mrGjjRXqQcV81ZXO7sMQv2GAqEqyEQwaIfbbD0qSzPazEd/BPOh+sXCvbxj32H86Qv6QLjEy8fvX8lVf1aogP6t9Jeb/npvsbAKi5xpfmmbzTStBeoiqlZ5TXgIFnrfVMwyni2dEvbiVQH473fdNPSG5R5scM8j2Cm67frAIYpim5mKiTWlHOFygjrb/Vw7zngHroBGs7PtZU9QZ28wB8xKdgrXEPzgkWS1Jaaz9cDUAWNIdHVNXdiIseHS2btIJYcrROe286x9JU0HMTnCwDObF5G460M/aEpvu2dksve+I6YeDFcVciu9Byk41b4tV85BMKUgCad53BfaUbYVvNJyZ8rSgv+iqRmnNy88xOO4Vh/xyeyUfKY81nNVKz+s4AlBTm7V+m0BpJnXkx7glxYD0Xz9VXjV0K+2d73281ERCNtaC8QltrJw1yANgxWdSUWaEa/A83BHPsSMHY/52RPmHzVthvUH7dh6uLaXFzVjOnWP44Eb/7EeJqety11Ou5gJvHtTOYP7LIJCdUuiFBRHhOC9+V2m025eU+zaNPceBqixsue8Pel28GtPK0jC52b6Ce05FZkkTCoo5q3E7XQVFqQsyw==\\\"}\",\n  \"Response\",\n  \"Not Available\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "e6f309de-4514-4a3e-a19f-b17e3b0ab98c",
-              "parentUUID": "fd892f12-edf7-4b4e-b0f0-43352e8c18c8",
->>>>>>> shraddha_changes
-              "isHook": false,
-              "skipped": false
-            },
-            {
-<<<<<<< HEAD
-              "title": "Verify whether shedule later with slot after two days",
-              "fullTitle": "Shedule later Service validation Verify whether shedule later with slot after two days",
-              "timedOut": false,
-<<<<<<< HEAD
-              "duration": 560,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"4705\\\",\\\"scheduledTime\\\":\\\"2022-04-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {
-                "message": "TypeError: Cannot read property 'sheduleLaterwithSlotAfterTwodays_response' of undefined",
-                "estack": "TypeError: Cannot read property 'sheduleLaterwithSlotAfterTwodays_response' of undefined\n    at Context.<anonymous> (test\\specs\\microservices\\customer-service\\shedule_later.js:70:80)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": null
-              },
-              "uuid": "7be2d8c4-6ede-4cd2-8efa-e5fb6f2b2583",
-              "parentUUID": "98877418-65da-48ea-b9de-e63e17b0c88b",
->>>>>>> vijay_changes
-=======
-              "duration": 210,
-=======
-              "title": "Validate whether Credit card api is giving error with empty Card Type data",
-              "fullTitle": "Apply Credit card validation Validate whether Credit card api is giving error with empty Card Type data",
-              "timedOut": false,
-              "duration": 1100,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/applyCreditCard\",\n  \"Request Body\",\n  \"{\\\"userId\\\":4,\\\"cardType\\\":\\\"\\\",\\\"ccApplicationDetails\\\":\\\"T6CTQcHDLpccUAeoYwqJCIZDI1TO1kNGhY3bCdJeu4qI804Y29W8PZ0OyOYTzACWJC+ZuNZfoZpexKMnmo3jtyQ/NBI4njmAp4kRUbd84kM7sPZs5xeVjPhQ67qZBV1JN2IxzNF/fZYl3u9S8GqhjC4BnGwh7Soyo7Z6V/qu/VqgDethfa17EUMV7XBAjHgFQb+5aYbcq+cuk8HXllTJ97pr/Gb+zPUXLgDCaIhbruQGaJ5X7oKFsDNuTIAuZS9skIyqu/xS+gZyITJZ+i7HpBpzjDWdHEtDTg4qev4FVFtVD6L+dhbNmzGSHO1StNvf2uXmRY20ddeHPQ6Ap482qdVizcp8yXn4Ik4eRNjAZC79JUe/q8LCI9HxSnXCKp04Ju25Q57vNiVKbr/fkeET30WdV+SyfYl/G9/uQio3mVWePpw/OmZNNxzctZAGoBB9n4cEFClkGFqLVT+XvCFr7pl6txInGkAAWIUpOHGb3uRkNFy2xpxY0FMO8tHvQ1iquAMNdzk83FvsSWPdVIOX1Xzq8/LbRUbFTWq65ZAClfsYrQ3nBW52b3g0+ZThOGxA9MXt2ygjXPzaH2XvIC12vOUmizcLJpgocMzAjwJB8OoWzeB0SiLn/C8+jrOJzKLmwS4YejKBtn60dwDTpJJVtx3hfAc1jjEri3+ik/F+/wgc4ocRgaTXIolR5b6Mp32rjtDA08wh8SyMLrcswU6fOf+FqsnKANeRCbqBWEQSzN884bilob5o/9jbgipVqSDFsr0JXT7Sn7YL7H6savD9kf87ylCHvCENh+yBHu8cx6EmkvOjXvxVfLunNozKj0TPSrW4FtbOLOHgPpE5+sif1XI8IfNF/H1+AmDkTOcoFIkpN9E6Y6Tyoia16rDnjbzoP6lFC/0YHdwG50k2UYzqQxNPvjLqTSECe+LEhJfVFlSwiXco3GUnTUahMTyQcijo2Dn1IjU27WNk5a6JHv17NZ3Q27FYVHtCKvWC2/AX9pVh/LCtgnt4PS2s5mrGjjRXqQcV81ZXO7sMQv2GAqEqyEQwaIfbbD0qSzPazEd/BPOh+sXCvbxj32H86Qv6QLjEy8fvX8lVf1aogP6t9Jeb/npvsbAKi5xpfmmbzTStBeoiqlZ5TXgIFnrfVMwyni2dEvbiVQH473fdNPSG5R5scM8j2Cm67frAIYpim5mKiTWlHOFygjrb/Vw7zngHroBGs7PtZU9QZ28wB8xKdgrXEPzgkWS1Jaaz9cDUAWNIdHVNXdiIseHS2btIJYcrROe286x9JU0HMTnCwDObF5G460M/aEpvu2dksve+I6YeDFcVciu9Byk41b4tV85BMKUgCad53BfaUbYVvNJyZ8rSgv+iqRmnNy88xOO4Vh/xyeyUfKY81nNVKz+s4AlBTm7V+m0BpJnXkx7glxYD0Xz9VXjV0K+2d73281ERCNtaC8QltrJw1yANgxWdSUWaEa/A83BHPsSMHY/52RPmHzVthvUH7dh6uLaXFzVjOnWP44Eb/7EeJqety11Ou5gJvHtTOYP7LIJCdUuiFBRHhOC9+V2m025eU+zaNPceBqixsue8Pel28GtPK0jC52b6Ce05FZkkTCoo5q3E7XQVFqQsyw==\\\"}\",\n  \"Response\",\n  \"Not Available\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "6a6f7d99-7488-4b07-aa5d-4771e5f49604",
-              "parentUUID": "fd892f12-edf7-4b4e-b0f0-43352e8c18c8",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Validate whether Credit card api is giving error with empty Card details data",
-              "fullTitle": "Apply Credit card validation Validate whether Credit card api is giving error with empty Card details data",
-              "timedOut": false,
-              "duration": 1463,
->>>>>>> shraddha_changes
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-<<<<<<< HEAD
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"5125\\\",\\\"scheduledTime\\\":\\\"2022-03-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "556a8c73-d804-4393-a7b9-54b8dd2f7905",
-              "parentUUID": "bfd67449-1667-4795-a337-cc39273b88e3",
->>>>>>> giri_changes
-=======
-              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/applyCreditCard\",\n  \"Request Body\",\n  \"{\\\"userId\\\":4,\\\"cardType\\\":\\\"EAVC\\\",\\\"ccApplicationDetails\\\":\\\"\\\"}\",\n  \"Response\",\n  \"Not Available\"\n]",
-              "code": "",
-              "err": {},
-              "uuid": "ef4a7664-0047-4a1d-a4bd-670997b6c4b8",
-              "parentUUID": "fd892f12-edf7-4b4e-b0f0-43352e8c18c8",
->>>>>>> shraddha_changes
+              "uuid": "fb979293-a64e-41a8-be64-580d6e01ace5",
+              "parentUUID": "0814d226-7dd2-4a08-90bb-b18430c81316",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-<<<<<<< HEAD
-          "passes": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "0a68111f-e3d7-4522-8112-ce33a7a01b81",
-            "e30310f7-6492-49f3-a6d5-566701450d18",
-            "76531d65-7c53-4fb0-92f9-13776442cbcd"
-=======
           "passes": [],
           "failures": [
-            "e02e74c0-92ca-4f85-84ac-589b86a61739",
-            "e126913d-bc40-4760-bc72-0db6294947e8",
-            "ab10607f-a719-4d08-8445-5b13552b3ada",
-            "f2045f4b-eec0-43aa-8556-784f65ab0e37",
-            "11121cf8-28de-4c99-9b8f-b96edee2fdf4",
-            "7be2d8c4-6ede-4cd2-8efa-e5fb6f2b2583"
->>>>>>> vijay_changes
-=======
-            "6ea07597-062e-4e77-8f8d-41e228ee0bde",
-            "97ec34bf-831d-4091-9ffa-58dc4f1b0878",
-            "4ebf736f-4367-4482-beb8-cbe27abe9cc0",
-            "8dcc3818-5445-485b-9c21-0f47a521d1c5",
-            "f7b1b45b-e18d-4548-8254-df7922c840b5",
-            "556a8c73-d804-4393-a7b9-54b8dd2f7905"
->>>>>>> giri_changes
-=======
-            "e6f309de-4514-4a3e-a19f-b17e3b0ab98c",
-            "6a6f7d99-7488-4b07-aa5d-4771e5f49604",
-            "ef4a7664-0047-4a1d-a4bd-670997b6c4b8"
+            "28d340e0-7d30-4776-a315-0abc24fd1400",
+            "32ce6c09-2620-4288-9cd2-a37a2fdc1e66",
+            "99f915ac-9886-40f3-acd5-1dadd2f2336d",
+            "fb979293-a64e-41a8-be64-580d6e01ace5"
           ],
-          "failures": [
-            "cff34ddf-fea4-4cfd-adb6-79fac4f03a8d",
-            "f3754582-88b2-478e-a62a-3f7325abfc43"
->>>>>>> shraddha_changes
-          ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "duration": 771,
-=======
-          "duration": 4460,
->>>>>>> vijay_changes
-=======
-          "duration": 1456,
->>>>>>> giri_changes
-=======
-          "duration": 6072,
->>>>>>> shraddha_changes
+          "duration": 70,
           "root": false,
           "rootEmpty": false,
           "_timeout": 90000
