@@ -1,6 +1,7 @@
 const homepage = require("../../pages/web/homepage.page");
 const { expect } = require("chai");
 const invalidTestData = require("../../../test-data/web/invalid_test_data.json");
+const validtestData=require("../../../test-data/web/valid_test_data.json");
 const labelConstants = require("../../../test-data/web/label_constants.json");
 
 describe("Homepage Validation", () => {
@@ -30,13 +31,21 @@ describe("Homepage Validation", () => {
 
         await expect(await homepage.getMobileNumber(await homepage.setValueToMobileNum(invalidTestData.mobileNumber.containingSplChars))).to.be.eql("");
     });
-    it("Validate whether User  able to enter only 10 digits in the mobile number field", async () => {
-        await homepage.setValueToMobileNum(invalidTestData.mobileNumber.lengthMoreThan10Digits);
-        await driver.pause(7000);
-        let mobileNum = await homepage.getMobileNumber();
-
-        await console.log("############", mobileNum);
-
-        // await expect(mobileNum.length).to.be.eql(10);
+    it("Validate adhar text box should allow 12 digit number", async () => {
+     
+        await homepage.setvaluetoAdharNumber(validtestData.mobileNumber.adharnumber);
+        await driver.pause(2000);
+        await expect(await homepage.getvalueAdharNumber()).to.be.eql();     
     });
+
+    it("verify the placeholder for the Aadhaar section", async () => {
+        console.log("#####",homepage.getplaceholderAdhaartext());
+       await expect(await homepage.getplaceholderAdhaartext()).to.be.eql(labelConstants.placeholdertextAdhar);
+    });
+
+    it("verify the hint text message for the Aadhaar section", async () => {
+        await homepage.setvaluetoAdharNumber(invalidTestData.mobileNumber.adharnumber);
+        await expect(await homepage.getAdharhinttext()).to.be.eql(labelConstants.adharhintAdhaar);
+   });
+
 });

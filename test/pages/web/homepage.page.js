@@ -6,6 +6,10 @@ class Homepage {
         this.termsAndCondHintText = "//p[text()='*T&C apply']";
         this.plusNintyOneText = "//p[text()='+91']";
         this.mobileNumberHintText = '//label[@for="mobileNumber"]';
+        this.adharNumber='#aadhaar';
+        this.adharMaskIcon='//*[@id="formName"]/div[2]/div[2]/div/div/div/div/div';
+        this.placeholderforAdhartext="//label[@for='aadhaar']";
+        this.hinttextAdhar="//label[contains(text(),'12-digit Aadhaar number or 16-digit Virtual ID')]";
     }
 
     async waitUntilHomepageLoad() {
@@ -29,11 +33,21 @@ class Homepage {
     async isPlusNintyOneTextDispalyed() {
         return await $(this.plusNintyOneText).isDisplayed();
     }
-    async getMobileNumberHintText() {
-        return await $(this.mobileNumberHintText).getText();
+    async setvaluetoAdharNumber(value){
+        return await $(this.adharNumber).setValue(value);
     }
-    async getMobileNumber() {
-        return await $(this.mobileNumber).getText();
+    async getvalueAdharNumber(){
+        return await $(this.adharNumber).getValue();
     }
+    async clickAdharMaskedIcon(){
+        return await $(this.adharMaskIcon).click();
+    }
+    async getplaceholderAdhaartext(){
+        return await $(this.placeholderforAdhartext).getText();
+    }
+    async getAdharhinttext(){
+        return await $(this.hinttextAdhar).getText();
+    }
+
 }
 module.exports = new Homepage();
