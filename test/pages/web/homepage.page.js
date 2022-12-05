@@ -6,6 +6,9 @@ class Homepage {
         this.termsAndCondHintText = "//p[text()='*T&C apply']";
         this.plusNintyOneText = "//p[text()='+91']";
         this.mobileNumberHintText = '//label[@for="mobileNumber"]';
+        this.email = "#emailId"
+        this.errorTextForEmailId = "//label[text() = 'Please enter a valid email address']"
+        this.emailIdHintText = "//label[text()='Email address']";
     }
 
     async waitUntilHomepageLoad() {
@@ -35,5 +38,32 @@ class Homepage {
     async getMobileNumber() {
         return await $(this.mobileNumber).getText();
     }
+
+    // anand_changes
+
+    async setValueToEmailId(value){
+        return await $(this.email).setValue(value);
+    }
+
+    async isEmailIdFeildDisplayed(){
+        return await $(this.email).isDisplayed();
+    }
+
+    async isErrorTextForEmailIdDisplayed(){
+        return await $(this.errorTextForEmailId).isDisplayed();
+    }
+
+    async isEmailIdHintTextDisplayed(){
+        return await $(this.emailIdHintText).isDisplayed();
+    }
+
+    async getEmailId() {
+        return await $(this.email).getText()
+    }
+
+    async clearEmail(){
+        return await $(this.email).clearValue();
+    }
+
 }
 module.exports = new Homepage();

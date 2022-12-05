@@ -1,0 +1,22 @@
+{
+    "emailId" : {
+        "validEmailId" : "idfc@idfc.com",
+        "validEmailIdWithDot" : "idfc.bank@idfc.com",
+        "validEmailIdWithDotInDomain" : "idfc@idfc.bank.com",
+        "EmailIdWithAddOperator" : "idfc+first@bank.com",
+        "EmailIdWithQuotes" : "'idfc'@idfc.com",
+        "EmailIdWithDigitsInAddress" : "1234567890@idfc.com",
+        "EmailIdWithUnderscoreInAddress" : "idfc_bank@idfc.com",
+        "EmailIdWithDashInAddress" : "idfc-bank@idfc.com",
+        "EmailIdWithMissingAtAndDomain" : "idfcbankidfc",
+        "EmailIdWithGarbage" : "idas';/.das';/][da",
+        "EmailIdWith2AtSigns" : "idfc_bank@@idfc.com",
+        "EmailIdWithMultipleDots" : "idfc...bank@idfc.com",
+        "EmailIdWithMissingDomain" : "idfcbank@idfc",
+        "EmailIdWithDotWebAsDomain" : "idfcbank@idfc.web",
+        "EmailIdWithMoreThan40Characters": "idfcfirstbankidfcfirstbankidfcfirstbankidfcfirstbank@idfc.com",
+        "EmailIdWithMissingUsername" : "@idfc.com",
+        "EmailIdWithLeadingDots" : "...idfcbank@idfc.com",
+        "EmailIdWithTrailingDots" : "...idfcbank@idfc.com"
+    }
+}
