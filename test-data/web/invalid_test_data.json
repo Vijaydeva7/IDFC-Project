@@ -3,6 +3,19 @@
     "toTestPlus91": "9123114708",
     "containingAlphabets": "KYHRFJG",
     "containingSplChars": "%$&%*%()-",
-    "lengthMoreThan10Digits": "766719755912345"
+    "lengthMoreThan10Digits": "766719755912345",
+    "blankSpace":"995  2345",
+    "secialCharAlph": "$%#ABc",
+    "only10DigMobileNum": "970113344697676",
+    "tenZerosEnter": "0000000000",
+    "lessThanTenNumbers": "876544",
+    "zeroAsIntial": "0342673653",
+    "zero": "0123456789",
+    "one": "1234567890",
+    "two": "2345678912",
+    "three": "3456789123",
+    "four": "4567891234",
+    "five": "5678912345",
+    "tenBlankSpaces": "          "
   }
 }
