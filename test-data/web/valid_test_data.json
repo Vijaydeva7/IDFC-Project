@@ -4,7 +4,11 @@
       "containingAlphabets": "KYHRFJG",
       "containingSplChars": "%$&%*%()-",
       "lengthMoreThan10Digits": "766719755912345",
-      "adharnumber":"939106450965"
+      "adharnumber":"939106450965",
+      "adharnumberlessthan12digits":"93910645",
+      "EmailId":"c.giriprasad1@gmail.com",
+      "PANID":"AWRPC6295L"
+
     }
   }
   

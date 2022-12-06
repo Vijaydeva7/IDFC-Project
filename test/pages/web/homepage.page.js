@@ -10,6 +10,13 @@ class Homepage {
         this.adharMaskIcon='//*[@id="formName"]/div[2]/div[2]/div/div/div/div/div';
         this.placeholderforAdhartext="//label[@for='aadhaar']";
         this.hinttextAdhar="//label[contains(text(),'12-digit Aadhaar number or 16-digit Virtual ID')]";
+        this.cancelButtonemailpopup="//div[contains(text(),'Cancel')]";
+        this.enterEmailAddress="//input[@id='emailId']";
+        this.panId="//input[@id='panNumber']";
+        this.getOTPButton="//button[@id='getOtpBtn']";
+        this.errorAdharhinttext="//label[contains(text(),'Please enter a valid 12-digit Aadhaar number or 16')]";
+        this.otpOnMobile="//input[@id='otp']";
+        this.verifyAdharbutton="//button[@id='verifyAadharBtn']";
     }
 
     async waitUntilHomepageLoad() {
@@ -36,8 +43,8 @@ class Homepage {
     async setvaluetoAdharNumber(value){
         return await $(this.adharNumber).setValue(value);
     }
-    async getvalueAdharNumber(){
-        return await $(this.adharNumber).getValue();
+    async getvalueAdharNumber(value){
+        return await $(this.adharNumber).getValue(value);
     }
     async clickAdharMaskedIcon(){
         return await $(this.adharMaskIcon).click();
@@ -48,6 +55,42 @@ class Homepage {
     async getAdharhinttext(){
         return await $(this.hinttextAdhar).getText();
     }
+    async getvalueAdharNumberText(){
+        return await $(this.adharNumber).getText();
+    }
+    async clickCancelOnEmailPopup(){
+        return await $(this.cancelButtonemailpopup).click();
+    }
+    async EnterEmailAddress(value){
+        return await $(this.enterEmailAddress).setValue(value); 
+    }
+    async EnterPanAddress(value){
+        return await $(this.panId).setValue(value); 
+    }
+    async getOTPAdharbutton(){
+        return await $(this.getOTPButton).isEnabled();
+    }
+    async errorHintTextAdhar(){
+        return await $(this.errorAdharhinttext).getText();
+    }
+    async clickOnOTPAdharvalidatebutton(){
+        return await $(this.getOTPButton).click();
+    }
+    async EnterOTPreceivedonMobile(){
+        return await $(this.otpOnMobile).click();
+    }
+
+    async clickonverifyAdharbuttonEnabled(){
+        return await $(this.verifyAdharbutton).click();
+    }
+
+    async clickonverifyAdharbuttonEnabled(){
+        return await $(this.verifyAdharbutton).sendKeys();
+    }
+    async clickonAdharvaluefield(){
+        return await $(this.adharNumber).click();
+    }
+    
 
 }
 module.exports = new Homepage();

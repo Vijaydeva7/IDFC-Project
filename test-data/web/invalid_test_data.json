@@ -4,6 +4,9 @@
     "containingAlphabets": "KYHRFJG",
     "containingSplChars": "%$&%*%()-",
     "lengthMoreThan10Digits": "766719755912345",
-    "adharnumber":"939106450965"
+    "adharnumber":"939106450965",
+    "decimaladhar":".939106450965",
+    "adharwithspace":" 93910 6450965",
+    "invalidAdhar":"93910645096"
   }
 }
