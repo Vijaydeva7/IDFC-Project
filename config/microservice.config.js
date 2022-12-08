@@ -4,18 +4,19 @@ module.exports = {
   timeout: 90000,
   spec: [
 
-    "./test/specs/microservices/experience-layer-service/aadhar_authentication.js",
+    "./test/specs/microservices/experience-layer-service/aadhar_otp_validation.js",
+    // "./test/specs/microservices/experience-layer-service/aadhar_authentication.js",
     // "./test/specs/microservices/Account-services/create_account.js",
-    "./test/specs/microservices/master-data-service/city_master.js",
-    "./test/specs/microservices/master-data-service/state_master.js",
-    "./test/specs/microservices/master-data-service/nearest_branch.js",
+    // "./test/specs/microservices/master-data-service/city_master.js",
+    // "./test/specs/microservices/master-data-service/state_master.js",
+    // "./test/specs/microservices/master-data-service/nearest_branch.js",
 
 
     // "./test/specs/microservices/customer-service/shedule_later.js",
     // "./test/specs/microservices/master-data-service/nearest_branch.js",
     // "./test/specs/microservices/master-data-service/nearest_branch.js",
-    // "./test/specs/microservices/user-management-service/user_info.js"
-    // "./test/specs/microservices/product-management-service/apply_hospicash.js",
+    // "./test/specs/microservices/user-management-service/user_info.js",
+    // "./test/specs/microservices/product-management-service/apply_hospicash.js"
   ],
   reporter: "node_modules/mochawesome",
   "reporter-option": [

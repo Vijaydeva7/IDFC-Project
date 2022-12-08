@@ -45,7 +45,16 @@
     }
 
   },
-  "Aadhar_Otp_Validation": {},
+  "Aadhar_Otp_Validation": {
+    "AOVWithValidData_request":{
+        "uid": "FU3wFvFcF2luDmhXDBGuuw==",
+        "otpTxn": "20221206105515402e799e",
+        "emailId":"gandhias01@gmail.com",
+        "panNumber":"3MgIrYplFUxMXNMYUZNSxg==",
+        "otp": "567135",
+        "mobileNumber": "9404779400"
+    }
+  },
 
   "Fraud_Check": {
     "fraudcheckwithvalidcustomer_request": {

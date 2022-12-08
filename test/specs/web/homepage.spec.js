@@ -131,10 +131,10 @@ describe("Homepage Validation : ", () => {
     })
 
     it("Verify whether the email id field not accepts more than 40 characters",async() => {
-        await homepage.setValueToEmailId(validTestData.emailId.validEmailId)
+        await homepage.setValueToEmailId(validTestData.emailId.EmailIdWithMoreThan40Characters)
 
-        let email = await homepage.getEmailId();
-        await expect(email.length).not.be.eql(40);
+        // let email = await homepage.getEmailId();
+        // await expect(email.length).not.be.eql(40);
         await expect(await homepage.isErrorTextForEmailIdDisplayed()).to.be.eql(true);
         await homepage.clearEmail();
     })

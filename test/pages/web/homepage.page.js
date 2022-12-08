@@ -58,11 +58,15 @@ class Homepage {
     }
 
     async getEmailId() {
-        return await $(this.email).getText()
+        return await $(this.email).getAttribute('value');
     }
 
-    async clearEmail(){
-        return await $(this.email).clearValue();
+    async clearEmail() {
+        const email =  await $(this.email).getAttribute('value');
+
+        for (var index = 1; index <= email.length; index++) {
+            await driver.keys(['Backspace']);
+        }
     }
 
 }
