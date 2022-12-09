@@ -1,3 +1,8 @@
 {
-  "mobileNumHintText": "Mobile number registered with Aadhaar"
+  "mobileNumHintText": "Mobile number registered with Aadhaar",
+  "placeholdertextAdhar":"12-digit Aadhaar number or 16-digit Virtual ID",
+  "adharhintAdhaar":"12-digit Aadhaar number or 16-digit Virtual ID",
+  "adharErrorhinttext":"Please enter a valid 12-digit Aadhaar number or 16-digit Virtual ID",
+  "maxLimitAdharText":"Please provide valid Aadhaar number or VID to open account"
 }
+

@@ -1,5 +1,6 @@
 {
   "stats": {
+<<<<<<< HEAD
     "suites": 1,
     "tests": 1,
     "passes": 1,
@@ -10,6 +11,18 @@
     "duration": 6792,
     "testsRegistered": 1,
     "passPercent": 100,
+=======
+    "suites": 2,
+    "tests": 11,
+    "passes": 6,
+    "pending": 0,
+    "failures": 5,
+    "start": "2022-12-06T03:59:57.345Z",
+    "end": "2022-12-06T03:59:59.405Z",
+    "duration": 2060,
+    "testsRegistered": 11,
+    "passPercent": 54.54545454545454,
+>>>>>>> giri_changes
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +31,11 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "uuid": "99e6d635-7609-452b-90d2-9ed529ffd373",
+=======
+      "uuid": "546641b2-07ff-456e-94c3-c0f3ea5b4ca4",
+>>>>>>> giri_changes
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,40 +44,303 @@
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "3287315a-6689-4084-9d79-49032f65e787",
           "title": "Aadhar OTP Validation",
           "fullFile": "D:\\NTB_SA_Automation\\test\\specs\\microservices\\experience-layer-service\\aadhar_otp_validation.js",
           "file": "\\test\\specs\\microservices\\experience-layer-service\\aadhar_otp_validation.js",
+=======
+          "uuid": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
+          "title": "Shedule later Service validation",
+          "fullFile": "D:\\SA Automation\\NTB_SA_Automation\\test\\specs\\microservices\\customer-service\\shedule_later.js",
+          "file": "\\test\\specs\\microservices\\customer-service\\shedule_later.js",
+>>>>>>> giri_changes
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
               "title": "Validating Aadhar by OTP with Valid Data",
               "fullTitle": "Aadhar OTP Validation Validating Aadhar by OTP with Valid Data",
               "timedOut": false,
               "duration": 6787,
+=======
+              "title": "Verify whether shedule later with valid data",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later with valid data",
+              "timedOut": false,
+              "duration": 616,
+>>>>>>> giri_changes
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
+<<<<<<< HEAD
               "pending": false,
               "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/aadhar/validateOtp\",\n  \"Request Body\",\n  \"{\\\"uid\\\":\\\"FU3wFvFcF2luDmhXDBGuuw==\\\",\\\"otpTxn\\\":\\\"20221207151605899e76b6\\\",\\\"emailId\\\":\\\"gandhias01@gmail.com\\\",\\\"panNumber\\\":\\\"3MgIrYplFUxMXNMYUZNSxg==\\\",\\\"otp\\\":\\\"567135\\\",\\\"mobileNumber\\\":\\\"9404779400\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please enter the correct OTP.\\\",\\\"responseCd\\\":\\\"400\\\",\\\"userId\\\":0}\"\n]",
               "code": "",
               "err": {},
               "uuid": "3cd98518-2a79-446c-b6c0-1b22430a2079",
               "parentUUID": "3287315a-6689-4084-9d79-49032f65e787",
+=======
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"7844\\\",\\\"scheduledTime\\\":\\\"2022-01-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "572d8493-8549-4b18-aaec-117e42363358",
+              "parentUUID": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether shedule later without timing",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later without timing",
+              "timedOut": false,
+              "duration": 317,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"7844\\\",\\\"scheduledTime\\\":\\\"2022-03-09\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "50acf8e5-44e4-4e81-855a-9e2142b4bac7",
+              "parentUUID": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether shedule later without date",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later without date",
+              "timedOut": false,
+              "duration": 304,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"7844\\\",\\\"scheduledTime\\\":\\\"T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "48f3c7f2-afae-4a80-b79d-4a8c9048b857",
+              "parentUUID": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether shedule later with blank data",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later with blank data",
+              "timedOut": false,
+              "duration": 253,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"7844\\\",\\\"scheduledTime\\\":\\\"\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "6ca92dda-d70b-4a26-b01b-449ff8cd8b2b",
+              "parentUUID": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether shedule later with previous date",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later with previous date",
+              "timedOut": false,
+              "duration": 298,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"7844\\\",\\\"scheduledTime\\\":\\\"2022-03-09T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "bbbac479-8a15-42c2-95aa-e7f17a6c7016",
+              "parentUUID": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether shedule later with slot after two days",
+              "fullTitle": "Shedule later Service validation Verify whether shedule later with slot after two days",
+              "timedOut": false,
+              "duration": 247,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Request Method Type : POST\",\n  \"Request URL\",\n  \"https://app.qa-opt.idfcfirstbank.com/api/ntb/v1/vkyc/scheduleLater\",\n  \"Request Body\",\n  \"{\\\"userId\\\":\\\"7844\\\",\\\"scheduledTime\\\":\\\"2022-03-11T13:00:00\\\"}\",\n  \"Response\",\n  \"{\\\"status\\\":\\\"ERROR\\\",\\\"message\\\":\\\"Please wait while we get your details ready for video KYC.\\\",\\\"responseCd\\\":\\\"VKYC2\\\"}\"\n]",
+              "code": "",
+              "err": {},
+              "uuid": "559b04ba-757f-48b5-91c2-f6e123564487",
+              "parentUUID": "3d158600-162d-4c3d-b2e9-418dc112d4f2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3cd98518-2a79-446c-b6c0-1b22430a2079"
+            "572d8493-8549-4b18-aaec-117e42363358",
+            "50acf8e5-44e4-4e81-855a-9e2142b4bac7",
+            "48f3c7f2-afae-4a80-b79d-4a8c9048b857",
+            "6ca92dda-d70b-4a26-b01b-449ff8cd8b2b",
+            "bbbac479-8a15-42c2-95aa-e7f17a6c7016",
+            "559b04ba-757f-48b5-91c2-f6e123564487"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+          "duration": 2035,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "4968df56-8728-4491-b2d4-6cc73cd00c57",
+          "title": "Apply HospiCash validation",
+          "fullFile": "D:\\SA Automation\\NTB_SA_Automation\\test\\specs\\microservices\\product-management-service\\apply_hospicash.js",
+          "file": "\\test\\specs\\microservices\\product-management-service\\apply_hospicash.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate whether hospi cash api is giving success response with valid data",
+              "fullTitle": "Apply HospiCash validation Validate whether hospi cash api is giving success response with valid data",
+              "timedOut": false,
+              "duration": 3,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "TypeError: Cannot read property 'data' of undefined",
+                "estack": "TypeError: Cannot read property 'data' of undefined\n    at MicroserviceUtil.postApiCall (utils\\microservice.util.js:82:42)\n    at async Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_hospicash.js:10:26)",
+                "diff": null
+              },
+              "uuid": "11d06c7e-237c-4bb2-a327-997afab3945f",
+              "parentUUID": "4968df56-8728-4491-b2d4-6cc73cd00c57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate whether hospi cash api is giving error without userid",
+              "fullTitle": "Apply HospiCash validation Validate whether hospi cash api is giving error without userid",
+              "timedOut": false,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "TypeError: Cannot read property 'data' of undefined",
+                "estack": "TypeError: Cannot read property 'data' of undefined\n    at MicroserviceUtil.postApiCall (utils\\microservice.util.js:82:42)\n    at async Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_hospicash.js:17:26)",
+                "diff": null
+              },
+              "uuid": "7977537f-3695-4819-9dfa-57e1c7396fe7",
+              "parentUUID": "4968df56-8728-4491-b2d4-6cc73cd00c57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate whether hospi cash api is giving error without hospicash details",
+              "fullTitle": "Apply HospiCash validation Validate whether hospi cash api is giving error without hospicash details",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "TypeError: Cannot read property 'data' of undefined",
+                "estack": "TypeError: Cannot read property 'data' of undefined\n    at MicroserviceUtil.postApiCall (utils\\microservice.util.js:82:42)\n    at async Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_hospicash.js:24:26)",
+                "diff": null
+              },
+              "uuid": "1e21ffed-9aca-48a2-8f27-9f851a9f7c4f",
+              "parentUUID": "4968df56-8728-4491-b2d4-6cc73cd00c57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate whether hospi cash api is giving error with invalid details",
+              "fullTitle": "Apply HospiCash validation Validate whether hospi cash api is giving error with invalid details",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "TypeError: Cannot read property 'data' of undefined",
+                "estack": "TypeError: Cannot read property 'data' of undefined\n    at MicroserviceUtil.postApiCall (utils\\microservice.util.js:82:42)\n    at async Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_hospicash.js:31:26)",
+                "diff": null
+              },
+              "uuid": "fd607a10-c852-4a76-89e1-8ae3c8085c33",
+              "parentUUID": "4968df56-8728-4491-b2d4-6cc73cd00c57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate whether hospi cash api is giving error with blank details",
+              "fullTitle": "Apply HospiCash validation Validate whether hospi cash api is giving error with blank details",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "TypeError: Cannot read property 'data' of undefined",
+                "estack": "TypeError: Cannot read property 'data' of undefined\n    at MicroserviceUtil.postApiCall (utils\\microservice.util.js:82:42)\n    at async Context.<anonymous> (test\\specs\\microservices\\product-management-service\\apply_hospicash.js:38:26)",
+                "diff": null
+              },
+              "uuid": "1c91f49e-d8fe-4e0c-9a5a-80af7013e1f1",
+              "parentUUID": "4968df56-8728-4491-b2d4-6cc73cd00c57",
+>>>>>>> giri_changes
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+<<<<<<< HEAD
+          "passes": [
+            "3cd98518-2a79-446c-b6c0-1b22430a2079"
+=======
+          "passes": [],
+          "failures": [
+            "11d06c7e-237c-4bb2-a327-997afab3945f",
+            "7977537f-3695-4819-9dfa-57e1c7396fe7",
+            "1e21ffed-9aca-48a2-8f27-9f851a9f7c4f",
+            "fd607a10-c852-4a76-89e1-8ae3c8085c33",
+            "1c91f49e-d8fe-4e0c-9a5a-80af7013e1f1"
+>>>>>>> giri_changes
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+<<<<<<< HEAD
           "duration": 6787,
+=======
+          "duration": 6,
+>>>>>>> giri_changes
           "root": false,
           "rootEmpty": false,
           "_timeout": 90000
