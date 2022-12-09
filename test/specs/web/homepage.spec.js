@@ -99,10 +99,6 @@ describe("Homepage Validation", () => {
         await homepage.clickAdharMaskedIcon();
         await driver.pause(2000);
         var str = await homepage.getvalueAdharNumber();
-        it.skip("Verify Error message by entering less than 12 digit adhar ID", async () => {
-            await homepage.setvaluetoAdharNumber(invalidTestData.mobileNumber.invalidAdhar)
-            await expect(await homepage.errorHintTextAdhar()).to.be.eql(labelConstants.adharErrorhinttext)
-        });
         const noSpecialCharacters = str.replace(/ /g, '');
         await expect(noSpecialCharacters).to.be.eql(validtestData.mobileNumber.adharnumber);
         await expect(noSpecialCharacters.length).to.be.eql(validtestData.mobileNumber.adharnumber.length);
@@ -121,7 +117,7 @@ describe("Homepage Validation", () => {
         await driver.pause(25000)
         await homepage.clickonverifyAdharbuttonEnabled();
     });
-    it("Verify Error message by entering less than 12 digit adhar ID", async () => {
+    it.skip("Verify Error message by entering less than 12 digit adhar ID", async () => {
         await homepage.setValueToMobileNum(validtestData.mobileNumber.toTestPlus91)
         try {
             await homepage.EnterEmailAddress(validtestData.mobileNumber.EmailId)
@@ -131,6 +127,12 @@ describe("Homepage Validation", () => {
         await homepage.EnterPanAddress(validtestData.mobileNumber.PANID)
         await homepage.clickAdharMaskedIcon()
         await homepage.setvaluetoAdharNumber(invalidTestData.mobileNumber.invalidAdhar)
+        await homepage.clickAdharMaskedIcon();
+        await driver.pause(2000);
+        var str = await homepage.getvalueAdharNumber();
+        const noSpecialCharacters = str.replace(/ /g, '');
+        await expect(noSpecialCharacters).to.be.eql(validtestData.mobileNumber.adharnumber);
+        await expect(noSpecialCharacters.length).to.be.eql(validtestData.mobileNumber.adharnumber.length);
 
     });
 });
