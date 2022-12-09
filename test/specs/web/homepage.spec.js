@@ -125,7 +125,6 @@ describe("Homepage Validation", () => {
             await homepage.clickCancelOnEmailPopup();
         }
         await homepage.EnterPanAddress(validtestData.mobileNumber.PANID)
-        await homepage.clickAdharMaskedIcon()
         await homepage.setvaluetoAdharNumber(invalidTestData.mobileNumber.invalidAdhar)
         await homepage.clickAdharMaskedIcon();
         await driver.pause(2000);
