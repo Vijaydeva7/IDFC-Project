@@ -15,20 +15,19 @@ describe("Fraudcheck validation", function () {
       await expect(response.status).to.be.eql(200);
 
       await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidcustomer_response.status);
-      await expect(response.data.message).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidcustomer_response.message);
+      await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidcustomer_response.enquireCibilAndCheckFraudResp.metaData.status);
 
 
    });
 
    it("Verify whether error responde with customer status as fraud", async function () {
       const response = await util.postApiCall(process.env.FRAUD_CHECK, expLayerData.Fraud_Check.fraudcheckwithvalidstatusfraud_request);
-
       await util.mochaAddContext(this, response);
 
       await expect(response.status).to.be.not.eql(200);
 
-       await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidstatusfraud_response.status);
-       await expect(response.data.message).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidstatusfraud_response.message);
+      await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidstatusfraud_response.status);
+      await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithvalidstatusfraud_response.enquireCibilAndCheckFraudResp.metaData.status);
 
    });
 
@@ -41,7 +40,7 @@ describe("Fraudcheck validation", function () {
       await expect(response.status).to.be.not.eql(200);
 
       await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwitherror_response.status);
-      await expect(response.data.message).to.be.eql(expLayerData.Fraud_Check.fraudcheckwitherror_response.message);
+      await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwitherror_response.enquireCibilAndCheckFraudResp.metaData.status);
 
    });
 
@@ -54,7 +53,7 @@ describe("Fraudcheck validation", function () {
       await expect(response.status).to.be.not.eql(200);
 
       await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithdelayed_response.status);
-      await expect(response.data.message).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithdelayed_response.message);
+      await expect(response.data.status).to.be.eql(expLayerData.Fraud_Check.fraudcheckwithdelayed_response.enquireCibilAndCheckFraudResp.metaData.status);
 
    });
 

@@ -16,6 +16,7 @@
     "three": "3456789123",
     "four": "4567891234",
     "five": "5678912345",
-    "tenBlankSpaces": "          "
+    "tenBlankSpaces": "          ",
+    "inValidPan": "BOEPT2508F"
   }
 }

@@ -8,7 +8,8 @@ module.exports = {
    // "./test/specs/microservices/customer-service/shedule_later.js",
    // "./test/specs/microservices/Account-services/create_account.js",
     //"./test/specs/microservices/master-data-service/nearest_branch.js"
-    "./test/specs/microservices/user-management-service/user_info.js"
+    // "./test/specs/microservices/user-management-service/user_info.js"
+    "./test/specs/microservices/experience-layer-service/fraudcheck.js"
   ],
   reporter: "node_modules/mochawesome",
   "reporter-option": [

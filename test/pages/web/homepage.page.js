@@ -14,6 +14,17 @@ class Homepage {
         this.tenZeros = "//*[text()='Please enter a valid 10-digit mobile number']";
         this.withoutAnyValue = "//*[text()='Mobile number registered with Aadhaar']";
         this.tenBlankSpaces = '//*[text()="Please enter Mobile No"]';
+        this.popUp = '//*[text()= "Welcome back!"]';
+        this.aadhaarField = '//*[@id="aadhaar"]'; 
+        this.otpError = '//*[text()="Please enter correct OTP"]';
+        this.emailId = '//*[@id="emailId"]';
+        this.panNumber = '//*[@id="panNumber"]';
+        this.aadharNumber = '//*[@id="aadhaar"]';    
+        this.byProceedText = '//*[text()="By proceeding I allow IDFC FIRST Bank to use my Aadhaar to fetch KYC details from UIDAI, fetch CIBIL report from "]'; 
+        this.dontHaveAadhar = '//*[@id="formName"]/div[3]/div/div[1]/p[2]';
+        this.timer = '//*[text()="Time Left"]';
+        this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
+        
 
     }
 
@@ -126,9 +137,41 @@ async getTenBlankSpaces(){
 }
 
 
-    
+async isPopUpDisplayed() {
+    return await $(this.popUp).isDisplayed();
+}
+async isAadhaarFieldDisplayed() {
+    return await $(this.aadhaarField).isDisplayed();
+}
+async setValueToAadhaarNum(value) {
+    return await $(this.aadhaarField).setValue(value);
+}
+async isOtpErrorMsgDisplayed() {
+    return await $(this.otpError).isDisplayed();
+}  
 
-    
+async setValueToEmail(value) {
+    return await $(this.emailId).setValue(value);
+}
+async setValueToPan(value) {
+    return await $(this.panNumber).setValue(value);
+} 
+
+async setValueToAadhaar(value) {
+    return await $(this.aadharNumber).setValue(value);
+} 
+async isByProceedTextDisplayed() {
+    return await $(this.byProceedText).isDisplayed();
+}
+async isDontHaveAadharTextDisplayed() {
+    return await $(this.dontHaveAadhar).isDisplayed();
+}
+async isTimerDisplayed() {
+    return await $(this.timer).isDisplayed();
+}
+async isPanAadharDoNotMatchTextDisplayed() {
+    return await $(this.panAadharDontMatch).isDisplayed();
+} 
 }
 
 module.exports = new Homepage();
