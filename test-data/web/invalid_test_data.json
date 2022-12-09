@@ -1,7 +1,7 @@
 {
   "mobileNumber": {
     "toTestPlus91": "9123114708",
-    "containingAlphabets": "KYHRFJG",
+    "containingAlphabets": "KYHRFJG123",
     "containingSplChars": "%$&%*%()-",
     "lengthMoreThan10Digits": "766719755912345",
     "adharnumber":"939106450965",

@@ -22,7 +22,7 @@ describe("Homepage Validation", () => {
         await expect(await homepage.isPlusNintyOneTextDispalyed()).to.be.eql(true);
     });
 
-    it.skip("Validate whether 'Mobile number registered with Aadhaar' hint text displayed for the mobile number field", async () => {
+    it("Validate whether 'Mobile number registered with Aadhaar' hint text displayed for the mobile number field", async () => {
         await expect(await homepage.getMobileNumberHintText()).to.be.eql(labelConstants.mobileNumHintText);
     });
 
@@ -117,7 +117,7 @@ describe("Homepage Validation", () => {
         await driver.pause(25000)
         await homepage.clickonverifyAdharbuttonEnabled();
     });
-    it.skip("Verify Error message by entering less than 12 digit adhar ID", async () => {
+    it("Verify Error message by entering less than 12 digit adhar ID", async () => {
         await homepage.setValueToMobileNum(validtestData.mobileNumber.toTestPlus91)
         try {
             await homepage.EnterEmailAddress(validtestData.mobileNumber.EmailId)
@@ -135,15 +135,15 @@ describe("Homepage Validation", () => {
 
     });
     it("Verify adhar number is not allowing alphabets", async () => {
-        await homepage.setvaluetoAdharNumber(invalidTestData.adharnumber.containingAlphabets);
+        await homepage.setvaluetoAdharNumber(invalidTestData.mobileNumber.containingAlphabets);
         await homepage.clickAdharMaskedIcon();
         await driver.pause(2000);
         var str = await homepage.getvalueAdharNumber();
-        await expect(str.length).to.be.not.eql(validtestData.mobileNumber.adharnumber.length);
+        await expect(str.length).to.be.not.eql(invalidTestData.mobileNumber.containingAlphabets.length);
     });
 
     it("Verify adhar number field should show error messge when user entering less than 12 digits", async () => {
-        await homepage.setvaluetoAdharNumber(invalidTestData.adharnumber.adharnumberlessthan12digits);
+        await homepage.setvaluetoAdharNumber(invalidTestData.mobileNumber.invalidAdhar);
         await homepage.clickAdharMaskedIcon();
         await expect(await homepage.getAdharhinttext()).to.be.eql(labelConstants.adharErrorhinttext);
       
