@@ -38,7 +38,8 @@ exports.config = {
   // },
 
   specs: [
-    "./test/specs/web/homepage.spec.js",
+    // "./test/specs/web/homepage.spec.js",
+    "./test/specs/web/emailDedupe.spec.js",
   ],
 
 

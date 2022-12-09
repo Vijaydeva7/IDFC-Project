@@ -1,6 +1,7 @@
 {
     "emailId" : {
         "validEmailId" : "idfc@idfc.com",
+        "EmailWithDotInSubdomain" : "idfcbank@idfc.bank.com",
         "validEmailIdWithDot" : "idfc.bank@idfc.com",
         "validEmailIdWithDotInDomain" : "idfc@idfc.bank.com",
         "EmailIdWithAddOperator" : "idfc+first@bank.com",
