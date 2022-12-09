@@ -134,4 +134,21 @@ describe("Homepage Validation", () => {
         await expect(noSpecialCharacters.length).to.be.eql(validtestData.mobileNumber.adharnumber.length);
 
     });
+    it("Verify adhar number is not allowing alphabets", async () => {
+        await homepage.setvaluetoAdharNumber(invalidTestData.adharnumber.containingAlphabets);
+        await homepage.clickAdharMaskedIcon();
+        await driver.pause(2000);
+        var str = await homepage.getvalueAdharNumber();
+        await expect(str.length).to.be.not.eql(validtestData.mobileNumber.adharnumber.length);
+    });
+
+    it("Verify adhar number field should show error messge when user entering less than 12 digits", async () => {
+        await homepage.setvaluetoAdharNumber(invalidTestData.adharnumber.adharnumberlessthan12digits);
+        await homepage.clickAdharMaskedIcon();
+        await expect(await homepage.getAdharhinttext()).to.be.eql(labelConstants.adharErrorhinttext);
+      
+    });
+   
+
+
 });
