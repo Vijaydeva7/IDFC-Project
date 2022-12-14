@@ -60,20 +60,40 @@
 
   "PAN_Validation": {
     "VerifyPANUsingValidData_Request": {
-      "userId": "3208",
+      "userId": "8511",
       "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
     },
-    "VerifyPANUsingValidData_Response": {},
+    "VerifyPANUsingValidData_Response": {
+        "status": "SUCCESS",
+        "message": "Pan Verified successfully...",
+        "responseCd": "00",
+        "pnSts": null
+    },
     "VerifyPANWithBlankData_Request": {
       "userId": "3208",
       "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
     },
     "VerifyPANWithBlankData_Response": {},
     "VerifyPANWithoutPAN_Request": {
-      "userId": "3208",
-      "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="
+      "userId": "8511",
+      "panNumber": ""
     },
-    "VerifyPANWithoutPAN_Response": {},
+    "VerifyPANWithoutPAN_Response": {
+        "status": "ERROR",
+        "message": "Sorry, your PAN validation could not be completed. Please try again later ",
+        "responseCd": "5",
+        "pnSts": null
+    },
+    "VerifyPANWithIncompletePAN_Request": {
+      "userId": "8511",
+      "panNumber": "3MgIrZNSxg=="
+    },
+    "VerifyPANWithIncompletePAN_Response": {
+        "status": "ERROR",
+        "message": "Sorry, your PAN validation could not be completed. Please try again later ",
+        "responseCd": "5",
+        "pnSts": null
+    },
     "VerifyPANWithoutUserID_Request": {
       "userId": "3208",
       "panNumber": "3MgIrYplFUxMXNMYUZNSxg=="

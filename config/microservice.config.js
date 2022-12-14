@@ -4,7 +4,7 @@ module.exports = {
   timeout: 90000,
   spec: [
 
-    "./test/specs/microservices/experience-layer-service/aadhar_otp_validation.js",
+    "./test/specs/microservices/user-management-service/pan_validation.js",
     // "./test/specs/microservices/experience-layer-service/aadhar_authentication.js",
     // "./test/specs/microservices/Account-services/create_account.js",
     // "./test/specs/microservices/master-data-service/city_master.js",
