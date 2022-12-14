@@ -1,3 +1,7 @@
 {
-  "mobileNumHintText": "Mobile number registered with Aadhaar"
+  "mobileNumHintText": "Mobile number registered with Aadhaar",
+  "plzEnterMobNum":"Please enter Mobile No",
+  "mobileNumRegWithAadharText": "Mobile number registered with Aadhaar",
+  "plzEnter10DigMobNum":"Please enter a valid 10-digit mobile number",
+  "checkBoxPopUP": "Looks like we don’t have a branch in your city yet, but don’t worry you can still open a power-packed digital savings account."
 }

@@ -1,31 +1,40 @@
 class Homepage {
     constructor() {
-        this.idfcLogo = '//*[@class="sc-ciKPGv kxCwlZ"]';
+        this.idfcLogo = '//*[@class="sc-cEqVOX cFXySj"]';
         this.basicDetailHeading = "//*[text()='Enter details to start your savings journey now!']";
         this.mobileNumber = "#mobileNumber";
         this.termsAndCondHintText = "//p[text()='*T&C apply']";
         this.plusNintyOneText = "//p[text()='+91']";
-        this.mobileNumberHintText = '//label[@for="mobileNumber"]';
-        this.mobileBlankSpace = "//*[text()='Please enter a valid 10-digit mobile number']";
-        this.mobileSplCharAlpha2 = '//*[@id="mobileNumber"]';
-        this.mobileSplCharAndAlpha ="//*[text()='Please enter Mobile No']";
-        this.tenDigMobileNum = "//*[text()='Mobile number registered with Aadhaar']";
-        this.tenDigMobileNum2 = '//*[@id="mobileNumber"]';
-        this.tenZeros = "//*[text()='Please enter a valid 10-digit mobile number']";
-        this.withoutAnyValue = "//*[text()='Mobile number registered with Aadhaar']";
-        this.tenBlankSpaces = '//*[text()="Please enter Mobile No"]';
-        this.popUp = '//*[text()= "Welcome back!"]';
+
+
+
+        this.mobileNumberHintText  ='//label[@for="mobileNumber"]';
+        this.mobileBlankSpace =    '//label[@for="mobileNumber"]';
+        this.mobileSplCharAlpha2   ='//*[@id="mobileNumber"]';
+        this.mobileSplCharAndAlpha ='//label[@for="mobileNumber"]';
+        this.tenDigMobileNum =      '//label[@for="mobileNumber"]';
+        this.tenDigMobileNum2 =     '//*[@id="mobileNumber"]';
+        this.tenZeros =             '//label[@for="mobileNumber"]';
+        this.withoutAnyValue =      '//label[@for="mobileNumber"]';
+        this.tenBlankSpaces =       '//label[@for="mobileNumber"]';
+
+
+
+        this.popUp = '//div[@title="Welcome back!"]';
         this.aadhaarField = '//*[@id="aadhaar"]'; 
-        this.otpError = '//*[text()="Please enter correct OTP"]';
+        this.otpError = '//label[@for="resume_app_number_input_otp"]';
         this.emailId = '//*[@id="emailId"]';
         this.panNumber = '//*[@id="panNumber"]';
         this.aadharNumber = '//*[@id="aadhaar"]';    
-        this.byProceedText = '//*[text()="By proceeding I allow IDFC FIRST Bank to use my Aadhaar to fetch KYC details from UIDAI, fetch CIBIL report from "]'; 
-        this.dontHaveAadhar = '//*[@id="formName"]/div[3]/div/div[1]/p[2]';
+        this.byProceedText = '#termsAndPolicies'; 
+        this.dontHaveAadhar = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/div[1]/p[2]';
         this.timer = '//*[text()="Time Left"]';
         this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
-        
-
+        this.checkBoxPopUp = '//body/div[7]/div[1]/div[1]/div[1]';
+        this.checkBoxPopUpText = '//body/div[7]/div[1]/div[1]/div[1]/div[3]/p[1]';
+        this.exploreOptions = '//div[@title="Explore other options"]';
+        this.uidPortal = '//*[@class="header__logo-container--left"]';
+        this.idfcDontHaveAadharPage = '//*[@class="sc-dEZoUN fJrQnC"]';
     }
 
     async waitUntilHomepageLoad() {
@@ -52,6 +61,14 @@ class Homepage {
     async getMobileNumberHintText() {
         return await $(this.mobileNumberHintText).getText();
     }
+    async getPlzEnterText() {
+        return await $(this.mobileSplCharAndAlpha).getText();
+    
+    }
+    async getRegAadharText() {
+        return await $(this.mobileSplCharAndAlpha).getText();
+    
+    }
     async getMobileNumber() {
         return await $(this.mobileNumber).getText();
     }
@@ -70,7 +87,7 @@ class Homepage {
         return await $(this.mobileSplCharAndAlpha).isDisplayed();
     }
     async getMobileSplCharAndAlpha(){
-        return await $(this.mobileSplCharAlpha2).getText();
+        return await $(this.mobileSplCharAndAlpha).getText();
     }
     
     // Only 10 digits mobile Number Testcase 
@@ -149,7 +166,15 @@ async setValueToAadhaarNum(value) {
 async isOtpErrorMsgDisplayed() {
     return await $(this.otpError).isDisplayed();
 }  
-
+async isExploreOtherOptionsDisplayed() {
+    return await $(this.exploreOptions).isDisplayed();
+}
+async isUidPortalDisplayed() {
+    return await $(this.uidPortal).isDisplayed();
+}
+async isIdfcLogoDontHaveAadharDisplayed() {
+    return await $(this.idfcDontHaveAadharPage).isDisplayed();
+} 
 async setValueToEmail(value) {
     return await $(this.emailId).setValue(value);
 }
@@ -172,6 +197,12 @@ async isTimerDisplayed() {
 async isPanAadharDoNotMatchTextDisplayed() {
     return await $(this.panAadharDontMatch).isDisplayed();
 } 
+async isCheckBoxPopUpDisplayed() {
+    return await $(this.checkBoxPopUp).isDisplayed();
+}
+async getCheckBoxPopUpText(){
+    return await $(this.checkBoxPopUpText).getText();
+}
 }
 
 module.exports = new Homepage();
