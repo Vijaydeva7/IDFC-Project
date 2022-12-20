@@ -3,5 +3,13 @@
   "plzEnterMobNum":"Please enter Mobile No",
   "mobileNumRegWithAadharText": "Mobile number registered with Aadhaar",
   "plzEnter10DigMobNum":"Please enter a valid 10-digit mobile number",
-  "checkBoxPopUP": "Looks like we don’t have a branch in your city yet, but don’t worry you can still open a power-packed digital savings account."
+  "checkBoxPopUP": "Review and confirm the list of key banking services available to you",
+  "reviewAddComText": "My communication address is same as my Aadhaar address.",
+  "byProceedingText": "By proceeding I allow IDFC FIRST Bank to use my Aadhaar to fetch KYC details from UIDAI, fetch CIBIL report from TransUnion CIBIL and give consent to the bank to contact me via Call, SMS, Email and WhatsApp. This consent overrides any registration for DNC/NDNC.",
+  "professionalDetailsText": "Please enter your professional & personal details",
+  "occupationText": "Occupation",
+  "grossIncomeText": "Gross annual income in ₹",
+                      
+  "dontHaveAadharPage": "Don’t have Aadhaar or Virtual ID?"
+                              
 }

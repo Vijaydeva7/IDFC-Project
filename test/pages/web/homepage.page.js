@@ -26,15 +26,26 @@ class Homepage {
         this.emailId = '//*[@id="emailId"]';
         this.panNumber = '//*[@id="panNumber"]';
         this.aadharNumber = '//*[@id="aadhaar"]';    
-        this.byProceedText = '#termsAndPolicies'; 
+        this.byProceedText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 gcBqbt"]'; 
         this.dontHaveAadhar = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/div[1]/p[2]';
         this.timer = '//*[text()="Time Left"]';
         this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
+        this.checkBox = '//*[@id="checkbox_comm_address"]';
         this.checkBoxPopUp = '//body/div[7]/div[1]/div[1]/div[1]';
-        this.checkBoxPopUpText = '//body/div[7]/div[1]/div[1]/div[1]/div[3]/p[1]';
+        this.checkBoxPopUpText = '';
         this.exploreOptions = '//div[@title="Explore other options"]';
         this.uidPortal = '//*[@class="header__logo-container--left"]';
-        this.idfcDontHaveAadharPage = '//*[@class="sc-dEZoUN fJrQnC"]';
+        this.idfcDontHaveAadharPage = '//*[@class="sc-kJvQNW gnGaWa"]';
+        this.dontHaveAadharPageText = '//label[@for = "number_input_full_name"]';
+        this.dontHaveAadharPageText2 = '//label[@for = "number_input_email"]';
+        this.reviewAddressCom = '//*[@class="sc-kXqQRF byxioW"]';
+        this.reviewAddressComText = '//strong[contains(text(),"My communication address is same as my Aadhaar address.")]';
+        this.professionalDetailsText='//p[contains(text(),"Please enter your ")]';
+        this.occupationText = '//label[contains(text(),"Occupation")]';
+        this.sourceOfIncome = '//label[contains(text(),"Source of income")]';
+        this.grossIncomeText = '//label[@for="number_input_annual_income"]';
+        this.rupeeIcon = '//*[@class="Inputstyle__InpuIconWrapper-sc-q7jno0-9 hZYNPa"]';
+        this.rupeeLogo = '';
     }
 
     async waitUntilHomepageLoad() {
@@ -174,7 +185,17 @@ async isUidPortalDisplayed() {
 }
 async isIdfcLogoDontHaveAadharDisplayed() {
     return await $(this.idfcDontHaveAadharPage).isDisplayed();
+}
+
+async getProfessionalDetailsText() {
+    return await $(this.professionalDetailsText).getText();
+}
+async isDontHavePageText() {
+    return await $(this.dontHaveAadharPageText).getText();
 } 
+async isDontHavePageText2() {
+    return await $(this.dontHaveAadharPageText2).getText();
+}  
 async setValueToEmail(value) {
     return await $(this.emailId).setValue(value);
 }
@@ -197,11 +218,33 @@ async isTimerDisplayed() {
 async isPanAadharDoNotMatchTextDisplayed() {
     return await $(this.panAadharDontMatch).isDisplayed();
 } 
+// async isReviewAddCom() {
+//     return await $(this.reviewAddressCom).isDisplayed();
+// }
+async getReviewAddComText() {
+    return await $(this.reviewAddressComText).getText();
+}
+//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 jhvtRE"]
 async isCheckBoxPopUpDisplayed() {
-    return await $(this.checkBoxPopUp).isDisplayed();
+    return await $(this.checkBox).isDisplayed();
 }
 async getCheckBoxPopUpText(){
     return await $(this.checkBoxPopUpText).getText();
+}
+async getByproceedText(){
+    return await $(this.byProceedText).getText();
+}
+async getOccupationText(){
+    return await $(this.occupationText).getText();
+}
+async getSourceOfIncome(){
+    return await $(this.sourceOfIncome).getText();
+}
+async getGrossIncomeText(){
+    return await $(this.grossIncomeText).getText();
+}
+async isRupeeLogoDisplayed(){
+    return await $(this.rupeeIcon).isDisplayed();
 }
 }
 
