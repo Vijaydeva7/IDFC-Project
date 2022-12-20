@@ -4,12 +4,13 @@ module.exports = {
   timeout: 90000,
   spec: [
 
-    "./test/specs/microservices/user-management-service/pan_validation.js",
+    // "./test/specs/microservices/user-management-service/pan_validation.js",
     // "./test/specs/microservices/experience-layer-service/aadhar_authentication.js",
     // "./test/specs/microservices/Account-services/create_account.js",
     // "./test/specs/microservices/master-data-service/city_master.js",
     // "./test/specs/microservices/master-data-service/state_master.js",
     // "./test/specs/microservices/master-data-service/nearest_branch.js",
+    "./test/specs/microservices/user-management-service/mobile_dedupe.js",
 
 
     // "./test/specs/microservices/customer-service/shedule_later.js",

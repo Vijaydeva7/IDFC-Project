@@ -13,6 +13,8 @@ describe("Account Service Validation", function () {
       const response = await util.postApiCall(process.env.ACCOUNT_SERVICE, accServiceData.Create_Account.createAccountWithVannilaFlow_request);
       await util.mochaAddContext(this, response);
 
+      console.log(response);
+
       await expect(await response.status).to.be.eql(200);
       await expect(response.data.status).to.be.eql(accServiceData.Create_Account.createAccountWithVannilaFlow_response.status);
       await expect(response.data.message).to.be.eql(accServiceData.Create_Account.createAccountWithVannilaFlow_response.message);

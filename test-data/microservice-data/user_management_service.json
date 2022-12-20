@@ -119,13 +119,35 @@
   },
 
   "Mobile_Dedupe": {
-    "ValidMobile_Request": {},
-    "ValidMobile_Response": {},
-    "InvalidMobile_Request": {},
-    "InvalidMobile_Response": {},
-    "BlankDetails_Request": {},
+    "ValidMobile_Request": {
+      "mobileNumber": "9404779400"
+    },
+    "ValidMobile_Response": {
+      "status": "SUCCESS",
+      "message": "Mobile dedupe checked successfully..."
+    },
+    "InvalidMobile_Request": {
+        "mobileNumber": "94079403"
+    },
+    "InvalidMobile_Response": {
+      "status": "ERROR",
+      "message": "Invalid input"
+    },
+    "BlankDetails_Request": {
+      "mobileNumber": ""
+    },
     "BlankDetails_Response": {},
-    "WithoutCardType_Request": {},
-    "WithoutCardType_Response": {}
+    "WithoutCardType_Request": {
+      "mobileNumber": "9404779400",
+      "cardType": "",
+     "isDroppedJourney":false
+  },
+    "WithoutCardType_Response": {},
+    "WithoutRefferal_Request": {
+      "mobileNumber": "9371610965",
+      "cardType": "CLASSIC",
+      "isDroppedJourney":false
+  },
+    "WithoutRefferal_Response": {}
   }
 }
