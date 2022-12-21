@@ -26,7 +26,7 @@ class Homepage {
         this.emailId = '//*[@id="emailId"]';
         this.panNumber = '//*[@id="panNumber"]';
         this.aadharNumber = '//*[@id="aadhaar"]';    
-        this.byProceedText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 gcBqbt"]'; 
+        this.byProceedText = 'p#termsAndPolicies'; 
         this.dontHaveAadhar = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/div[1]/p[2]';
         this.timer = '//*[text()="Time Left"]';
         this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
