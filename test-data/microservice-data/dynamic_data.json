@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "userId": 6584,
   "authToken": "Mzc21UbWb3znaKGsKPhY7pQNP-UxAY1FcWf2zSMjTWM.US2mtoRyTwGVWDDwAucCCtGOcqNjML0qgYNG4_leiXo",
   "clientId": "WZMcKKwROSuUUAnBFw8ZWQ==",
@@ -10,4 +11,9 @@
   "clientId": "WZMcKKwROSuUUAnBFw8ZWQ==",
   "otpTxn" : "20221219104044417479ee"
 >>>>>>> anand_changes
+=======
+  "userId": 8368,
+  "authToken":"Bearer 9TmrdmkWmhTIngLoq04Vm1z58tCoTgGGoi_5sS5dvPY.WZGe7Fd8RLkk4iMSm2vFTQP0IcZJydesNYjev-mY76o",
+  "clientId": "WZMcKKwROSuUUAnBFw8ZWQ=="
+>>>>>>> vijay_changes
 }
