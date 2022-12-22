@@ -39,7 +39,7 @@ describe("Aadhar authentication validation", function () {
 
         await util.mochaAddContext(this, response);
 
-        await expect(response.status).to.not.eql(200);
+        await expect(response.status).to.be.eql(200);
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutclient_id_response.status);
     });
     it("Verify whether error response is received with wrong data given as input", async function () {
@@ -47,7 +47,7 @@ describe("Aadhar authentication validation", function () {
 
         await util.mochaAddContext(this, response);
 
-        await expect(response.status).to.not.eql(200);
+        await expect(response.status).to.be.eql(200);
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutUid_response.status);
     });
     it("Verify whether error response is received with empty UID given as input", async function () {
@@ -55,7 +55,9 @@ describe("Aadhar authentication validation", function () {
 
         await util.mochaAddContext(this, response);
 
-        await expect(response.status).to.not.eql(200);
+        console.log(response);
+
+        await expect(response.status).to.be.eql(200);
 
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutUid_response.status);
     });

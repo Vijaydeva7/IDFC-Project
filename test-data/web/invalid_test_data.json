@@ -1,10 +1,14 @@
 {
   "mobileNumber": {
     "toTestPlus91": "9123114708",
-    "containingAlphabets": "KYHRFJG",
+    "containingAlphabets": "KYHRFJG123",
     "containingSplChars": "%$&%*%()-",
     "lengthMoreThan10Digits": "766719755912345",
-    "blankSpace":"995  2345",
+    "adharnumber": "939106450965",
+    "decimaladhar": ".939106450965",
+    "adharwithspace": " 93910 6450965",
+    "invalidAdhar": "93910645096",
+    "blankSpace": "995  2345",
     "secialCharAlph": "$%#ABc",
     "only10DigMobileNum": "970113344697676",
     "tenZerosEnter": "0000000000",
