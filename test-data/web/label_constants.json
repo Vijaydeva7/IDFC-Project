@@ -10,9 +10,14 @@
   "checkBoxPopUP": "Review and confirm the list of key banking services available to you",
   "reviewAddComText": "My communication address is same as my Aadhaar address.",
   "byProceedingText": "By proceeding I allow IDFC FIRST Bank to use my Aadhaar to fetch KYC details from UIDAI, fetch CIBIL report from TransUnion CIBIL and give consent to the bank to contact me via Call, SMS, Email and WhatsApp. This consent overrides any registration for DNC/NDNC.",
-  "professionalDetailsText": "Please enter your professional & personal details",
+  "professionalDetailsText": "Please enter your",
+  "professionalDetailsText2" :"professional & personal details",
   "occupationText": "Occupation",
+  "SourceOfIncome": "Source of income",
   "grossIncomeText": "Gross annual income in ₹",
-
+  "salariedPlaceHolder": "Salaried",
+  "salaryPlaceHolder": "Salary",
+  "grossIncomeErrorText": "Gross annual income should be max ₹100 Cr to proceed",
   "dontHaveAadharPage": "Don’t have Aadhaar or Virtual ID?"
+  
 }

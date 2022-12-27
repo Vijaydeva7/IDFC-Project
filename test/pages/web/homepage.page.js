@@ -55,11 +55,18 @@ class Homepage {
         this.reviewAddressCom = '//*[@class="sc-kXqQRF byxioW"]';
         this.reviewAddressComText = '//strong[contains(text(),"My communication address is same as my Aadhaar address.")]';
         this.professionalDetailsText = '//p[contains(text(),"Please enter your ")]';
+        this.professionalDetailsText2 = '//strong[contains(text(),"professional & personal details")]';
         this.occupationText = '//label[contains(text(),"Occupation")]';
         this.sourceOfIncome = '//label[contains(text(),"Source of income")]';
         this.grossIncomeText = '//label[@for="number_input_annual_income"]';
         this.rupeeIcon = '//*[@class="Inputstyle__InpuIconWrapper-sc-q7jno0-9 hZYNPa"]';
         this.rupeeLogo = '';
+        this.occupationPlaceHolder='//input[@id="selectOccupation"]';
+        this.sourceIncomePlaceHolder = '//input[@id="selectSourceOfIncome"]';
+        this.mothersNameText='//input[@id="motherFullName"]';
+        this.grossIncomeErrorMsg = '//label[@for="number_input_annual_income"] ';
+        this.grossIncome = '//input[@id="grossAnualIncome"]';
+        
     }
 
     async waitUntilHomepageLoad() {
@@ -164,7 +171,7 @@ class Homepage {
         return await $(this.adharNumber).click();
     }
 
-
+// vijay_changes
     async getPlzEnterText() {
         return await $(this.mobileSplCharAndAlpha).getText();
 
@@ -331,6 +338,21 @@ class Homepage {
     }
     async isRupeeLogoDisplayed() {
         return await $(this.rupeeIcon).isDisplayed();
+    }
+    async getSalariedText() {
+        return await $(this.occupationPlaceHolder).getValue();
+    }
+    async getSalaryText(){
+        return await $(this.sourceIncomePlaceHolder).getValue();
+    }
+    async getMothersName(){
+        return await $(this.mothersNameText).getText();
+    }
+    async getGrossIncomeErrorText(){
+        return await $(this.grossIncomeErrorMsg).getText();
+    }
+    async setValueToGrossIncome(value) {
+        return await $(this.grossIncome).setValue(value);
     }
 }
 
