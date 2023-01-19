@@ -22,5 +22,20 @@
     "five": "5678912345",
     "tenBlankSpaces": "          ",
     "inValidPan": "BOEPT2508F"
-  }
+    
+  },
+  "grossIncome":{
+    "income": "123456789123",
+    "alphaAndChar": "@jbdfb##",
+    "zeroIntial": "02345",
+    "zeroIntial2": "2345",
+    "decimal": "43.456"
+  },
+  "invalidAadhaar":{
+    "aadhaar": "466102489432"
+  },
+  "mothersName":{
+    "moreThan40Char": "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
+    "numerics": "1234567898" 
+  } 
 }

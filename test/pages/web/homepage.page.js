@@ -3,7 +3,7 @@ class Homepage {
         this.idfcLogo = '//*[@class="sc-cEqVOX cFXySj"]';
         this.basicDetailHeading = "//*[text()='Enter details to start your savings journey now!']";
         this.mobileNumber = "#mobileNumber";
-        this.termsAndCondHintText = "//p[text()='*T&C apply']";
+        this.termsAndCondHintText = "//button[contains(text(),'Click here')]";
         this.plusNintyOneText = "//p[text()='+91']";
         this.mobileNumberHintText = '//label[@for="mobileNumber"]';
         this.email = "#emailId";
@@ -64,8 +64,36 @@ class Homepage {
         this.occupationPlaceHolder='//input[@id="selectOccupation"]';
         this.sourceIncomePlaceHolder = '//input[@id="selectSourceOfIncome"]';
         this.mothersNameText='//input[@id="motherFullName"]';
+        this.mothersErrorText = '//*[@for="number_input_monther_name"]';
         this.grossIncomeErrorMsg = '//label[@for="number_input_annual_income"] ';
         this.grossIncome = '//input[@id="grossAnualIncome"]';
+        this.companyNameHintText = "//input[@id='select_company']";
+        this.fiveTimesOtpErrorText = "//div[text() = 'Sorry, your Aadhaar authentication could not be completed. Please try again after sometime']",
+        this.searchIcon = '//*[@data-testid = "IconSearch"]';
+        this.invalidAadharError = '//label[contains(text(),"Please enter a valid 12-digit Aadhaar number or 16")]';
+        this.userAuthenticated = '//strong[contains(text(),"My communication address is same as my Aadhaar add")]';
+        this.disclaimer = '//p[contains(text(),"Disclaimer")]';
+        this.redColorText = '//button[contains(text(),"View Schedule of Charges")]';
+        this.iamNotPoliticalText = '//p[@id="firstConcentNote"]';
+        this.IndianCitizenText = '//p[@id="secondConcentNote"]';
+        this.selectYourProductText = '//p[text()="Select your "]';
+        this.supremeImage = '//*[@class="sc-jmWZkt kwJwyK"]';
+        this.primeImage = '//*[@class="sc-jmWZkt cNPcET"]';
+        this.termsAndConditionText = '//*[text()="Terms & conditions"]';
+        this.proceedBtn = '//button[@id="proceedBtn"]';
+        this.companyName = '//*[@id="select_company"]';
+        this.companyList = '//ul[@id="select_company-list"]';
+        this.companyNameMatch = '//span[contains(text(),"COGN")]';
+        this.viewScheduleRedirectPageLogo = '//*[@class = "logo"]';
+        this.viewScheduleOpenBtn = '//*[@class = "btn-red"]';
+        this.viewSchedule = '//button[text()="View Schedule of Charges"]';
+        this.termsConditions = '//*[@class="container"]';
+        
+
+
+
+        
+        
         
     }
 
@@ -95,6 +123,9 @@ class Homepage {
     }
     async getvalueAdharNumber(value) {
         return await $(this.adharNumber).getValue(value);
+    }
+    async getMobileNumberHintText(value) {
+        return await $(this.mobileNumber).getValue(value);
     }
 
     // anand_changes
@@ -171,7 +202,7 @@ class Homepage {
         return await $(this.adharNumber).click();
     }
 
-// vijay_changes
+// vijay_changes Start
     async getPlzEnterText() {
         return await $(this.mobileSplCharAndAlpha).getText();
 
@@ -346,14 +377,94 @@ class Homepage {
         return await $(this.sourceIncomePlaceHolder).getValue();
     }
     async getMothersName(){
-        return await $(this.mothersNameText).getText();
+        return await $(this.mothersNameText).getValue();
     }
+    async getMothersErrorText(){
+        return await $(this.mothersErrorText).getText();
+    }
+    async getCompanyNamesList(){
+        return await $(this.companyList).isDisplayed();
+    }
+    async getCompanyNamesMatch(){
+        return await $(this.companyNameMatch).getText();
+    }
+    //span[contains(text(),'COGN')]
     async getGrossIncomeErrorText(){
         return await $(this.grossIncomeErrorMsg).getText();
     }
     async setValueToGrossIncome(value) {
         return await $(this.grossIncome).setValue(value);
     }
+    async isCompanyNameHintTextDisplayed() {
+        return await $(this.companyNameHintText).getText();
+    }
+    async fiveTimesOtp() {
+        return await $(this.fiveTimesOtpErrorText).getText();
+    }
+    async isSearchIconDisplayed() {
+        return await $(this.searchIcon).isDisplayed();
+    }
+    async invalidAadharErrorText(){
+        return await $(this.invalidAadharError).getText();
+    }
+    async getEmailIdResetField() {
+        return await $(this.email).getValue();
+    }
+    async userAuthenticatedSuccessful(){
+        return await $(this.userAuthenticated).getText();
+    }
+    async setValueToMothersName(value) {
+        return await $(this.mothersNameText).setValue(value);
+    }
+    async setValueToCompanyName(){
+        return await $(this.companyName).setValue();
+    }
+    async disclaimerText(){
+        return await $(this.disclaimer).getText();
+    }
+    async getColorOfTheText(){
+        return await $(this.redColorText).getText();
+    }
+    async getIamNotPoliticalPersonText(){
+        return await $(this.iamNotPoliticalText).getText();
+    }
+    async getIamAnIndianCitizenText(){
+        return await $(this.IndianCitizenText).getText();
+    }
+    async selectProductText(){
+        return await $(this.selectYourProductText).getText();
+    }
+    
+    async supremeImageDisplayed(){
+        return await $(this.supremeImage).isDisplayed();
+    }
+    async primeImageDisplayed(){
+        return await $(this.primeImage).isDisplayed()
+    }
+    async termsAndCondition(){
+        return await $(this.termsAndConditionText).getText()
+    }
+    async proceedButtonDisplayed(){
+        return await $(this.proceedBtn).isDisplayed()
+    }
+    async viewScheduleRedirectPageLogoDisplayed(){
+        return await $(this.viewScheduleRedirectPageLogo).isDisplayed();
+    }
+    async viewScheduleRedirectOpenBtn(){
+        return await $(this.viewScheduleOpenBtn).isDisplayed();
+    }
+    async clickViewSchedule() {
+        return await $(this.viewSchedule).click();
+    }
+
+    async termsAndConditionPoints(){
+        return await $(this.termsConditions).getValue();
+    }
+    async getGrossIncome(){
+        return await $(this.grossIncome).getValue();
+    }
+    
+    // Vijay_changes End
 }
 
 module.exports = new Homepage();

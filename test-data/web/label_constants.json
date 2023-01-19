@@ -17,7 +17,26 @@
   "grossIncomeText": "Gross annual income in ₹",
   "salariedPlaceHolder": "Salaried",
   "salaryPlaceHolder": "Salary",
+  "mothersFullName": "Mother’s full name (e.g. Lata Singh)",
   "grossIncomeErrorText": "Gross annual income should be max ₹100 Cr to proceed",
-  "dontHaveAadharPage": "Don’t have Aadhaar or Virtual ID?"
+  "dontHaveAadharPage": "Your full name*",
+  "dontHaveAadharPage2": "Your email address*",
+  "companyNameHintText": "Company Name",
+  "invalidAadhaarErrorText": "Please enter a valid 12-digit Aadhaar number or 16-digit VID number",
+  "resetFieldEmail": "tragnarok569@gmail.com",
+  "myAddressCommunicaionText": "My communication address is same as my Aadhaar address.",
+  "disclaimerText": "Disclaimer",
+  "redText":  "{ property: 'rgb(157, 29, 39)', value: '', parsed: {} }" ,
+  "iamNotPoliticalText": "I confirm that I am not a politically exposed person nor related to one (required as per RBI guideline). For any change, I will visit the nearest branch and update my details." ,
+  "IndianCitizenText": "I confirm that I am an Indian citizen, born in India and a tax resident of India (required as per RBI guideline). For any change, I will visit the nearest branch and update my details.",
+  "selectProductText": "Select your Product",
+  "termsAndConditionText": "Terms & conditions",
+  "numericMothersNameErrorText" : "Please enter the full name separated by spaces.",
+  "companyNameMatch": "COGN"
+ 
+
+
+
+  
   
 }
