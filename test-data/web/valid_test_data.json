@@ -50,8 +50,10 @@
   },
   "grossIncome": {
     "income": "1,000",
-    "income2": "1,00,00,000"
+    "income2": "1,00,00,000",
+    "income3": "25000"
   },
-  "mothersNameField": "Vijay Kumar Muppidi",
-  "companyName": "Cong"
+  "mothersNameField": "Deepa Muppidi",
+  "companyName": "Rajkumar Travells Pvt Ltd"
+  
 }

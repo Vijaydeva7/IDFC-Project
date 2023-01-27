@@ -40,7 +40,7 @@ class Homepage {
         this.emailId = '//*[@id="emailId"]';
         this.panNumber = '//*[@id="panNumber"]';
         this.aadharNumber = '//*[@id="aadhaar"]';    
-        this.byProceedText = 'p#termsAndPolicies'; 
+        this.byProceedText = '//*[@id="formName"]/div[4]/p'; 
         this.dontHaveAadhar = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/div[1]/p[2]';
         this.timer = '//*[text()="Time Left"]';
         this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
@@ -55,7 +55,7 @@ class Homepage {
         this.reviewAddressCom = '//*[@class="sc-kXqQRF byxioW"]';
         this.reviewAddressComText = '//strong[contains(text(),"My communication address is same as my Aadhaar address.")]';
         this.professionalDetailsText = '//p[contains(text(),"Please enter your ")]';
-        this.professionalDetailsText2 = '//strong[contains(text(),"professional & personal details")]';
+        this.professionalDetailsText2 = '//p[@id="professionalAndPersonalDetails"]';
         this.occupationText = '//label[contains(text(),"Occupation")]';
         this.sourceOfIncome = '//label[contains(text(),"Source of income")]';
         this.grossIncomeText = '//label[@for="number_input_annual_income"]';
@@ -87,7 +87,28 @@ class Homepage {
         this.viewScheduleRedirectPageLogo = '//*[@class = "logo"]';
         this.viewScheduleOpenBtn = '//*[@class = "btn-red"]';
         this.viewSchedule = '//button[text()="View Schedule of Charges"]';
-        this.termsConditions = '//*[@class="container"]';
+        this.termsConditions = '//div//ol//li[1]';
+        this.otpBtnEnable = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 hOVLvr"]';
+        this.occupationDropDown ="//input[@id='selectOccupation']"; 
+        this.salariedText='//*[text()="Salaried"]';
+        this.solePropText = '//*[text()="Sole Proprietorship"]';
+        this.partnershipCompanyText = '//*[text()="Partnership/Company"]';
+        this.selfEmployedText= '//*[text()="Self Employed Professional"]';
+        this.homeMakerText= '//*[text()="Homemaker"]';
+        this.studentText = '//*[text()="Student"]';
+        this.farmerText = '//*[text()="Farmer"]';
+        this.retiredText = '//*[text()="Retired"]';
+        this.sourceOfIncomeDropDown = '//input[@id="selectSourceOfIncome"]';
+        this.salaryText = '//span[contains(text(),"Salary")]';
+        this.familyWealthText = '//*[text()="Family wealth"]';
+        this.savingsText = '//*[text()="Savings"]';
+
+        this.businessText = '//span[contains(text(),"Business")]';
+        this.investmentsText = '//span[contains(text(),"Investments")]';
+        this.professionalFeeText = '//span[contains(text(),"Professional fees")]';
+        this.vsRedirectText = '//*[@class = "heading-box"]';
+
+        //body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/form[1]/div[6]/div[2]/div[1]/div[1]/span[1]/*[1]
         
 
 
@@ -416,8 +437,11 @@ class Homepage {
     async setValueToMothersName(value) {
         return await $(this.mothersNameText).setValue(value);
     }
-    async setValueToCompanyName(){
-        return await $(this.companyName).setValue();
+    async setValueToCompanyName(value){
+        return await $(this.companyName).setValue(value);
+    }
+    async getCompanyName(){
+        return await $(this.companyName).getValue();
     }
     async disclaimerText(){
         return await $(this.disclaimer).getText();
@@ -450,19 +474,81 @@ class Homepage {
     async viewScheduleRedirectPageLogoDisplayed(){
         return await $(this.viewScheduleRedirectPageLogo).isDisplayed();
     }
+    async viewScheduleRedirectText(){
+        return await $(this.vsRedirectText).getText();
+    }
     async viewScheduleRedirectOpenBtn(){
         return await $(this.viewScheduleOpenBtn).isDisplayed();
     }
+
     async clickViewSchedule() {
         return await $(this.viewSchedule).click();
     }
 
     async termsAndConditionPoints(){
-        return await $(this.termsConditions).getValue();
+        return await $(this.termsConditions).getText()
     }
     async getGrossIncome(){
         return await $(this.grossIncome).getValue();
     }
+    async otpButtonEnable(){
+        return await $(this.otpBtnEnable).isDisplayed();
+    }
+    async occDropDown(){
+        return await $(this.occupationDropDown).click();
+    }
+    async salaried(){
+        return await $(this.salariedText).getText()
+    }
+    async soleProprietorship(){
+        return await $(this.solePropText).getText()
+    }
+    async partnershipCompany(){
+        return await $(this.partnershipCompanyText).getText()
+    }
+    async selfEmployedProffesional(){
+        return await $(this.selfEmployedText).getText()
+    }
+    async homeMaker(){
+        return await $(this.homeMakerText).getText()
+    }
+    async student(){
+        return await $(this.studentText).getText()
+    }
+    async farmer(){
+        return await $(this.farmerText).getText()
+    }
+    async retired(){
+        return await $(this.retiredText).getText()
+    }
+    async sourceOfIncomeDD(){
+        return await $(this.sourceOfIncomeDropDown).click();
+    }
+    async salary(){
+        return await $(this.salaryText).getText()
+    }
+    async familyWealth(){
+        return await $(this.familyWealthText).getText()
+    }
+    async savings(){
+        return await $(this.savingsText).getText()
+    }
+    async business(){
+        return await $(this.businessText).getText()
+    }
+    async investments(){
+        return await $(this.investmentsText).getText()
+    }
+    async professionalFee(){
+        return await $(this.professionalFeeText).getText()
+    }
+    async setValueToOccupation(){
+        return await $(this.occupationPlaceHolder).setValue()
+    }
+    async getOccupationValue() {
+        return await $(this.occupationPlaceHolder).getValue();
+    }
+
     
     // Vijay_changes End
 }

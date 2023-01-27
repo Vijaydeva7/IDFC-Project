@@ -37,5 +37,6 @@
   "mothersName":{
     "moreThan40Char": "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
     "numerics": "1234567898" 
-  } 
+  } ,
+  "occupationValue": "IDFC Bank"
 }

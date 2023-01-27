@@ -32,7 +32,30 @@
   "selectProductText": "Select your Product",
   "termsAndConditionText": "Terms & conditions",
   "numericMothersNameErrorText" : "Please enter the full name separated by spaces.",
-  "companyNameMatch": "COGN"
+  "companyNameMatch": "COGN",
+  "occupationDropDownValues":{
+    "salaried": "Salaried",
+    "soleProprietorship": "Sole Proprietorship",
+    "partnershipCompany": "Partnership/Company",
+    "selfEmployedProffesional": "Self Employed Professional",
+    "homeMaker": "Homemaker",
+    "student": "Student",
+    "farmer":"Farmer",
+    "retired":"Retired"
+   
+
+        
+  },
+  "sourceOfIncomeDropDownValues":{
+
+    "salary": "Salary",
+    "familyWealth": "Family wealth",
+    "savings":"Savings",
+    "business": "Business",
+    "investments": "Investments",
+    "professionalFee": "Professional fees"
+  },
+  "viewScheduleRedirectText":"Savings Account Fees and Charges"
  
 
 
