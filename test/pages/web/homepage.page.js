@@ -82,7 +82,7 @@ class Homepage {
         this.termsAndConditionText = '//*[text()="Terms & conditions"]';
         this.proceedBtn = '//button[@id="proceedBtn"]';
         this.companyName = '//*[@id="select_company"]';
-        this.companyList = '//ul[@id="select_company-list"]';
+        this.companyList = '//*[@id="select_company-list"]';
         this.companyNameMatch = '//span[contains(text(),"COGN")]';
         this.viewScheduleRedirectPageLogo = '//*[@class = "logo"]';
         this.viewScheduleOpenBtn = '//*[@class = "btn-red"]';
@@ -107,6 +107,12 @@ class Homepage {
         this.investmentsText = '//span[contains(text(),"Investments")]';
         this.professionalFeeText = '//span[contains(text(),"Professional fees")]';
         this.vsRedirectText = '//*[@class = "heading-box"]';
+        this.disabledProceedBtn = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 htkvKw"]';
+        this.footer = '//*[@class="sc-iBsTaR bqzIqW"]';
+        this.compareCompanyList = '//*[@data-value="363349"]';
+        this.compareCompanyList2 = '//*[@data-value="363350"]';
+        this.compareCompanyList3 = '//*[@data-value="363351"]';
+        this.acceptTermsAndConditionText = '//*[text() = "related to IDFC FIRST Bank"]';
 
         //body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/form[1]/div[6]/div[2]/div[1]/div[1]/span[1]/*[1]
         
@@ -548,7 +554,25 @@ class Homepage {
     async getOccupationValue() {
         return await $(this.occupationPlaceHolder).getValue();
     }
-
+    async isDisabledProceedToOpen() {
+        return await $(this.disabledProceedBtn).isDisplayed();
+    }
+    async isFooterDisplayed() {
+        return await $(this.footer).isDisplayed();
+    }
+    async compareCompanyListData(){
+        return await $(this.compareCompanyList).getText()
+    }
+    async compareCompanyListData2(){
+        return await $(this.compareCompanyList2).getText()
+    }
+    async compareCompanyListData3(){
+        return await $(this.compareCompanyList3).getText()
+    }
+    async acceptTermsAndConditionTextDisplay(){
+        return await $(this.acceptTermsAndConditionText).getText()
+    }
+    
     
     // Vijay_changes End
 }

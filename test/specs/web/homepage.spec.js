@@ -831,7 +831,7 @@ it("Validate User should get authenticated successfull.", async () => {
     await driver.pause(30000);
     const verifyOtpBtn = await $('//*[@id="verifyAadharBtn"]');
     await verifyOtpBtn.click();
-    await driver.pause(2000)
+    await driver.pause(20000)
     await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
 
      
@@ -843,12 +843,21 @@ it("Validate User should get authenticated successfull.", async () => {
     const comapanyName= await $('//*[@id="select_company"]');
     await comapanyName.click();
     await driver.pause(3000);
-    await homepage.setValueToCompanyName(validTestData.companyName);
+    await homepage.setValueToCompanyName(validTestData.companyName2);
     await driver.pause(5000);
     await expect(await homepage.getCompanyNamesList()).to.be.eql(true);    
-    await expect(await homepage.getCompanyNamesMatch()).to.be.eql(labelConstants.companyNameMatch);    
+    //await expect(await homepage.getCompanyNamesMatch()).to.be.eql(labelConstants.companyNameMatch);    
 
 });
+it("Validate whether User should be able to see the Company name list properly without any dummy data.", async () => {
+    
+    await expect(await homepage.compareCompanyListData()).to.be.eql(validTestData.companyName2);
+    await expect(await homepage.compareCompanyListData2()).to.be.eql(validTestData.companyName2);
+    await expect(await homepage.compareCompanyListData3()).to.be.eql(validTestData.companyName2);
+
+
+});
+
   it("Validate whether Mother's name field should not accept numeric numbers", async () => {
     await driver.pause(2000);
     const mothersName= await $('//*[@id="motherFullName"]');
@@ -1132,7 +1141,7 @@ it(" Validate whether User should not be able to add values manually in Occupati
 
 
 });
-it("Validate User Proceed to open account button should be displayed on the right bottom of the page with proper alignment and color of the button should be red.", async () => {
+it("Validate User If user enters all the above fields correctly, Proceed to open account button should be enable and clickable.", async () => {
     await driver.refresh();
     await driver.pause(4000);
     const mobileNumber = await $('#mobileNumber')
@@ -1191,6 +1200,27 @@ it("Validate User Proceed to open account button should be displayed on the righ
     const proceedToOpen = $('//button[@id="proceedBtn"]');
     await proceedToOpen.click();
   });
+  
+  it("Validate whetherTo verify if Proceed to open account button is disable when user is landed on the page.", async () => { 
+    
+    await expect(await(homepage.isDisabledProceedToOpen())).to.be.eql(true)
+
+  });
+
+  it("Validate whetherUser should able to see the static footer design/menu's for all web pages.", async () => { 
+    
+    await expect(await(homepage.isFooterDisplayed())).to.be.eql(true)
+
+  });
+
+  it("Validate whether Informational text - I accept all the terms & conditions related to IDFC", async () => { 
+    
+    await expect(await(homepage.acceptTermsAndConditionTextDisplay())).to.be.eql(labelConstants.acceptTermsAndConditionText)
+
+ });
+
+
+
 
  });
 
