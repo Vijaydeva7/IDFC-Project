@@ -1043,24 +1043,7 @@ it("Validate whether user should not able to enter decimal values in gross incom
     await expect(await homepage.getGrossIncome()).to.be.not.eql(invalidTestData.grossIncome.decimal);
 
 });
-it("Validate whether User should able to enter only numbers in gross annual income text box", async () => { 
-    for (var index = 1; index <= 5; index++) {
 
-        await driver.keys(['Backspace']);
-                        
-    }
-    await driver.pause(5000);
-    await homepage.setValueToGrossIncome(validTestData.grossIncome.income);
-    await driver.pause(3000);
-    await expect(await homepage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income);
-   
-   
-    await driver.pause(5000);
-    await homepage.setValueToGrossIncome(invalidTestData.grossIncome.alphaAndChar);
-    await expect(await homepage.getGrossIncome()).to.be.not.eql(invalidTestData.grossIncome.alphaAndChar);
-
-
-});
 
 it("Validate whether Respective source of income should be by default selected when user selects specific occupation", async () => { 
     await driver.refresh();
@@ -1101,9 +1084,6 @@ it("Validate whether Respective source of income should be by default selected w
     await expect(await homepage.business()).to.be.eql(labelConstants.sourceOfIncomeDropDownValues.business);
 
 
-
-     
-
 });
 it(" Validate whether User should not be able to add values manually in Occupation field.", async () => {
     await driver.refresh();
@@ -1138,6 +1118,24 @@ it(" Validate whether User should not be able to add values manually in Occupati
     await homepage.setValueToOccupation(invalidTestData.occupationValue);
     await expect(await homepage.getOccupationValue()).to.be.not.eql(invalidTestData.occupationValue);
 
+
+
+});
+it("Validate whether User should able to enter only numbers in gross annual income text box", async () => { 
+    // for (var index = 1; index <= 5; index++) {
+
+    //     await driver.keys(['Backspace']);
+                        
+    // }
+    await driver.pause(5000);
+    await homepage.setValueToGrossIncome(validTestData.grossIncome.income);
+    await driver.pause(3000);
+    await expect(await homepage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income);
+   
+   
+    await driver.pause(5000);
+    await homepage.setValueToGrossIncome(invalidTestData.grossIncome.alphaAndChar);
+    await expect(await homepage.getGrossIncome()).to.be.not.eql(invalidTestData.grossIncome.alphaAndChar);
 
 
 });
