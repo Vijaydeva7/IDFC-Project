@@ -34,27 +34,64 @@
   },
   "mobileNumber2": {
     "mobileNo": "8142662462",
-    "mobileNo2": "7702552190"
+    "mobileNo2": "7702552190",
+    "mobileNo3": "7032627891",
+    "mobileNo4": "9423572416",
+    "mobileNo5": "8308758707",
+    "mobileNo6": "9527048053"
   },
   "emailId2":{
       "email":"vdeva236@gmail.com",
-      "email2": "tragnarok569@gmail.com"
+      "email2": "tragnarok569@gmail.com",
+      "email3": "pittalarajkumar185@gmail.com"
   },
   "panNumber": {
     "pan": "EYVPM4838R",
-    "pan2": "BOEPT2508F"
+    "pan2": "BOEPT2508F",
+    "pan3": "DUZPP9465E"
   },
   "aadhaarNumber": {
     "aadhaar": "526996116515",
-    "aadhaar2": "466102489433"
+    "aadhaar2": "466102489433",
+    "aadhaar3": "445161738009"
   },
   "grossIncome": {
-    "income": "1,000",
-    "income2": "1,00,00,000",
-    "income3": "25000"
+    "income": "₹1,000",
+    "income2": "₹1,00,00,000",
+    "income3": "₹25,000",
+    "income4": "20000000000"
   },
   "mothersNameField": "Deepa Muppidi",
   "companyName": "Rajkumar Travells Pvt Ltd",
-  "companyName2": "cogn"
+  "companyName2": "cogn",
+
+
+
+  "exploreOtherOptionsField": {
+    "validFullName": "Vijay Kumar",
+    "validPan": "EYVPM4838R",
+    "validMobileNo": "8142662462",
+    "validMobileNo2": "9999999999",
+    "validEmailId": "vdeva236@gmail.com",
+    "validEmailId2": "muppidivijaykumarnaidu81426624@gmail.com",
+    "validEmailId3": "vijaykumar23@gmail.com",
+    "validEmailId4": "vijay.kumar2@gmail.com",
+    "validEmailId5": "vijay1234@gmail.com",
+    "validEmailId6": "vijay_kumar45@gmail.com",
+    "validEmailId7": "vijay.kumar@gmail.com",
+    "validEmailId8": "vijay123@co.jp",
+    "validEmailId9": "vijay-kumar@gmail.com"
+  },
+  "cssValues":{
+    "property": "color",
+      "value": "rgba(84,86,91,1)",
+      "parsed": { "hex": "#54565b", "alpha": "1", "type": "color", "rgba": "rgba(84,86,91,1)" }
+     
+  },
+  "pincode": "500032",
+  "adress1": "1-55,Markode",
+  "debitCard" : "4035622809292008",
+  "cvv": "732"
+      
   
 }

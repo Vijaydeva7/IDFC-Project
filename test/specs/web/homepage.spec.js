@@ -401,7 +401,7 @@ it("Validate whether source income field prefilled with salary", async () => {
     await driver.pause(2000);
     await expect(await homepage.getSalaryText()).to.be.eql(labelConstants.salaryPlaceHolder);    
 });
-it("Validate whether should be as Mothers fullname'", async () => {
+it("Validate whether Hint text should be as Mothers fullname'", async () => {
     await driver.pause(2000);
     await expect(await homepage.getMothersName()).to.be.eql(labelConstants.mothersFullName);    
 });
@@ -953,53 +953,6 @@ it("Validate whether clicking Terms& conditions 34 points should be present", as
     await expect(await homepage.termsAndConditionPoints()).to.be.eql(true);
 });
 
-
-
-it("Validate whether Verify when user adds values between ₹1000 to ₹1,00,00,000  in Gross annual income field values should be accepted", async () => { 
-    await driver.refresh();
-    await driver.pause(4000);
-    const mobileNumber = await $('#mobileNumber')
-    await mobileNumber.click();
-    await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-    await driver.pause(2000);
-    const emailIdField = await $('//*[@id="emailId"]')
-    await emailIdField.click();
-    await driver.pause(1000)
-    await homepage.setValueToEmail(validTestData.emailId2.email);
-    await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-    const cancel = await $('//*[@id="resumeModalCloseBtn"]');
-    await cancel.click();
-    await driver.pause(3000);
-    const panNumber = await $('//*[@id="panNumber"]')
-    await panNumber.click();
-    await homepage.setValueToPan(validTestData.panNumber.pan);
-    const aadhaarNum = await $('//*[@id="aadhaar"]')
-    await aadhaarNum.click();
-    await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-    await driver.pause(10000);
-    const getOtp = await $('//*[@id="getOtpBtn"]')
-    await getOtp.click(); 
-    await driver.pause(30000);
-    const verifyOtpBtn = await $('//*[@id="verifyAadharBtn"]');
-    await verifyOtpBtn.click();
-    await driver.pause(20000);
-    const grossIncome = await $('//*[@id="grossAnualIncome"]');
-    await grossIncome.click();
-    await homepage.setValueToGrossIncome(validTestData.grossIncome.income);
-    await driver.pause(2000);
-    await expect(await homepage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income);
-    await driver.pause(3000);
-    for (var index = 1; index <= 4; index++) {
-
-        await driver.keys(['Backspace']);
-                        
-    }
-    await driver.pause(5000);
-    await homepage.setValueToGrossIncome(validTestData.grossIncome.income2);
-    await driver.pause(5000);
-    await expect(await homepage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income2);
-
-});
 it("Validate whether user should not able to enter 0 in gross income field as intial", async () => { 
     await driver.pause(5000);
     for (var index = 1; index <= 8; index++) {
@@ -1115,6 +1068,7 @@ it(" Validate whether User should not be able to add values manually in Occupati
     await driver.pause(50000)
     await homepage.occDropDown();
     await driver.pause(3000)
+    await driver.keys(['Enter']);
     await homepage.setValueToOccupation(invalidTestData.occupationValue);
     await expect(await homepage.getOccupationValue()).to.be.not.eql(invalidTestData.occupationValue);
 
@@ -1178,8 +1132,8 @@ it("Validate User If user enters all the above fields correctly, Proceed to open
     const preferBranch = $('//input[@id="select_prefered_branch"]');
     await preferBranch.click();
     await driver.pause(2000);
-    const brach = $('//*[text() ="WARANGAL BRANCH"]');
-    await brach.click();
+    const branch = $('//*[text() ="WARANGAL BRANCH"]');
+    await branch.click();
     await driver.pause(2000);
     const  grossIncome = $('//input[@id="grossAnualIncome"]');
     await grossIncome.click();
@@ -1217,6 +1171,196 @@ it("Validate User If user enters all the above fields correctly, Proceed to open
 
  });
 
+it("Validate whether User should able to  encrypt or decrypt their Aadhaar number by clicking on Eye icon.", async () => { 
+const aadhaarNum = await $('//*[@id="aadhaar"]')
+    await aadhaarNum.click();
+    await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
+
+    await expect(await(homepage.encryptedData())).to.be.eql(true)
+    const eyeIcon = await  $('//*[@data-testid = "IconEye2Off"]');
+    await eyeIcon.click();
+    await expect(await(homepage.decryptedData())).to.be.eql(true)
+
+    
+});
+it("Validate whetherUser should be able to click on Explore other option", async () => {
+    await driver.pause(2000);
+    await driver.refresh();
+    const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
+    await exploreOptions.click();
+    await driver.pause(10000);
+    await expect(await homepage.isExploreOtherOptionsDisplayed()).to.be.eql(true);
+
+});
+
+it("Validate whetherUser PAN-Aadhaar name should match to proceed with account opening journey.", async () => {
+       
+
+    await driver.refresh();
+    await driver.pause(4000);
+    const mobileNumber = await $('#mobileNumber')
+    await mobileNumber.click();
+    await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
+    await driver.pause(5000);
+    const emailIdField = await $('//*[@id="emailId"]')
+    await emailIdField.click();
+    await driver.pause(3000)
+    await homepage.setValueToEmail(validTestData.emailId2.email);
+    // await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+    // const cancel = await $('//*[@id="resumeModalCloseBtn"]');
+    // await cancel.click();
+    await driver.pause(3000);
+    const panNumber = await $('//*[@id="panNumber"]')
+    await panNumber.click();
+    await homepage.setValueToPan(validTestData.panNumber.pan3);
+    const aadhaarNum = await $('//*[@id="aadhaar"]')
+    await aadhaarNum.click();
+    await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
+    await driver.pause(10000);
+    const getOtp = await $('//*[@id="getOtpBtn"]')
+    await getOtp.click(); 
+    await driver.pause(30000);
+    const verifyOtpBtn = await $('//*[@id="verifyAadharBtn"]');
+    await verifyOtpBtn.click();
+    await driver.pause(30000)
+    await expect(await homepage.panAadharMismatchCondition()).to.be.eql(labelConstants.hiThereText);
+    await expect(await homepage.panAadharMismatchCondition2()).to.be.eql(labelConstants.panAadharMismatchCondition);
+
+    
+});
+    
+it("Validate whetherUser should be able to click on Explore other option", async () => {
+        await driver.pause(2000);
+        await driver.refresh();
+        const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
+        await exploreOptions.click();
+        await driver.pause(10000);
+        await expect(await homepage.isExploreOtherOptionsDisplayed()).to.be.eql(true);
+    
+    });
+it("Validate whether Verify when user adds values between ₹1000 to ₹1,00,00,000  in Gross annual income field values should be accepted", async () => { 
+    await driver.refresh();
+    await driver.pause(4000);
+    const mobileNumber = await $('#mobileNumber')
+    await mobileNumber.click();
+    await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
+    await driver.pause(2000);
+    const emailIdField = await $('//*[@id="emailId"]')
+    await emailIdField.click();
+    await driver.pause(1000)
+    await homepage.setValueToEmail(validTestData.emailId2.email);
+    await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+    const cancel = await $('//*[@id="resumeModalCloseBtn"]');
+    await cancel.click();
+    await driver.pause(3000);
+    const panNumber = await $('//*[@id="panNumber"]')
+    await panNumber.click();
+    await homepage.setValueToPan(validTestData.panNumber.pan);
+    const aadhaarNum = await $('//*[@id="aadhaar"]')
+    await aadhaarNum.click();
+    await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
+    await driver.pause(10000);
+    const getOtp = await $('//*[@id="getOtpBtn"]')
+    await getOtp.click(); 
+    await driver.pause(30000);
+    const verifyOtpBtn = await $('//*[@id="verifyAadharBtn"]');
+    await verifyOtpBtn.click();
+    await driver.pause(30000);
+    const grossIncome = await $('//*[@id="grossAnualIncome"]');
+    await grossIncome.click();
+    await homepage.setValueToGrossIncome(validTestData.grossIncome.income);
+    await driver.pause(2000);
+    await expect(await homepage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income);
+    await driver.pause(3000);
+    for (var index = 1; index <= 4; index++) {
+
+        await driver.keys(['Backspace']);
+                        
+    }
+    await driver.pause(5000);
+    await homepage.setValueToGrossIncome(validTestData.grossIncome.income2);
+    await driver.pause(5000);
+    await expect(await homepage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income2);
+
+});
+it("Validate whether gross anual income field should not accept more than 1,00,00,00,000", async () => { 
+    
+    const grossIncome = await $('//*[@id="grossAnualIncome"]');
+    await grossIncome.click();
+    for (var index = 1; index <= 8; index++) {
+
+        await driver.keys(['Backspace']);
+                        
+    }
+    await homepage.setValueToGrossIncome(validTestData.grossIncome.income4);
+    await driver.pause(5000);
+    await expect(await homepage.getGrossIncomeError()).to.be.eql(labelConstants.grossAnualIncomeErrorText);
+
+});
+    
+it("Validate Checkbox should be by default selected when user lands on personal details page.", async () => {
+        await driver.refresh();
+        await driver.pause(4000);
+        const mobileNumber = await $('#mobileNumber')
+        await mobileNumber.click();
+        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
+        await driver.pause(5000);
+        const emailIdField = await $('//*[@id="emailId"]')
+        await emailIdField.click();
+        await driver.pause(3000)
+        await homepage.setValueToEmail(validTestData.emailId2.email);
+        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+        const cancel = await $('//*[@id="resumeModalCloseBtn"]');
+        await cancel.click();
+        await driver.pause(3000);
+        const panNumber = await $('//*[@id="panNumber"]')
+        await panNumber.click();
+        await homepage.setValueToPan(validTestData.panNumber.pan);
+        const aadhaarNum = await $('//*[@id="aadhaar"]')
+        await aadhaarNum.click();
+        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
+        await driver.pause(10000);
+        const getOtp = await $('//*[@id="getOtpBtn"]')
+        await getOtp.click(); 
+        await driver.pause(30000);
+        const verifyOtpBtn = await $('//*[@id="verifyAadharBtn"]');
+        await verifyOtpBtn.click();
+        await driver.pause(20000)
+        await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
+        await driver.pause(3000);
+        const checkBox = $('//*[@for="checkbox_comm_address"]');
+        await checkBox.click();
+        await driver.pause(3000);
+        const proceedToAadhar = $('//*[@id="proceedAadharAddressBtn"]');
+        await proceedToAadhar.click();
+        await driver.pause(4000);
+        const preferBranch = $('//input[@id="select_prefered_branch"]');
+        await preferBranch.click();
+        await driver.pause(2000);
+        const brach = $('//*[text() ="WARANGAL BRANCH"]');
+        await brach.click();
+        await driver.pause(2000);
+        const  grossIncome = $('//input[@id="grossAnualIncome"]');
+        await grossIncome.click();
+        await homepage.setValueToGrossIncome(validTestData.grossIncome.income3);
+        await driver.pause(3000);
+        const companyName = $('//*[@id="select_company"]');
+        await companyName.click();
+        await driver.pause(2000);
+        await homepage.setValueToCompanyName(validTestData.companyName);
+        await driver.pause(2000);
+        const mothersName= await $('//*[@id="motherFullName"]');
+        await mothersName.click();
+        await driver.pause(2000);
+        await homepage.setValueToMothersName(validTestData.mothersNameField);
+        await driver.pause(2000);
+        // const checkBoxVs = $('//*[@class="Checkboxstyle__Box-sc-ins62l-1 blcGGD"]');
+        // await checkBoxVs.click();
+        await expect(await homepage.viewScheduleCheckBox()).to.be.not.eql(true);
+        const proceedToOpen = $('//button[@id="proceedBtn"]');
+        await proceedToOpen.click();
+        await driver.pause(2000);
+      });
 
 
 

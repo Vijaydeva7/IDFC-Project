@@ -49,9 +49,12 @@ class Homepage {
         this.checkBoxPopUpText = '';
         this.exploreOptions = '//div[@title="Explore other options"]';
         this.uidPortal = '//*[@class="header__logo-container--left"]';
+        this.uidLogo = '//*[@alt="Aadhaar Logo"]';
+        this.uidContainer = '//*[@class="retrieve-eid-uid-form__card-container"]';
         this.idfcDontHaveAadharPage = '//*[@class="sc-kJvQNW gnGaWa"]';
         this.dontHaveAadharPageText = '//label[@for = "number_input_full_name"]';
         this.dontHaveAadharPageText2 = '//label[@for = "number_input_email"]';
+        this.dontHaveAadharPageText3 = '//p[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-dSSJwc hGBKvt"]';
         this.reviewAddressCom = '//*[@class="sc-kXqQRF byxioW"]';
         this.reviewAddressComText = '//strong[contains(text(),"My communication address is same as my Aadhaar address.")]';
         this.professionalDetailsText = '//p[contains(text(),"Please enter your ")]';
@@ -63,7 +66,8 @@ class Homepage {
         this.rupeeLogo = '';
         this.occupationPlaceHolder='//input[@id="selectOccupation"]';
         this.sourceIncomePlaceHolder = '//input[@id="selectSourceOfIncome"]';
-        this.mothersNameText='//input[@id="motherFullName"]';
+        //this.mothersNameText='//input[@id="motherFullName"]';
+        this.mothersNameText='//*[@id="motherFullName"]';
         this.mothersErrorText = '//*[@for="number_input_monther_name"]';
         this.grossIncomeErrorMsg = '//label[@for="number_input_annual_income"] ';
         this.grossIncome = '//input[@id="grossAnualIncome"]';
@@ -113,9 +117,56 @@ class Homepage {
         this.compareCompanyList2 = '//*[@data-value="363350"]';
         this.compareCompanyList3 = '//*[@data-value="363351"]';
         this.acceptTermsAndConditionText = '//*[text() = "related to IDFC FIRST Bank"]';
-
-        //body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/form[1]/div[6]/div[2]/div[1]/div[1]/span[1]/*[1]
-        
+        this.encryptData = '//*[@type="password"]';
+        this.decryptData = '//*[@type="password1"]';
+        this.panAadharMismatch = '//*[text() = "Hi there!"]';
+        this.panAadharMismatch2 = '//*[text() = "Mobile number linked to your Aadhaar must be used to open savings account"]';
+        this.grossIncomeError = '//*[@for="number_input_annual_income"]';
+        this.viewScheduleCb = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 htkvKw"]';
+        this.exploreOtherOptionsTexts = '//*[text()="Don’t have an"]';
+        this.exploreOtherOptionsTexts2 = '//*[text()="Don’t remember your"]';
+        this.downContentOfDontRememberAadharText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 jbLuoC"]';
+        // this.downContentOfDontRememberAadharText2 = '//*[text() = "Visit the UIDAI site below"]';
+        // this.downContentOfDontRememberAadharText3 = '//*[text() = "Enter your name and search by registered mobile number or email address"]';
+        // this.downContentOfDontRememberAadharText4 = '//*[text() = "Retrieve your Aadhaar number via OTP verification"]';
+        // this.downContentOfDontRememberAadharText5 = '//*[text() = "Resume your IDFC FIRST savings account portal and enter your Aadhaar number to continue your journey"]';
+        this.downContentOfDontHaveAadharText = '//*[@class = "StyledTextstyle__TextItem-sc-9k2kxs-0 itaovv"]';
+        this.visitUidBtn = "#visitUid";
+        this.intiateOfflineProcessBtn = "#initiateOfflineProcess";
+        this.dontHaveAdharEnterDetailsPan = '//*[@for= "number_input_pan"]';
+        this.dontHaveAdharEnterDetailsMobileNo = '//*[@for= "number_input_mobile"]';
+        this.dontHaveAdharEnterDetailsSendOtp = '//*[@type= "  "]';
+        this.dontHaveAadharFullName = '//*[@autocomplete="fullName"]';
+        this.dontHaveAadharPan = '//*[@autocomplete="pan"]';
+        this.dontHaveAadharPanIcon = '//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]';
+        this.dontHaveAadharMobilePlus91 = '//*[@class="Inputstyle__PrefixWrapper-sc-q7jno0-6 GkFRw inputbox-prefix-wrapper"]';
+        this.dontHaveAadharMobileNo = '//*[@autocomplete="mobileNumber"]'; 
+        this.dontHaveAadharMobileNo2 = '//*[@for="number_input_mobile"]' ; 
+        this.dontHaveAadharEmailId = '//*[@name="email"]'  ;
+        this.thankYouText = '//*[@class ="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-gQirvS fDCxED"]';
+        this.panIcon  = '//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]';
+        this.dontHaveAadharEmail = '//*[@for="number_input_email"]';
+        this.sendOtpBtnNotDisplayed = '//*[@class ="Buttonstyle__Wrapper-sc-6p72tp-0 iYmufh sc-SBYpD xzIFt"]';
+        this.rightArrowDisplayed = '//*[@class="IconButtonstyle__IconButtonWrapper-sc-1qfzwt7-0 jjGPUg"]';
+        this.otpErrorMsg = '//*[@for="input_otp"]';
+        this.timer = '//*[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-dAvZuH fLcpMZ"]'
+        this.otpField = '//*[@type="password"]';
+        this.thankYouPageText = '//strong[text()="We will contact you soon"]';
+        this.thankYouPageText2 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 PBeXk"]';
+        this.visitBankBtn = '//*[@class="Buttonstyle__Wrapper-sc-6p72tp-0 fhUqql sc-fspXqA cLuSUk"]';
+        this.welcomeBanner = '//*[@alt="Welcome banner"]';
+        this.expiredOtpTitle = '//*[@data-testid = "ERROR_TITLE"]';
+        this.expiredOtpMsg = '//*[@data-testid = "ERROR_MESSAGE"]';
+        this.pincode = '//*[@id="pincode"]';
+        this.city = '//*[@value="RANGAREDDI"]';
+        this.classicProduct = '//*[@aria-checked="false"]';
+        this.address1 = '//*[@id="address1"]';
+        this.proceedBtnClass = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 dPEWVA"]';
+        this.fundingPopUpText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 dDgZEv"]';
+        this.fundingBtn = '//*[@id="fundingProceedBtn"]';
+        this.congoText = '//*[text()="Congratulations! "]';
+        this.debitCard = '//*[@id="debitCardNumber"]';
+        this.cvv = '//*[@id="CVVNumberDebitCard"]';
 
 
 
@@ -404,7 +455,7 @@ class Homepage {
         return await $(this.sourceIncomePlaceHolder).getValue();
     }
     async getMothersName(){
-        return await $(this.mothersNameText).getValue();
+        return await $(this.mothersNameText).getText();
     }
     async getMothersErrorText(){
         return await $(this.mothersErrorText).getText();
@@ -497,6 +548,10 @@ class Homepage {
     async getGrossIncome(){
         return await $(this.grossIncome).getValue();
     }
+    async getGrossIncomeError(){
+        return await $(this.grossIncomeError).getText();
+    }
+    
     async otpButtonEnable(){
         return await $(this.otpBtnEnable).isDisplayed();
     }
@@ -572,9 +627,182 @@ class Homepage {
     async acceptTermsAndConditionTextDisplay(){
         return await $(this.acceptTermsAndConditionText).getText()
     }
+    async encryptedData() {
+        return await $(this.encryptData).isDisplayed();
+    }
+    async decryptedData() {
+        return await $(this.decryptData).isDisplayed();
+    }
+    async panAadharMismatchCondition(){
+        return await $(this.panAadharMismatch).getText()
+    }
+    async panAadharMismatchCondition(){
+        return await $(this.panAadharMismatch2).getText()
+    }
     
-    
+    async viewScheduleCheckBox() {
+        return await $(this.viewScheduleCb).isDisplayed();
+    }
     // Vijay_changes End
+
+
+    // ExploreOtherOptions 
+
+    async exploreOtherOptionsTwoTexts(){
+        return await $(this.exploreOtherOptionsTexts).isDisplayed()
+    }
+    async exploreOtherOptionsTwoTexts2(){
+        return await $(this.exploreOtherOptionsTexts2).isDisplayed()
+    }
+    async downContentOfDontRememberAadhar(){
+        return await $(this.downContentOfDontRememberAadharText).getText()
+    }
+    
+    async downContentOfDontHaveAadhar(){
+        return await $(this.downContentOfDontHaveAadharText).getText()
+    }
+    
+    async exploreOtherOptionsVisitUidBtn(){
+        return await $(this.visitUidBtn).isDisplayed()
+    }
+     async exploreOtherOptionsintiateOfflineProcessBtn(){
+        return await $(this.intiateOfflineProcessBtn).isDisplayed()
+    }
+    async popUpClosed() {
+        return await $(this.exploreOptions).isDisplayed();
+    }
+    async popUpNotClosed() {
+        return await $(this.exploreOptions).isDisplayed();
+    }
+    async uidRedirectPage() {
+        return await $(this.uidLogo).isDisplayed();
+    }
+    async uidPageContainer() {
+        return await $(this.uidContainer).isDisplayed();
+    }
+    async dontHaveAadharRedirectPage(){
+        return await $(this.dontHaveAadharPageText3).getText()
+    }
+    async dontHaveAadharEnterDetailsFieldPan(){
+        return await $(this.dontHaveAdharEnterDetailsPan).getText()
+    }
+    async dontHaveAadharEnterDetailsFieldMobileNo(){
+        return await $(this.dontHaveAdharEnterDetailsMobileNo).getText()
+    }
+    async dontHaveAadharEnterDetailsFieldSendOtp(){
+        return await $(this.dontHaveAdharEnterDetailsSendOtp).getText()
+    }
+    async setValueToDontHaveAadhaarFullName(value){
+        return await $(this.dontHaveAadharFullName).setValue(value)
+    }
+    async setValueToDontHaveAadhaarPan(value){
+        return await $(this.dontHaveAadharPan).setValue(value)
+    }
+    async isDontHaveAadharPanIconDisplayed() {
+        return await $(this.dontHaveAadharPanIcon).isDisplayed();
+    }
+    async colorOfTheIcon(){
+        return await $(this.panIcon).getValue();
+    }
+    async isDontHaveAadharMobilePlus91Displayed() {
+        return await $(this.dontHaveAadharMobilePlus91).isDisplayed();
+    }
+    async dontHaveAadharMobilePlus91Text() {
+        return await $(this.dontHaveAadharMobilePlus91).getText();
+    }
+    async setValueToDontHaveAadhaarMobileNo(value){
+        return await $(this.dontHaveAadharMobileNo).setValue(value)
+    }
+    async dontHaveAadharMobileField() {
+        return await $(this.dontHaveAadharMobileNo).getValue();
+    }
+    async dontHaveAadharMobile() {
+        return await $(this.dontHaveAadharMobileNo2).getText();
+    }
+    async setValueToDontHaveAadhaarEmailId(value){
+        return await $(this.dontHaveAadharEmailId).setValue(value)
+    }
+    async thankYouForYourDetailsText() {
+        return await $(this.thankYouText).getText();
+    }
+    async dontHaveAadharEmailIdText() {
+        return await $(this.dontHaveAadharEmail).getText();
+    }
+    async isSendOtpBtnNotDisplayed() {
+        return await $(this.sendOtpBtnNotDisplayed).isDisplayed();
+    }
+    async isRightArrowDisplayed() {
+        return await $(this.rightArrowDisplayed).isDisplayed();
+    }
+    async otpErrorMsgText() {
+        return await $(this.otpErrorMsg).getText();
+    }
+    async otpFieldValue() {
+        return await $(this.otpField).getValue();
+    }
+    async thankYouPageWillContactBoldText() {
+        return await $(this.thankYouPageText).getText();
+    }
+    async thankYouPageWillContactText() {
+        return await $(this.thankYouPageText2).getText();
+    }
+    async thankYouPageVisitBankBtn() {
+        return await $(this.visitBankBtn).isDisplayed();
+    }
+    async isWelcomeBannerDisplayed() {
+        return await $(this.welcomeBanner).isDisplayed();
+    }
+    async timerStartsFrom() {
+        return await $(this.timer).getText();
+    }
+    async expiredOtpTitleText() {
+        return await $(this.expiredOtpTitle).getText();
+    }
+    async expiredOtpMsgText() {
+        return await $(this.expiredOtpMsg).getText();
+    }
+    async setValueToPincode(value){
+        return await $(this.pincode).setValue(value)
+    }
+    async cityName() {
+        return await $(this.city).getValue();
+    }
+    async sourceIncomePlaceHolderText() {
+        return await $(this.sourceIncomePlaceHolder).getValue();
+    }
+    async grossIncomeValue() {
+        return await $(this.grossIncome).getValue();
+    }
+    async mothersName(){
+        return await $(this.mothersNameText).getValue();
+    }
+    async selectClassicProduct() {
+        return await $(this.classicProduct).isDisplayed();
+    }
+    async setValueToAddress1(value){
+        return await $(this.address1).setValue(value)
+    }
+    async proceedOpenBtn() {
+        return await $(this.proceedBtnClass).isDisplayed();
+    }
+    async fundingPopUp() {
+        return await $(this.fundingPopUpText).getText();
+    }
+    async fundingProceedBtn() {
+        return await $(this.fundingBtn).isDisplayed();
+    }
+    async accountDetailsPageText() {
+        return await $(this.congoText).getText();
+    }
+    async setValueToDebitCard(value){
+        return await $(this.debitCard).setValue(value)
+    }
+    async setValueToCvv(value){
+        return await $(this.cvv).setValue(value)
+    }
+    
+    
+    
 }
 
 module.exports = new Homepage();

@@ -38,7 +38,10 @@ exports.config = {
   // },
 
   specs: [
-    "./test/specs/web/homepage.spec.js",
+    //"./test/specs/web/homepage.spec.js",
+    //"./test/specs/web/exploreOtherOptions.spec.js"
+    "./test/specs/web/accouuntOpening.spec.js"
+    //"./test/specs/web/accountDetails.spec.js"
   ],
 
 

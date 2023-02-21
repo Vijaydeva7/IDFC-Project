@@ -21,6 +21,9 @@
   "grossIncomeErrorText": "Gross annual income should be max ₹100 Cr to proceed",
   "dontHaveAadharPage": "Your full name*",
   "dontHaveAadharPage2": "Your email address*",
+  "dontHaveAadharPage3": "Your Permanent Account Number(PAN)*",
+  "dontHaveAadharPage4": "Your mobile number*",
+  "dontHaveAadharPage5": "Send OTP",
   "companyNameHintText": "Company Name",
   "invalidAadhaarErrorText": "Please enter a valid 12-digit Aadhaar number or 16-digit VID number",
   "resetFieldEmail": "tragnarok569@gmail.com",
@@ -46,6 +49,7 @@
 
         
   },
+  "grossAnualIncomeErrorText":"Gross annual income should be max ₹100 Cr to proceed",
   "sourceOfIncomeDropDownValues":{
 
     "salary": "Salary",
@@ -56,7 +60,59 @@
     "professionalFee": "Professional fees"
   },
   "viewScheduleRedirectText":"Savings Account Fees and Charges",
-  "acceptTermsAndConditionText": "I accept all terms & conditions related to IDFC FIRST Bank"
+  "acceptTermsAndConditionText": "I accept all terms & conditions ",
+  "hiThereText": "Hi there!",
+  "panAadharMismatchCondition": "Mobile number linked to your Aadhaar must be used to open savings account",
+  
+  
+  
+  "exploreOtherOptionsField":{
+
+   "downContentOfDontRememberAadhar":"In order to retrieve your Aadhaar online,\nStep 1: Visit the UIDAI site below\nStep 2: Enter your name and search by registered mobile number or email address\nStep 3: Retrieve your Aadhaar number via OTP verification\nStep 4: Resume your IDFC FIRST savings account portal and enter your Aadhaar number to continue your journey",
+   
+   "downContentOfDontHaveAadhar":"Open your savings account by opting for an offline branch-based journey",
+   "dontHaveAadharText": "Don’t have Aadhaar or Virtual ID?\nThat’s alright!",
+  
+   "fullNameErrorMsg": "Please enter valid full name",
+   "validFullNameMsg":"Your full name*",
+   "invalidPanErrorMsg": "Please enter a valid PAN.",
+   "validPanMsg": "Your Permanent Account Number(PAN)*",
+   "nintyOneMobileNo":"+91",
+   "mobileErrorMsg":"Please enter your valid 10-digit mobile number",
+   "mobileFieldMsg":"Your mobile number*",
+   "thankYouText": "Thank you for\nsharing your details!",
+   "emailFieldText":"Your email address*",
+   "otpErrorMsg":"Please enter correct OTP",
+   "otpFieldValue": "",
+   "weWillContactYouText": "We will contact you soon",
+   "weWillContactYouText2":"We will contact you soon and you can\ncontinue your journey to open IDFC\nFIRST Bank Savings Account with\npower-packed offers & benefits.",
+   "timer": "Time Left 03:30",
+   "emailFieldTextError": "Please enter valid email to communicate with you.",
+   "expiredOtpTitleText": "Hi there!",
+   "expiredOtpMsgText": "Session is expired or token invalid."
+   
+
+   
+  
+  },
+  "cityName": "RANGAREDDI",
+  "professionalFeesText": "Professional fees",
+  "AccountOpeningDetails":{
+    "popUpText": "Please enter the funding amount",
+    "congoText": "Congratulations!"
+  },
+  "detailsPage": {
+
+    "congoText": "Congratulations! Your savings account has been opened",
+    "step2Text": "You have completed",
+    "step2Text2": "limited KYC",
+    "customerIdText": "Customer ID:",
+    "accountNoText": "Ac No:",
+    "complete3EasyStepsText": "Complete 3 easy steps to fully activate your account",
+    "earnUptoText": "You have started earning up to 6.75% p.a.",
+    "moreInterestText"  : "Earn 30-70% more interest than most banks"
+
+  }
  
 
 

@@ -38,5 +38,32 @@
     "moreThan40Char": "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
     "numerics": "1234567898" 
   } ,
-  "occupationValue": "IDFC Bank"
+  "occupationValue": "IDFC Bank",
+
+
+
+  "exploreOtherOptionsField": {
+    "invalidFullName": "VijayKumar",
+    "invalidPan": "9876543219",
+    "invalidPan2": "eyvpmklmnk",
+    "invalidPan3": "eyv@#$2345",
+    "invalidMobileNo":"vijay",
+    "invalidMobileNo2": "@#vk$%$#@",
+    "invalidMobileNo3": "814266246299",
+    "invalidMobileNo4":"81426624",
+    "invalidMobileNo5":"5678956789",
+    "invalidMobileNo6":"4567894567",
+    "invalidMobileNo7":"3456789345",
+    "invalidMobileNo8":"2345678923",
+    "invalidMobileNo9": "1234567890",
+    "invalidMobileNo10":"0987654321",
+    "invalidEmail": "vdeva236",
+    "invalidEmail2":"@gmail.com",
+    "invalidEmail3": "vdeva236gmail.com",
+    "invalidEmail4": "vdeva236@@gmail.com",
+    "invalidEmail5": ".vdeva236@.gmail.com",
+    "invalidEmail6": "vdeva236@gmail",
+    "invalidEmail7": "U+234@gmail.com",
+    "invalidEmail8": "@#$$%&@gmail.com"
+  }
 }
