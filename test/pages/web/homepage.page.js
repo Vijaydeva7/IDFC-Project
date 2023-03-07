@@ -39,7 +39,8 @@ class Homepage {
         this.otpError = '//label[@for="resume_app_number_input_otp"]';
         this.emailId = '//*[@id="emailId"]';
         this.panNumber = '//*[@id="panNumber"]';
-        this.aadharNumber = '//*[@id="aadhaar"]';    
+        //this.aadharNumber = '//*[@id="aadhaar"]'; 
+        this.aadharNumber = '/html/body/div[7]/div/div/div/div[3]/div/div[2]/div/div/div'
         this.byProceedText = '//*[@id="formName"]/div[4]/p'; 
         this.dontHaveAadhar = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/div[1]/p[2]';
         this.timer = '//*[text()="Time Left"]';
@@ -157,18 +158,8 @@ class Homepage {
         this.welcomeBanner = '//*[@alt="Welcome banner"]';
         this.expiredOtpTitle = '//*[@data-testid = "ERROR_TITLE"]';
         this.expiredOtpMsg = '//*[@data-testid = "ERROR_MESSAGE"]';
-        this.pincode = '//*[@id="pincode"]';
-        this.city = '//*[@value="RANGAREDDI"]';
-        this.classicProduct = '//*[@aria-checked="false"]';
-        this.address1 = '//*[@id="address1"]';
-        this.proceedBtnClass = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 dPEWVA"]';
-        this.fundingPopUpText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 dDgZEv"]';
-        this.fundingBtn = '//*[@id="fundingProceedBtn"]';
-        this.congoText = '//*[text()="Congratulations! "]';
-        this.debitCard = '//*[@id="debitCardNumber"]';
-        this.cvv = '//*[@id="CVVNumberDebitCard"]';
-
-
+       
+        
 
         
         
@@ -761,45 +752,7 @@ class Homepage {
     async expiredOtpMsgText() {
         return await $(this.expiredOtpMsg).getText();
     }
-    async setValueToPincode(value){
-        return await $(this.pincode).setValue(value)
-    }
-    async cityName() {
-        return await $(this.city).getValue();
-    }
-    async sourceIncomePlaceHolderText() {
-        return await $(this.sourceIncomePlaceHolder).getValue();
-    }
-    async grossIncomeValue() {
-        return await $(this.grossIncome).getValue();
-    }
-    async mothersName(){
-        return await $(this.mothersNameText).getValue();
-    }
-    async selectClassicProduct() {
-        return await $(this.classicProduct).isDisplayed();
-    }
-    async setValueToAddress1(value){
-        return await $(this.address1).setValue(value)
-    }
-    async proceedOpenBtn() {
-        return await $(this.proceedBtnClass).isDisplayed();
-    }
-    async fundingPopUp() {
-        return await $(this.fundingPopUpText).getText();
-    }
-    async fundingProceedBtn() {
-        return await $(this.fundingBtn).isDisplayed();
-    }
-    async accountDetailsPageText() {
-        return await $(this.congoText).getText();
-    }
-    async setValueToDebitCard(value){
-        return await $(this.debitCard).setValue(value)
-    }
-    async setValueToCvv(value){
-        return await $(this.cvv).setValue(value)
-    }
+   
     
     
     

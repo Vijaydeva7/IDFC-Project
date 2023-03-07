@@ -112,6 +112,13 @@
     "earnUptoText": "You have started earning up to 6.75% p.a.",
     "moreInterestText"  : "Earn 30-70% more interest than most banks"
 
+  },
+  "referralPage": {
+    "tncText": "Terms & conditions",
+    "howItsWorkPopUpText": "How it works",
+    "pipeSymbol": "How it works | Terms & conditions",
+    "copiedText": "Copied",
+    "whatsAppText": "Send the following on WhatsApp"
   }
  
 

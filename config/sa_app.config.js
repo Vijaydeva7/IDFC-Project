@@ -40,8 +40,10 @@ exports.config = {
   specs: [
     //"./test/specs/web/homepage.spec.js",
     //"./test/specs/web/exploreOtherOptions.spec.js"
-    "./test/specs/web/accouuntOpening.spec.js"
+    //"./test/specs/web/accouuntOpening.spec.js"
     //"./test/specs/web/accountDetails.spec.js"
+    //"./test/specs/web/referralLink.spec.js"
+    "./test/specs/web/preferredBranch.spec.js"
   ],
 
 
@@ -121,7 +123,7 @@ exports.config = {
   // gets prepended directly.
   //baseUrl: process.env.SFDC_QA_URL,
   baseUrl: "https://qa-opt.idfcfirstbank.com",
-  //
+  // baseUrl2: "https://www.ref-r.com/campaign_user/p?brandid=13850&campaignid=12572&widget=popup&ir_url=https://idfcfirst.ref-r.com/",
   // Default timeout for all waitFor* commands.
   waitforTimeout: 30000,
   //

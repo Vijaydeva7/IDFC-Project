@@ -1,5 +1,6 @@
 const homepage = require("../../pages/web/homepage.page");
 const detailspage = require("../../pages/accountDetails.page"); 
+const accountpage = require("../../pages/web/accountOpening.page.js");
 
 const { expect } = require("chai");
 //const validTestData = require("../../../test-data/web/valid_test_data.json");
@@ -45,13 +46,13 @@ describe("Account Opening Validation : ", () => {
         await driver.pause(5000);
         const pincode = await $('//*[@id="pincode"]');
         await pincode.click();
-        await homepage.setValueToPincode(validTestData.pincode);
+        await accountpage.setValueToPincode(validTestData.pincode);
         await driver.pause(3000);
-        await expect(await homepage.cityName()).to.be.eql(labelConstants.cityName);
+        await expect(await accountpage.cityName()).to.be.eql(labelConstants.cityName);
         await driver.pause(2000);
         const address1 = $('//*[@id="address1"]');
         await address1.click();
-        await homepage.setValueToAddress1(validTestData.adress1);
+        await accountpage.setValueToAddress1(validTestData.adress1);
 
     });
 
@@ -64,13 +65,13 @@ describe("Account Opening Validation : ", () => {
         const sep = await $('//*[text()="Self Employed Professional"]');
         await sep.click();
         await driver.pause(5000);
-        await expect(await homepage.sourceIncomePlaceHolderText()).to.be.eql(labelConstants.professionalFeesText);
+        await expect(await accountpage.sourceIncomePlaceHolderText()).to.be.eql(labelConstants.professionalFeesText);
 
 
     });
     it("Select source of income field ", async() => {
         
-        await expect(await homepage.sourceIncomePlaceHolderText()).to.be.eql(labelConstants.professionalFeesText);
+        await expect(await accountpage.sourceIncomePlaceHolderText()).to.be.eql(labelConstants.professionalFeesText);
 
 
     });
@@ -81,9 +82,9 @@ describe("Account Opening Validation : ", () => {
         const grossIncome = await $('//*[@id="grossAnualIncome"]');
         await grossIncome.click();
         await driver.pause(2000);
-        await homepage.setValueToGrossIncome(validTestData.grossIncome.income2);
+        await accountpage.setValueToGrossIncome(validTestData.grossIncome.income2);
         await driver.pause(5000);
-        await expect(await homepage.grossIncomeValue()).to.be.eql(validTestData.grossIncome.income2);
+        await expect(await accountpage.grossIncomeValue()).to.be.eql(validTestData.grossIncome.income2);
 
 
     });
@@ -92,9 +93,9 @@ describe("Account Opening Validation : ", () => {
         const mothersName = await $('//*[@id="motherFullName"]');
         await mothersName.click();
         await driver.pause(2000);
-        await homepage.setValueToMothersName(validTestData.mothersNameField);
+        await accountpage.setValueToMothersName(validTestData.mothersNameField);
         await driver.pause(5000);
-        await expect(await homepage.mothersName()).to.be.eql(validTestData.mothersNameField);
+        await expect(await accountpage.mothersName()).to.be.eql(validTestData.mothersNameField);
 
 
     });
@@ -111,7 +112,7 @@ describe("Account Opening Validation : ", () => {
         const checkBox = await $('//*[@id="formName"]/div[15]/div/div[2]/label/div');
         await checkBox.click();
         await driver.pause(2000);
-        await expect(await homepage.isDisabledProceedToOpen()).to.be.eql(true);
+        await expect(await accountpage.isDisabledProceedToOpen()).to.be.eql(true);
  
      });
      it("to validate the footer links", async() => {
@@ -158,12 +159,31 @@ describe("Account Opening Validation : ", () => {
         const checkBox = await $('//*[@id="formName"]/div[15]/div/div[2]/label/div');
         await checkBox.click();
         await driver.pause(2000);
-        await expect(await homepage.proceedOpenBtn()).to.be.eql(true);
+        await expect(await accountpage.proceedOpenBtn()).to.be.eql(true);
+        await checkBox.click();
+        await driver.pause(2000);
         const proceedToOpenBtn = await $('//*[@id="proceedBtn"]');
         await proceedToOpenBtn.click()
         await driver.pause(3000);
 
      });
+     it.only("validate funding btn - Step 3 in Account Opening Details Page ", async() => {
+        
+        // const fundingBtn = await $('div[class="sc-hBlfeS bqQxiP"] button[type="button"]');
+        // await fundingBtn.click();
+        // await driver.pause(5000);
+        await expect(await accountpage.fundingPopUp()).to.be.eql(labelConstants.AccountOpeningDetails.popUpText);
+        await expect(await accountpage.fundingProceedBtn()).to.be.eql(true);
+        // const closePopUp = await $('//*[@data-testid="IconCross"]');
+        // await closePopUp.click();
+        await driver.pause(2000);
+        await expect(await accountpage.accountDetailsPageText()).to.be.eql(labelConstants.AccountOpeningDetails.congoText);
+        await driver.pause(2000);
+        
+
+
+     });
+
 
      it.only("validate Perform schedule later functionality", async() => {
         
@@ -171,13 +191,13 @@ describe("Account Opening Validation : ", () => {
         await driver.pause(5000);
         const mobileNumber = await $('#mobileNumber')
         await mobileNumber.click();
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo6);
+        await accountpage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo6);
         await driver.pause(5000);
         const emailIdField = await $('//*[@id="emailId"]');
         await emailIdField.click();
        // await homepage.setValueToEmail(validTestData.emailId2.email);
         await driver.pause(3000);
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+        await expect(await accountpage.isPopUpDisplayed()).to.be.eql(true);
         await driver.pause(60000);
         const verifyBtn = await $('//*[@id="verifyOtpBtn"]');
         await verifyBtn.click();
@@ -214,12 +234,12 @@ describe("Account Opening Validation : ", () => {
         const fundingBtn = await $('div[class="sc-hBlfeS bqQxiP"] button[type="button"]');
         await fundingBtn.click();
         await driver.pause(5000);
-        await expect(await homepage.fundingPopUp()).to.be.eql(labelConstants.AccountOpeningDetails.popUpText);
-        await expect(await homepage.fundingProceedBtn()).to.be.eql(true);
+        await expect(await accountpage.fundingPopUp()).to.be.eql(labelConstants.AccountOpeningDetails.popUpText);
+        await expect(await accountpage.fundingProceedBtn()).to.be.eql(true);
         const closePopUp = await $('//*[@data-testid="IconCross"]');
         await closePopUp.click();
         await driver.pause(2000);
-        await expect(await homepage.accountDetailsPageText()).to.be.eql(labelConstants.AccountOpeningDetails.congoText);
+        await expect(await accountpage.accountDetailsPageText()).to.be.eql(labelConstants.AccountOpeningDetails.congoText);
         await driver.pause(2000);
 
 
@@ -237,7 +257,7 @@ describe("Account Opening Validation : ", () => {
         const cancelPayment = await $('//*[@title="Cancel Transaction"]');
         await cancelPayment.click();
         await driver.pause(10000);
-        await expect(await detailspage.earnUptoText()).to.be.eql(labelConstants.detailsPage.earnUptoText);
+        await expect(await accountpage.earnUptoTextFlow()).to.be.eql(labelConstants.detailsPage.earnUptoText);
 
 
     });

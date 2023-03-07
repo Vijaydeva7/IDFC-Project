@@ -48,12 +48,14 @@
   "panNumber": {
     "pan": "EYVPM4838R",
     "pan2": "BOEPT2508F",
-    "pan3": "DUZPP9465E"
+    "pan3": "DUZPP9465E",
+    "pan4" : "ERUPP4271H"
   },
   "aadhaarNumber": {
     "aadhaar": "526996116515",
     "aadhaar2": "466102489433",
-    "aadhaar3": "445161738009"
+    "aadhaar3": "445161738009",
+    "aadhaar4": "300021023104"
   },
   "grossIncome": {
     "income": "₹1,000",
@@ -91,7 +93,12 @@
   "pincode": "500032",
   "adress1": "1-55,Markode",
   "debitCard" : "4035622809292008",
-  "cvv": "732"
+  "cvv": "732",
+  "referralPage":{
+    "name": "Vijay Kumar",
+    "email": "vdeva236@gmail.com",
+    "mobile": "8142662462"
+  }
       
   
 }
