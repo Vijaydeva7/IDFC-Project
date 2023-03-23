@@ -41,9 +41,10 @@ exports.config = {
     //"./test/specs/web/homepage.spec.js",
     //"./test/specs/web/exploreOtherOptions.spec.js"
     //"./test/specs/web/accouuntOpening.spec.js"
-    //"./test/specs/web/accountDetails.spec.js"
+    "./test/specs/web/accountDetails.spec.js"
     //"./test/specs/web/referralLink.spec.js"
-    "./test/specs/web/preferredBranch.spec.js"
+    //"./test/specs/web/preferredBranch.spec.js"
+    // "./test/specs/web/csHomePage.spec.js"
   ],
 
 

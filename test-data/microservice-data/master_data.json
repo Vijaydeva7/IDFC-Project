@@ -7,7 +7,9 @@
         "value": "60344",
         "branchName": "RANCHI - LALPUR BRANCH",
         "branchCode": "60344",
-        "ifscCode": "IDFB0060344"
+        "ifscCode": "IDFB0060344",
+        "corpSalTray": null,
+        "ownerID": null
       }
     },
 

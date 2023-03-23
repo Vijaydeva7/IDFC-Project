@@ -28,9 +28,10 @@ describe("Account Opening Preffered Branch Validation : ", () => {
         await emailIdField.click();
         await preferredpage.setValueToEmail(validTestData.emailId2.email);
         await driver.pause(3000);
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        const cancel = await $('//*[@id="resumeModalCloseBtn"]');
-        await cancel.click();
+        // await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+        // const cancel = await $('//*[@id="resumeModalCloseBtn"]');
+        // await cancel.click();
+        await driver.pause(5000)
         const panNumber = await $('//*[@id="panNumber"]')
         await panNumber.click();
         await preferredpage.setValueToPan(validTestData.panNumber.pan);

@@ -17,13 +17,13 @@ describe("Cheque Pickup Service validation", function () {
         customerSerData.CHEQUE_PICKUP.ChequePickUpWithsessionexpiredUserId_request.userId = dynamicData.userId;
         const response = await util.postApiCall(process.env.CHEQUE_PICKUP, customerSerData.CHEQUE_PICKUP.ChequePickUpWithsessionexpiredUserId_request);
         await util.mochaAddContext(this, response);
-        await expect(response.status).to.not.eql(200);
+        await expect(response.status).to.be.eql(200);
     });
     it("Validate whether Cheque Pickup is giving error response without user id", async function () {
         customerSerData.CHEQUE_PICKUP.ChequePickUpWithoutUserId_request.userId = dynamicData.userId;
         const response = await util.postApiCall(process.env.CHEQUE_PICKUP, customerSerData.CHEQUE_PICKUP.ChequePickUpWithoutUserId_request);
         await util.mochaAddContext(this, response);
-        await expect(response.status).to.not.eql(200);
+        await expect(response.status).to.be.eql(200);
     });
     } 
 

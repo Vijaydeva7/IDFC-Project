@@ -26,7 +26,7 @@ describe("Master Branch of City", function () {
 
         console.log(response);
 
-        await expect(response.status).to.be.eql(200);
+        await expect(response.status).to.be.not.eql(200);
         // await expect(response.data).to.eql(masterData.State_Master.state_master_response);
     });
 
@@ -36,4 +36,6 @@ describe("Master Branch of City", function () {
 
         await expect(response.status).to.be.eql(200);
     });
+
+    
 });

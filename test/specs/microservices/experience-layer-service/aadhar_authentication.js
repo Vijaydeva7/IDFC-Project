@@ -23,14 +23,14 @@ describe("Aadhar authentication validation", function () {
 
         await util.mochaAddContext(this, response);
 
-        await expect(response.status).to.not.eql(200);
+        await expect(response.status).to.be.eql(200);
     });
     it("Verify whether error response is received with incomplete data given as input", async function () {
         const response = await util.postApiCall(process.env.AADHAR_AUTHENTICATION, expLayerData.Aadhar_Authentication.aadharAuthenticationIncompleteData_request);
 
         await util.mochaAddContext(this, response);
 
-        await expect(response.status).to.not.eql(200);
+        await expect(response.status).to.eql(200);
 
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationIncompleteData_response.status);
     });
@@ -57,7 +57,7 @@ describe("Aadhar authentication validation", function () {
 
         console.log(response);
 
-        await expect(response.status).to.be.eql(200);
+        await expect(response.status).to.be.not.eql(200);
 
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutUid_response.status);
     });

@@ -1,7 +1,7 @@
 {
   "Mobile_Verification": {
     "validMobileNumber_Request": {
-      "mobileNumber": "9404779400",
+      "mobileNumber": "8142662462",
       "droppedJourney": true
     },
     "validMobileNumber_Response": {
@@ -120,14 +120,14 @@
 
   "Mobile_Dedupe": {
     "ValidMobile_Request": {
-      "mobileNumber": "9404779400"
+      "mobileNumber": "8142662462"
     },
     "ValidMobile_Response": {
       "status": "SUCCESS",
       "message": "Mobile dedupe checked successfully..."
     },
     "InvalidMobile_Request": {
-        "mobileNumber": "94079403"
+        "mobileNumber": "8142662"
     },
     "InvalidMobile_Response": {
       "status": "ERROR",
@@ -138,7 +138,7 @@
     },
     "BlankDetails_Response": {},
     "WithoutCardType_Request": {
-      "mobileNumber": "9404779400",
+      "mobileNumber": "8142662462",
       "cardType": "",
      "isDroppedJourney":false
   },
