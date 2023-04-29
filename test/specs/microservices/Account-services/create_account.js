@@ -31,7 +31,7 @@ describe("Account Service Validation", function () {
       
    });
    it("Verify whether account create with self serviceable ", async function () {
-      accServiceData.Create_Account.createAccountWithSelfServiceable_request_request.userId = dynamicData.userId;
+      accServiceData.Create_Account.createAccountWithSelfServiceable_request.userId = dynamicData.userId;
       const response = await util.postApiCall(process.env.ACCOUNT_SERVICE, accServiceData.Create_Account.createAccountWithSelfServiceable_request);
       await util.mochaAddContext(this, response);
 
@@ -42,7 +42,7 @@ describe("Account Service Validation", function () {
 
    });
    it("Verify whether account create with preferred branch  ", async function () {
-      accServiceData.Create_Account.createAccountWithPreferredBranch_request_request.userId = dynamicData.userId;
+      accServiceData.Create_Account.createAccountWithPreferredBranch_request.userId = dynamicData.userId;
       const response = await util.postApiCall(process.env.ACCOUNT_SERVICE, accServiceData.Create_Account.createAccountWithPreferredBranch_request);
       await util.mochaAddContext(this, response);
 

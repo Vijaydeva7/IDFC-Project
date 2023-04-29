@@ -6,8 +6,9 @@ const invalidTestData = require("../../../test-data/web/invalid_test_data.json")
 const validTestData = require("../../../test-data/web/valid_test_data.json");
 const labelConstants = require("../../../test-data/web/label_constants.json");
 const { termsConditions } = require("../../pages/web/homepage.page");
+const { okayBtn, btn } = require("../../pages/web/preferredBranch.page");
 
-// const { getMobileNumber, grossIncome } = require("../../pages/web/homepage.page");
+ const { getMobileNumber, grossIncome } = require("../../pages/web/homepage.page");
 
 
 
@@ -15,35 +16,32 @@ const { termsConditions } = require("../../pages/web/homepage.page");
 describe("Account Opening Preffered Branch Validation : ", () => {
 
     it("Validate whether valid details of user", async () => {
-
+        await driver.pause(2000);
         await driver.url("/apply/savings");
         await driver.maximizeWindow();
         await preferredpage.waitUntilHomepageLoad();
         await driver.pause(7000);
-        const mobileNumber = await $('#mobileNumber')
-        await mobileNumber.click();
-        await preferredpage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
+        await preferredpage.mobileNumberField();
+        await preferredpage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo12);
         await driver.pause(5000);
-        const emailIdField = await $('//*[@id="emailId"]');
-        await emailIdField.click();
+        await preferredpage.emailIdField();
+        await driver.pause(6000)
         await preferredpage.setValueToEmail(validTestData.emailId2.email);
-        await driver.pause(3000);
-        // await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+        await driver.pause(5000);
+        // await expect(await preferredpage.popUpCancel()).to.be.eql(true);
         // const cancel = await $('//*[@id="resumeModalCloseBtn"]');
         // await cancel.click();
-        await driver.pause(5000)
-        const panNumber = await $('//*[@id="panNumber"]')
-        await panNumber.click();
-        await preferredpage.setValueToPan(validTestData.panNumber.pan);
+        await driver.pause(6000)
+        await preferredpage.panNumberField();
+        await preferredpage.setValueToPan(validTestData.panNumber.pan8);
         await driver.pause(3000);
 
     });
 
     it("Enter VID", async () => {
 
-        const aadhaarNum = await $('//*[@id="aadhaar"]')
-        await aadhaarNum.click();
-        await preferredpage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
+        await preferredpage.aadhaarField();
+        await preferredpage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar8);
         await driver.pause(10000);
 
     });
@@ -52,9 +50,8 @@ describe("Account Opening Preffered Branch Validation : ", () => {
 
     it("Click on OTP to verify Aadhaar", async () => {
 
-        const getOtp = await $('//*[@id="getOtpBtn"]')
-        await getOtp.click();
-        await driver.pause(20000);
+        await preferredpage.getOtpBtn();
+        await driver.pause(60000);
 
     });
 
@@ -62,21 +59,19 @@ describe("Account Opening Preffered Branch Validation : ", () => {
 
     it("click on Validate OTP", async () => {
 
-        const verifyOtpBtn = await $('//*[@id="verifyAadharBtn"]')
-        await verifyOtpBtn.click();
+        await preferredpage.verifyOtpBtn();
         await driver.pause(50000);
 
     });
+    
 
 
 
     it("Check if communication address is uncheck when OTP validated.", async () => {
 
-        const checkBox = await $('//*[@id="formName"]/div[5]/div[1]/div[1]/label/div');
-        await checkBox.click();
+        await preferredpage.checkBoxField();
         await driver.pause(3000);
-        const proceedBtn = await $('//*[@id="proceedAadharAddressBtn"]');
-        await proceedBtn.click();
+        await preferredpage.popUpProceedBtn();
         await driver.pause(3000);
 
     });
@@ -85,11 +80,9 @@ describe("Account Opening Preffered Branch Validation : ", () => {
 
     it("Select second preferred branch from the list of given drop down.", async () => {
 
-        const preferred = await $('//*[@id="select_prefered_branch"]');
-        await preferred.click();
+        await preferredpage.preferredBranchField();
         await driver.pause(3000);
-        const secondBranch = await $('//*[text() = "NUZVID BRANCH"]');
-        await secondBranch.click();
+        await preferredpage.secondBranch();
         await driver.pause(3000);
 
     });
@@ -117,19 +110,17 @@ describe("Account Opening Preffered Branch Validation : ", () => {
 
     it("Enter gross annual income", async () => {
 
-        const gross = await $('//*[@id="grossAnualIncome"]');
-        await gross.click();
+        await preferredpage.grossIncomeField();
         await driver.pause(5000);
         await preferredpage.setValueToGrossIncome(validTestData.grossIncome.income);
         await driver.pause(3000);
         await expect(await preferredpage.getGrossIncome()).to.be.eql(validTestData.grossIncome.income);
 
-    });
+    }); 
 
     it("Enter Company name ",async () => {
 
-        const company = await $('//*[@id="select_company"]');
-        await company.click();
+        await preferredpage.companyNameField();
         await driver.pause(2000);
         await preferredpage.setValueToCompanyName(validTestData.companyName);
         await driver.pause(3000);
@@ -140,59 +131,89 @@ describe("Account Opening Preffered Branch Validation : ", () => {
 
     it(" Enter mother's name", async () => {
 
-        const mothersName = await $('//*[@id="motherFullName"]');
-        await mothersName.click();
+        await preferredpage.mothersNameField();
         await driver.pause(2000);
         await preferredpage.setValueToMothersName(validTestData.mothersNameField);
-        
+        await driver.pause(5000);
     });
 
     it("Click on Proceed to open account.", async () => {
 
-        const proceedToOpen = $('//button[@id="proceedBtn"]');
-        await proceedToOpen.click();
-        await driver.pause(15000);
+        await preferredpage.proceedToOpenBtn();
+        await driver.pause(20000);
 
     });
+    // it("Click on OKAY button if Error popup came after clicks on Proceed to Open account button", async () => {
+        
+    //     const okay = await $('//*[@data-testid="Button"]');
+    //     await okay.click();
+    //     await driver.pause(5000);
+
+    // });
+    
+
 
     it("If user gets L funding pop up click on proceed else validate title of account page.", async () => {
 
-        await driver.pause(5000);
-        const btn = await $('//*[@id="fundingProceedBtn"]');
-        await btn.click();
+        
+        if(await preferredpage.btn()){
+
+        await preferredpage.fundingBtn();
         await driver.pause(10000);
-       
-    });
-
-
-
-    it("Upon clicking on L funding proceed button enter valid details and click on payment ", async () => {
-
-    
-        const debitCard = await $('//*[@id="debitCardNumber"]');
-        await debitCard.click();
+        await preferredpage.debitCardLpopUp();
         await preferredpage.setValueToDebitCard(validTestData.debitCard);
-        const month = await $('//*[@id="expiryMonthDebitCard"]');
-        await month.click();
-        const selectMonth  = await $('//*[@value="03"]');
-        await selectMonth.click();
-        const year = await $('//*[@id="expiryYearDebitCard"]');
-        await year.click();
-        const selectYear = await $('//*[@value="2029"]');
-        await selectYear.click();
-        const cvv = await $('//*[@id="CVVNumberDebitCard"]');
-        await cvv.click();
+        await preferredpage.monthLpopUp();
+        await preferredpage.selectMonthLpopUp();
+        await preferredpage.yearLpopUp();
+        await preferredpage.selectYearLpopUp();
+        await preferredpage.cvvLpopUp();
         await preferredpage.setValueToCvv(validTestData.cvv);
         await driver.pause(2000);
+        await preferredpage.makePaymentLpopUp();
+        await driver.pause(40000); 
+
+        } else {
+
+            await expect(await preferredpage.uiOfVKYCfield()).to.be.eql(true);
+            await expect(await preferredpage.uiOfVKYCfield2()).to.be.eql(true);
+
+        }
+         
 
      });
 
-    it("Confirm transaction.", async () => {
+    it("To verify the VKYC status in Web UI of account details page for newly created account", async () => {
+        
+        await expect(await preferredpage.uiOfVKYCfield()).to.be.eql(true);
+        await expect(await preferredpage.uiOfVKYCfield2()).to.be.eql(true);
 
-        const makePayment = await $('//*[@id="SubmitBillShip"]');
-        await makePayment.click();
-        await driver.pause(40000);  
+    })
 
+    it("Account Details Download : ", async () => {
+
+        await preferredpage.AccountDetails();
+        await driver.pause(30000);
+        await driver.switchWindow("https://qa-ntb.idfcfirstbank.com/apply/accountDetails");
+        await driver.pause(5000);
     });
 
+it("schedule later functionality",async () => {
+
+    await preferredpage.scheduleLtrBtn();
+    await driver.pause(5000);
+    await preferredpage.calander();
+    await driver.pause(3000);
+    await preferredpage.date();
+    await driver.pause(2000);
+    await preferredpage.timerIcon();
+    await driver.pause(2000);
+    await preferredpage.timeSlot();
+    await driver.pause(2000);
+    await preferredpage.confirmBtn();
+    await driver.pause(5000);
+    // await preferredpage.okayBtn();
+    // await driver.pause(5000);
+
+});
+    
 });

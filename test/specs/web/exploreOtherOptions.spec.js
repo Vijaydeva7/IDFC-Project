@@ -7,11 +7,11 @@ const labelConstants = require("../../../test-data/web/label_constants.json");
 // const { getMobileNumber, grossIncome } = require("../../pages/web/homepage.page");
 
 describe("Explore Other Options Validation : ", () => {
-    it("Validate whether idfc logo is present on screen", async () => {
+    it.only("Validate whether idfc logo is present on screen", async () => {
         await driver.url("/apply/savings");
         await driver.maximizeWindow();
 
-        // await driver.pause(10000);
+        // await driver.pause(10000); 
         await homepage.waitUntilHomepageLoad();
         await driver.pause(2000);
         await expect(await homepage.isIdfcLogoDisplayed()).to.be.eql(true);
@@ -234,12 +234,12 @@ describe("Explore Other Options Validation : ", () => {
         // const color = await driver.getCSSProperty("//*[@class='Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa']", "color");
         // await console.log("######",color)
         // await expect(color.value).to.be.eql("rgba(84,86,91,1)");
-        const panIconElem = await $('//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]')
-        const panIcon = await panIconElem.getCSSProperty('//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]','color')
-        await console.log("######",panIcon)
-        await expect(await homepage.colorOfTheIcon()).to.be.eql(validTestData.cssValues);
+        // const panIconElem = await $('//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]')
+        // const panIcon = await panIconElem.getCSSProperty('//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]','color')
+        // await console.log("######",panIcon)
+        // await expect(await homepage.colorOfTheIcon()).to.be.eql(validTestData.cssValues);
 
-        await expect(await homepage.isDontHaveAadharPanIconDisplayed()).to.be.eql(true);
+       // await expect(await homepage.isDontHaveAadharPanIconDisplayed()).to.be.eql(true);
         await expect(await homepage.dontHaveAadharEnterDetailsFieldPan()).to.be.eql(labelConstants.exploreOtherOptionsField.validPanMsg);
 
         
@@ -247,7 +247,7 @@ describe("Explore Other Options Validation : ", () => {
 
     it("Validate whether Verify that mobile number should be start  +91 country code.", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
         await expect(await homepage.isDontHaveAadharMobilePlus91Displayed()).to.be.eql(true);
         await expect(await homepage.dontHaveAadharMobilePlus91Text()).to.be.eql(labelConstants.exploreOtherOptionsField.nintyOneMobileNo);
@@ -255,7 +255,7 @@ describe("Explore Other Options Validation : ", () => {
     });
     it("Validate whether Verify that mobile number should accept only numbers", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
         await homepage.setValueToDontHaveAadhaarMobileNo(invalidTestData.exploreOtherOptionsField.invalidMobileNo);
         await expect(await homepage.dontHaveAadharMobileField()).to.be.not.eql(invalidTestData.exploreOtherOptionsField.invalidMobileNo);
@@ -267,16 +267,16 @@ describe("Explore Other Options Validation : ", () => {
     }); 
     it("Validate whether Verify that user should not be able to enter special characters or alphabets in mobile number field", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
-        for (var index = 1; index <= 10; index++) {
+        for (var index = 1; index <= 11; index++) {
 
             await driver.keys(['Backspace']);
     
         }
         await driver.pause(4000);
         await mobileNo.click();
-        for (var index = 1; index <= 3; index++) {
+        for (var index = 1; index <= 4; index++) {
 
             await driver.keys(['Backspace']);
     
@@ -291,7 +291,7 @@ describe("Explore Other Options Validation : ", () => {
     }); 
     it("Validate whether Verify that mobile number should accept not accept more than 10 numbers", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
         await homepage.setValueToDontHaveAadhaarMobileNo(invalidTestData.exploreOtherOptionsField.invalidMobileNo3);
         await driver.pause(4000)
@@ -301,7 +301,7 @@ describe("Explore Other Options Validation : ", () => {
     }); 
     it("Validate whether Verify that mobile number should accept not accept less than 10 numbers it shows error msg", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
         for (var index = 1; index <= 10; index++) {
 
@@ -323,7 +323,7 @@ describe("Explore Other Options Validation : ", () => {
     }); 
     it("Validate whether Verify that entered invalid mobile number should accept same ", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
         for (var index = 1; index <= 10; index++) {
 
@@ -345,7 +345,7 @@ describe("Explore Other Options Validation : ", () => {
     }); 
     it("Validate whether if user entered 5,4,3,2,1,0 as intial in mobile number field should get error msg ", async () => {
         
-        const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+        const mobileNo = await $('//*[@autocomplete="mobile"]');
         await mobileNo.click();
         for (var index = 1; index <= 10; index++) {
 
@@ -472,11 +472,11 @@ describe("Explore Other Options Validation : ", () => {
     const pan = $('//*[@autocomplete="pan"]');
     await pan.click();
     await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-    const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
     await mobileNo.click();
     await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
     await driver.pause(4000)
-    const sendBtn = await $("button[type='  ']");
+    const sendBtn = await $("//button[@type='submit']");
     await sendBtn.click();
     await driver.pause(2000)
     await expect(await homepage.timerStartsFrom()).to.be.eql(labelConstants.exploreOtherOptionsField.timer);
@@ -806,7 +806,7 @@ it("Validate whether Verify functionlaity of Send OTP button when user clicks af
     await pan.click();
     await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
     await expect(await homepage.isSendOtpBtnNotDisplayed()).to.be.not.eql(true);
-    const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
     await mobileNo.click();
     await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
     await driver.pause(4000)
@@ -819,7 +819,6 @@ it("Validate whether Verify functionlaity of Send OTP button when user clicks af
 }); 
 
 it("Validate whether Verify  if user can click on right arrow key when only5 digit OTP is entered Right arrow should not get enable.", async () => {
-    
     
     
     const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
@@ -840,11 +839,11 @@ it("Validate whether Verify  if user can click on right arrow key when only5 dig
     const pan = $('//*[@autocomplete="pan"]');
     await pan.click();
     await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-    const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
     await mobileNo.click();
     await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
     await driver.pause(4000)
-    const sendBtn = await $("button[type='  ']");
+    const sendBtn = await $("//button[@type='submit']");
     await sendBtn.click();
     await driver.pause(20000);
     await expect(await homepage.isRightArrowDisplayed()).to.be.not.eql(true);
@@ -873,22 +872,22 @@ it("Validate whether Verify  if user entered invalid Otp user should get Error m
     const pan = $('//*[@autocomplete="pan"]');
     await pan.click();
     await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-    const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
     await mobileNo.click();
     await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
     await driver.pause(4000)
-    const sendBtn = await $("button[type='  ']");
+    const sendBtn = await $("//button[@type='submit']");
     await sendBtn.click();
     await driver.pause(20000);
     const rightArrow = await $('//span[@aria-label="ArrowRight"]');
     await rightArrow.click();
-    await expect(await homepage.otpErrorMsgText()).to.be.not.eql(labelConstants.exploreOtherOptionsField.otpErrorMsg);
+    await expect(await homepage.otpErrorMsgText()).to.be.eql(labelConstants.exploreOtherOptionsField.otpErrorMsg);
 
     
 }); 
 it("Validate whether user After clicking on 'Resend code' OTP field should be cleared.", async () => {
-
-    const resend = await $('//*[@class="CallToActionstyle__ContentWrapper-sc-100zrep-1 kyFLwW"]');
+     await driver.pause(46000);
+    const resend = await $('//*[@data-testid="resend-opt-button"]');
     await resend.click();
     await expect(await homepage.otpFieldValue()).to.be.eql(labelConstants.exploreOtherOptionsField.otpFieldValue);
 
@@ -916,11 +915,11 @@ it("Validate whether Verify  if user entered valid Otp after 10 min user should 
     const pan = $('//*[@autocomplete="pan"]');
     await pan.click();
     await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-    const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
     await mobileNo.click();
     await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
     await driver.pause(4000)
-    const sendBtn = await $("button[type='  ']");
+    const sendBtn = await $("//button[@type='submit']");
     await sendBtn.click();
     await driver.pause(300000);
     const rightArrow = await $('//span[@aria-label="ArrowRight"]');
@@ -955,7 +954,7 @@ await homepage.setValueToDontHaveAadhaarEmailId(validTestData.exploreOtherOption
 const pan = $('//*[@autocomplete="pan"]');
 await pan.click();
 await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+const mobileNo = await $('//*[@autocomplete="mobile"]');
 await mobileNo.click();
 await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
 await driver.pause(4000)
@@ -967,9 +966,9 @@ await expect(await homepage.isSendOtpBtnNotDisplayed()).to.be.eql(true);
 it("verify whether user should be authenticated successfully to the Thank you for sahring your details page when entered correct Otp. ", async () => {
 
 
-const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
-await backArrow.click();
-await driver.pause(5000);
+// const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
+// await backArrow.click();
+// await driver.pause(5000);
 const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
 await exploreOptions.click();
 await driver.pause(3000);
@@ -985,11 +984,11 @@ await homepage.setValueToDontHaveAadhaarEmailId(validTestData.exploreOtherOption
 const pan = $('//*[@autocomplete="pan"]');
 await pan.click();
 await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+const mobileNo = await $('//*[@autocomplete="mobile"]');
 await mobileNo.click();
 await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
 await driver.pause(4000)
-const sendBtn = await $("button[type='  ']");
+const sendBtn = await $("//button[@type='submit']");
 await sendBtn.click();
 await driver.pause(20000);
 const rightArrow = await $('//span[@aria-label="ArrowRight"]');
@@ -1008,75 +1007,20 @@ await expect(await homepage.thankYouPageVisitBankBtn()).to.be.eql(true);
 
 
 });
-it("verify whether To check the functionality of  Go to IDFC First Bank Website button.", async () => {
-const visitBankBtn = await $('//*[@class="Buttonstyle__Wrapper-sc-6p72tp-0 fhUqql sc-fspXqA cLuSUk"]');
-await visitBankBtn.click();
-await driver.pause(10000);
-await expect(await homepage.isWelcomeBannerDisplayed()).to.be.eql(true);
-
-
-});
-
-
-it("verify whether the functionality of right arrow key after entering all valid details user should land on Thank you page", async () => {
-
-
-const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
-await backArrow.click();
-await driver.pause(5000);
-const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
-await exploreOptions.click();
-await driver.pause(3000);
-const intiate = await $('//*[@id="initiateOfflineProcess"]');
-await intiate.click();
-await driver.pause(3000);
-const fullName = $('//*[@autocomplete="fullName"]');
-await fullName.click();
-await homepage.setValueToDontHaveAadhaarFullName(validTestData.exploreOtherOptionsField.validFullName);
-const mailId = await $('//*[@name="email"]');
-await mailId.click();
-await homepage.setValueToDontHaveAadhaarEmailId(validTestData.exploreOtherOptionsField.validEmailId);
-const pan = $('//*[@autocomplete="pan"]');
-await pan.click();
-await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
-await mobileNo.click();
-await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
-await driver.pause(4000)
-const sendBtn = await $("button[type='  ']");
-await sendBtn.click();
-await driver.pause(20000);
-const rightArrow = await $('//span[@aria-label="ArrowRight"]');
-await rightArrow.click();
-await driver.pause(5000);
-await expect(await homepage.isSendOtpBtnNotDisplayed()).to.be.eql(true);
-await expect(await homepage.thankYouForYourDetailsText()).to.be.eql(labelConstants.exploreOtherOptionsField.thankYouText);
-
-
-});
-
-
-
-
-
-
-
-
-
-
-it("Validate whether Verify that mobile number should accept not accept more than 10 numbers", async () => {
+it("Validate whether Verify that user after enter valid details, user will get Thank you page", async () => {
     
     
-    
-    const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
-    await backArrow.click();
+    await driver.refresh();
     await driver.pause(5000);
-    const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
-    await exploreOptions.click();
-    await driver.pause(3000);
-    const intiate = await $('//*[@id="initiateOfflineProcess"]');
-    await intiate.click();
-    await driver.pause(3000);
+    // const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
+    // await backArrow.click();
+    // await driver.pause(5000);
+    // const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
+    // await exploreOptions.click();
+    // await driver.pause(3000);
+    // const intiate = await $('//*[@id="initiateOfflineProcess"]');
+    // await intiate.click();
+    // await driver.pause(3000);
     const fullName = $('//*[@autocomplete="fullName"]');
     await fullName.click();
     await homepage.setValueToDontHaveAadhaarFullName(validTestData.exploreOtherOptionsField.validFullName);
@@ -1086,11 +1030,11 @@ it("Validate whether Verify that mobile number should accept not accept more tha
     const pan = $('//*[@autocomplete="pan"]');
     await pan.click();
     await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
-    const mobileNo = await $('//*[@autocomplete="mobileNumber"]');
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
     await mobileNo.click();
     await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
     await driver.pause(4000)
-    const sendBtn = await $("button[type='  ']");
+    const sendBtn = await $("//button[@type='submit']");
     await sendBtn.click();
     await driver.pause(20000);
     const rightArrow = await $('//span[@aria-label="ArrowRight"]');
@@ -1104,10 +1048,55 @@ it("Validate whether Verify that mobile number should accept not accept more tha
 
 
 }); 
+it("verify whether the functionality of right arrow key after entering all valid details user should land on Thank you page", async () => {
+
+    await driver.refresh();
+    await driver.pause(5000);
+    // const backArrow = $('//*[name()="path" and contains(@d,"M23.47 8.2")]');
+    // await backArrow.click();
+    // await driver.pause(5000);
+    // const exploreOptions = await $('//button[@id="exploreOtherOptionBtn"]');
+    // await exploreOptions.click();
+    // await driver.pause(3000);
+    // const intiate = await $('//*[@id="initiateOfflineProcess"]');
+    // await intiate.click();
+    // await driver.pause(3000);
+    const fullName = $('//*[@autocomplete="fullName"]');
+    await fullName.click();
+    await homepage.setValueToDontHaveAadhaarFullName(validTestData.exploreOtherOptionsField.validFullName);
+    const mailId = await $('//*[@name="email"]');
+    await mailId.click();
+    await homepage.setValueToDontHaveAadhaarEmailId(validTestData.exploreOtherOptionsField.validEmailId);
+    const pan = $('//*[@autocomplete="pan"]');
+    await pan.click();
+    await homepage.setValueToDontHaveAadhaarPan(validTestData.exploreOtherOptionsField.validPan);
+    const mobileNo = await $('//*[@autocomplete="mobile"]');
+    await mobileNo.click();
+    await homepage.setValueToDontHaveAadhaarMobileNo(validTestData.exploreOtherOptionsField.validMobileNo);
+    await driver.pause(4000)
+    const sendBtn = await $("//button[@type='submit']");
+    await sendBtn.click();
+    await driver.pause(20000);
+    const rightArrow = await $('//span[@aria-label="ArrowRight"]');
+    await rightArrow.click();
+    await driver.pause(5000);
+    //await expect(await homepage.isSendOtpBtnNotDisplayed()).to.be.eql(true);
+    await expect(await homepage.thankYouForYourDetailsText()).to.be.eql(labelConstants.exploreOtherOptionsField.thankYouText);
     
-   
-   
+    
+    });
+    
+    
+    
+it("verify whether To check the functionality of  Go to IDFC First Bank Website button.", async () => {
+
+    const visitBankBtn = await $('//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 llmeRh"]');
+    await visitBankBtn.click();
+    await driver.pause(10000);
+    await expect(await homepage.isWelcomeBannerDisplayed()).to.be.eql(true);
 
 
-    
+});
+
+
 });

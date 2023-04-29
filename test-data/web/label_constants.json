@@ -36,11 +36,13 @@
   "termsAndConditionText": "Terms & conditions",
   "numericMothersNameErrorText" : "Please enter the full name separated by spaces.",
   "companyNameMatch": "COGN",
-  "occupationDropDownValues":{
+  "viewScheduleText": "View Schedule of Charges",
+  "occupationDropDownValues":{ 
     "salaried": "Salaried",
     "soleProprietorship": "Sole Proprietorship",
     "partnershipCompany": "Partnership/Company",
     "selfEmployedProffesional": "Self Employed Professional",
+    "soleProp": "Sole Proprietorship",
     "homeMaker": "Homemaker",
     "student": "Student",
     "farmer":"Farmer",
@@ -60,7 +62,7 @@
     "professionalFee": "Professional fees"
   },
   "viewScheduleRedirectText":"Savings Account Fees and Charges",
-  "acceptTermsAndConditionText": "I accept all terms & conditions ",
+  "acceptTermsAndConditionText": "I accept all terms & conditions related to IDFC FIRST Bank",
   "hiThereText": "Hi there!",
   "panAadharMismatchCondition": "Mobile number linked to your Aadhaar must be used to open savings account",
   
@@ -70,7 +72,7 @@
 
    "downContentOfDontRememberAadhar":"In order to retrieve your Aadhaar online,\nStep 1: Visit the UIDAI site below\nStep 2: Enter your name and search by registered mobile number or email address\nStep 3: Retrieve your Aadhaar number via OTP verification\nStep 4: Resume your IDFC FIRST savings account portal and enter your Aadhaar number to continue your journey",
    
-   "downContentOfDontHaveAadhar":"Open your savings account by opting for an offline branch-based journey",
+   "downContentOfDontHaveAadhar":"Open your SAVINGS account by opting for an offline branch-based journey",
    "dontHaveAadharText": "Don’t have Aadhaar or Virtual ID?\nThat’s alright!",
   
    "fullNameErrorMsg": "Please enter valid full name",
@@ -109,7 +111,7 @@
     "customerIdText": "Customer ID:",
     "accountNoText": "Ac No:",
     "complete3EasyStepsText": "Complete 3 easy steps to fully activate your account",
-    "earnUptoText": "You have started earning up to 6.75% p.a.",
+    "earnUptoText": "Earn up to6.75%p.a",
     "moreInterestText"  : "Earn 30-70% more interest than most banks"
 
   },
@@ -119,7 +121,15 @@
     "pipeSymbol": "How it works | Terms & conditions",
     "copiedText": "Copied",
     "whatsAppText": "Send the following on WhatsApp"
-  }
+  },
+  "errorHiThereText":"Hi there!",
+  "errorMessage":"We are unable to open a savings account for you.",
+  "apologiesText1":"Apologies, we are not able to open a savings account for you at this moment.",
+  "apologiesText2":"You may visit your nearest branch or call us on 180 010 888 to contact our bank representative for further assistance. Thank you for showing interest in our savings bank account.",
+  "notLinkedText":"Mobile number linked to your Aadhaar must be used to open savings account",
+  "notLinkedText2":"Please provide the mobile number linked to your Aadhaar to continue with account opening or visit the nearest branch to open account. ", 
+  "nameMismatchErrorText":"The name as per your PAN & Aadhaar are not matching",
+  "nameMismatchErrorText2":"Please re-check your PAN & Aadhaar details or visit the nearest branch to open account. "
  
 
 

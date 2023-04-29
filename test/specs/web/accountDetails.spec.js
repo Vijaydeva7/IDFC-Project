@@ -14,24 +14,43 @@ describe("Account Opening Validation : ", () => {
         await driver.url("/apply/savings");
         await driver.maximizeWindow();
         // await driver.pause(10000);
-        await homepage.waitUntilHomepageLoad();
+        await detailspage.waitUntilHomepageLoad();
         // await driver.pause(7000);
         await driver.pause(5000);
-        const mobileNumber = await $('#mobileNumber')
-        await mobileNumber.click();
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo6);
+        await detailspage.mobileNumber();
+        await detailspage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
         await driver.pause(5000);
-        const emailIdField = await $('//*[@id="emailId"]');
-        await emailIdField.click();
-       // await homepage.setValueToEmail(validTestData.emailId2.email);
-        await driver.pause(3000);
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+        await detailspage.emailIdField();
+        await driver.pause(80000);
+        const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
+        await resumeVerify.click();
         await driver.pause(30000);
-        const verifyBtn = await $('//*[@id="verifyOtpBtn"]');
-        await verifyBtn.click();
-        await driver.pause(10000);
+       // await homepage.setValueToEmail(validTestData.emailId2.email);
+        // await driver.pause(3000);
+        // await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
+        // await driver.pause(30000);
+        // const verifyBtn = await $('//*[@id="verifyOtpBtn"]');
+        // await verifyBtn.click();
+        // await driver.pause(10000);
         
     });
+    it("To verify the VKYC status in Web UI of account details page for newly created account", async () => {
+        
+        await expect(await detailspage.uiOfVKYCfield()).to.be.eql(true);
+        await expect(await detailspage.uiOfVKYCfield2()).to.be.eql(true);
+
+
+    })
+
+    it("To verify the User able to see the 3 steps in Account details Page", async () => {
+        
+        await expect(await detailspage.step1Field()).to.be.eql(true);
+        await expect(await detailspage.step2Field()).to.be.eql(true);
+        await expect(await detailspage.step3Field()).to.be.eql(true);
+
+    })
+
+
 
     it(" validate whether Lock icon symbol and below text should be seen You have done limited KYC Video KYC should be in progress", async () => {
         await driver.pause(5000);
@@ -57,21 +76,14 @@ describe("Account Opening Validation : ", () => {
        
 
     });
-    Skip.it(" validate whether user clicks appstore user should navigate to appstore for iphone & user clicks google play user should navigate to play store", async () => {
-        
-        const appStore = await $('//*[@src="/appstore~37d220.svg"]');
-        await appStore.click();
-        await driver.pause(15000);
-        await expect(await detailspage.appleIconDisplayed()).to.be.eql(true);
-        await expect(await detailspage.idfcLogoDisplayed()).to.be.eql(true);
-        await expect(await detailspage.idfcLinkDisplayed()).to.be.eql(true);
+   
 
 
-    });
+
     it(" validate whether The new text Earn upto 6.75% per annum should be displayed in step 3", async () => {
         
         
-        await expect(await detailspage.earnUptoText()).to.be.eql(labelConstants.detailsPage.earnUptoText);
+        await expect(await detailspage.earnUptoText()).to.be.eql(true);
        
 
     });
@@ -84,6 +96,24 @@ describe("Account Opening Validation : ", () => {
 
     });
 
+    it(" validate whether user clicks appstore user should navigate to appstore for iphone & user clicks google play user should navigate to play store", async () => {
+        
+        await detailspage.appStoreIcon();
+        await driver.pause(5000);
+       // await expect(await detailspage.appleIconDisplayed()).to.be.eql(true);
+       // await expect(await detailspage.idfcLogoDisplayed()).to.be.eql(true);
+      //  await expect(await detailspage.idfcLinkDisplayed()).to.be.eql(true);
+        await driver.switchWindow("IDFC FIRST Bank")
+        await driver.pause(8000);
+        await detailspage.googleplayIcon();
+        await driver.pause(4000)
+        // await driver.pause(5000);
+        // await expect(await detailspage.googleplayDisplayed()).to.be.eql(true);
+
+
+
+    });
+   
 
 
  

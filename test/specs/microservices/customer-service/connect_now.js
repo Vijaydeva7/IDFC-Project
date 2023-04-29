@@ -12,8 +12,8 @@ describe("Connectnow service validation", function () {
         await util.mochaAddContext(this, response);
 
         await expect(await response.status).to.be.eql(200);
-        await expect(response.data.status).to.be.eql(dynamicData.Connect_Now.connectNowBefore9am_response.status);
-        await expect(response.data.message).to.be.eql(dynamicData.Connect_Now.connectNowBefore9am_response.message);
+        await expect(response.data.status).to.be.eql(customerSerData.Connect_Now.connectNowBefore9am_response.status);
+        await expect(response.data.message).to.be.eql(customerSerData.Connect_Now.connectNowBefore9am_response.message);
         
     });
     it("Verify whether customer connected after 9 pm", async function () {
@@ -22,8 +22,8 @@ describe("Connectnow service validation", function () {
         await util.mochaAddContext(this, response);
 
         await expect(await response.status).to.be.eql(200);
-        await expect(response.data.status).to.be.eql(dynamicData.Connect_Now.connectNowAfter9pm_reresponse.status);
-        await expect(response.data.message).to.be.eql(dynamicData.Connect_Now.connectNowAfter9pm_reresponse.message);
+        await expect(response.data.status).to.be.eql(customerSerData.Connect_Now.connectNowAfter9pm_reresponse.status);
+        await expect(response.data.message).to.be.eql(customerSerData.Connect_Now.connectNowAfter9pm_reresponse.message);
         
     });
     it("Verify whether customer connected with valid timings", async function () {
@@ -32,8 +32,8 @@ describe("Connectnow service validation", function () {
         await util.mochaAddContext(this, response);
 
         await expect(await response.status).to.be.eql(200);
-        await expect(response.data.status).to.be.eql(dynamicData.Connect_Now.connectNowValidTiming_response.status);
-        await expect(response.data.message).to.be.eql(dynamicData.Connect_Now.connectNowValidTiming_response.message);
+        await expect(response.data.status).to.be.eql(customerSerData.Connect_Now.connectNowValidTiming_response.status);
+        await expect(response.data.message).to.be.eql(customerSerData.Connect_Now.connectNowValidTiming_response.message);
         
     });
 });

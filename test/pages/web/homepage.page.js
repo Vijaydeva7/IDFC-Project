@@ -1,8 +1,9 @@
 class Homepage {
     constructor() {
-        this.idfcLogo = '//*[@class="sc-cEqVOX cFXySj"]';
+        this.idfcLogo = '//*[@src="/LogoFull~640834.svg"]';
         this.basicDetailHeading = "//*[text()='Enter details to start your savings journey now!']";
         this.mobileNumber = "#mobileNumber";
+        this.mobileNumber2 = '//*[@for="mobileNumber"]';
         this.termsAndCondHintText = "//button[contains(text(),'Click here')]";
         this.plusNintyOneText = "//p[text()='+91']";
         this.mobileNumberHintText = '//label[@for="mobileNumber"]';
@@ -37,13 +38,13 @@ class Homepage {
         this.popUp = '//div[@title="Welcome back!"]';
         this.aadhaarField = '//*[@id="aadhaar"]';
         this.otpError = '//label[@for="resume_app_number_input_otp"]';
-        this.emailId = '//*[@id="emailId"]';
+        this.emailId = '(//input[@type="text"])[2]';
         this.panNumber = '//*[@id="panNumber"]';
         //this.aadharNumber = '//*[@id="aadhaar"]'; 
-        this.aadharNumber = '/html/body/div[7]/div/div/div/div[3]/div/div[2]/div/div/div'
-        this.byProceedText = '//*[@id="formName"]/div[4]/p'; 
-        this.dontHaveAadhar = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/div[1]/p[2]';
-        this.timer = '//*[text()="Time Left"]';
+        this.aadharNumber = '//*[@id="aadhaar"]'
+        this.byProceedText = '//p[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 hQVrYt"]'; 
+        this.dontHaveAadhar = '//*[@id="app"]/div[1]/div/div/div[2]/div[1]/div/div[1]/p[2]';
+        this.timer = '//p[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-cbeQSR faRvJV"]';
         this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
         this.checkBox = '//*[@id="checkbox_comm_address"]';
         this.checkBoxPopUp = '//body/div[7]/div[1]/div[1]/div[1]';
@@ -53,9 +54,9 @@ class Homepage {
         this.uidLogo = '//*[@alt="Aadhaar Logo"]';
         this.uidContainer = '//*[@class="retrieve-eid-uid-form__card-container"]';
         this.idfcDontHaveAadharPage = '//*[@class="sc-kJvQNW gnGaWa"]';
-        this.dontHaveAadharPageText = '//label[@for = "number_input_full_name"]';
-        this.dontHaveAadharPageText2 = '//label[@for = "number_input_email"]';
-        this.dontHaveAadharPageText3 = '//p[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-dSSJwc hGBKvt"]';
+        this.dontHaveAadharPageText = '//label[@for="fullName"]';
+        this.dontHaveAadharPageText2 = '//label[@for="email"]';
+        this.dontHaveAadharPageText3 = '//p[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 fhbUiO"]';
         this.reviewAddressCom = '//*[@class="sc-kXqQRF byxioW"]';
         this.reviewAddressComText = '//strong[contains(text(),"My communication address is same as my Aadhaar address.")]';
         this.professionalDetailsText = '//p[contains(text(),"Please enter your ")]';
@@ -63,16 +64,16 @@ class Homepage {
         this.occupationText = '//label[contains(text(),"Occupation")]';
         this.sourceOfIncome = '//label[contains(text(),"Source of income")]';
         this.grossIncomeText = '//label[@for="number_input_annual_income"]';
-        this.rupeeIcon = '//*[@class="Inputstyle__InpuIconWrapper-sc-q7jno0-9 hZYNPa"]';
+        this.rupeeIcon = '//*[@class="InputWrapperstyle__InputWrapperStyles-sc-yn7nxv-0 dvzVVo input-box-wrapper-child"]';
         this.rupeeLogo = '';
         this.occupationPlaceHolder='//input[@id="selectOccupation"]';
         this.sourceIncomePlaceHolder = '//input[@id="selectSourceOfIncome"]';
         //this.mothersNameText='//input[@id="motherFullName"]';
-        this.mothersNameText='//*[@id="motherFullName"]';
+        this.mothersNameText='//*[@for="number_input_monther_name"]';
         this.mothersErrorText = '//*[@for="number_input_monther_name"]';
-        this.grossIncomeErrorMsg = '//label[@for="number_input_annual_income"] ';
+        this.grossIncomeErrorMsg = '//label[@for="number_input_annual_income"]';
         this.grossIncome = '//input[@id="grossAnualIncome"]';
-        this.companyNameHintText = "//input[@id='select_company']";
+        this.companyNameHintText = '//label[@for="select_company"]';
         this.fiveTimesOtpErrorText = "//div[text() = 'Sorry, your Aadhaar authentication could not be completed. Please try again after sometime']",
         this.searchIcon = '//*[@data-testid = "IconSearch"]';
         this.invalidAadharError = '//label[contains(text(),"Please enter a valid 12-digit Aadhaar number or 16")]';
@@ -81,21 +82,21 @@ class Homepage {
         this.redColorText = '//button[contains(text(),"View Schedule of Charges")]';
         this.iamNotPoliticalText = '//p[@id="firstConcentNote"]';
         this.IndianCitizenText = '//p[@id="secondConcentNote"]';
-        this.selectYourProductText = '//p[text()="Select your "]';
-        this.supremeImage = '//*[@class="sc-jmWZkt kwJwyK"]';
-        this.primeImage = '//*[@class="sc-jmWZkt cNPcET"]';
+        this.selectYourProductText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 lmafxf"]';
+        this.supremeImage = '//strong[contains(text(),"₹25,000")]';
+        this.primeImage = '//strong[contains(text(),"₹10,000")]';
         this.termsAndConditionText = '//*[text()="Terms & conditions"]';
-        this.proceedBtn = '//button[@id="proceedBtn"]';
-        this.companyName = '//*[@id="select_company"]';
-        this.companyList = '//*[@id="select_company-list"]';
+        this.proceedBtn = '//button[@form="formName"]';
+        this.companyName = '(//input[@type="text"])[11]';
+        this.companyList = '//*[@class="SearchResultstyle__SearchResultWrapper-sc-2pcwfa-0 iWCzce"]';
         this.companyNameMatch = '//span[contains(text(),"COGN")]';
         this.viewScheduleRedirectPageLogo = '//*[@class = "logo"]';
         this.viewScheduleOpenBtn = '//*[@class = "btn-red"]';
         this.viewSchedule = '//button[text()="View Schedule of Charges"]';
-        this.termsConditions = '//div//ol//li[1]';
-        this.otpBtnEnable = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 hOVLvr"]';
+        this.termsConditions = '//*[@class="container"]';
+        this.otpBtnEnable = '//*[@data-testid="VerifyAadhaarBtn"]';
         this.occupationDropDown ="//input[@id='selectOccupation']"; 
-        this.salariedText='//*[text()="Salaried"]';
+        this.salariedText='//input[@id="selectOccupation"]';
         this.solePropText = '//*[text()="Sole Proprietorship"]';
         this.partnershipCompanyText = '//*[text()="Partnership/Company"]';
         this.selfEmployedText= '//*[text()="Self Employed Professional"]';
@@ -104,16 +105,16 @@ class Homepage {
         this.farmerText = '//*[text()="Farmer"]';
         this.retiredText = '//*[text()="Retired"]';
         this.sourceOfIncomeDropDown = '//input[@id="selectSourceOfIncome"]';
-        this.salaryText = '//span[contains(text(),"Salary")]';
+        this.salaryText = '//*[@id="selectSourceOfIncome"]';
         this.familyWealthText = '//*[text()="Family wealth"]';
         this.savingsText = '//*[text()="Savings"]';
 
         this.businessText = '//span[contains(text(),"Business")]';
         this.investmentsText = '//span[contains(text(),"Investments")]';
-        this.professionalFeeText = '//span[contains(text(),"Professional fees")]';
-        this.vsRedirectText = '//*[@class = "heading-box"]';
-        this.disabledProceedBtn = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 htkvKw"]';
-        this.footer = '//*[@class="sc-iBsTaR bqzIqW"]';
+        this.professionalFeeText = '//*[@id="selectSourceOfIncome"]';
+        this.vsRedirectText = '//*[@id="idfcfirstpage-3fd835df99"]';
+        this.disabledProceedBtn = '//*[@form="formName"]';
+        this.footer = '//*[@class="sc-ezzayL dvEEhY"]';
         this.compareCompanyList = '//*[@data-value="363349"]';
         this.compareCompanyList2 = '//*[@data-value="363350"]';
         this.compareCompanyList3 = '//*[@data-value="363351"]';
@@ -134,36 +135,63 @@ class Homepage {
         this.downContentOfDontHaveAadharText = '//*[@class = "StyledTextstyle__TextItem-sc-9k2kxs-0 itaovv"]';
         this.visitUidBtn = "#visitUid";
         this.intiateOfflineProcessBtn = "#initiateOfflineProcess";
-        this.dontHaveAdharEnterDetailsPan = '//*[@for= "number_input_pan"]';
-        this.dontHaveAdharEnterDetailsMobileNo = '//*[@for= "number_input_mobile"]';
-        this.dontHaveAdharEnterDetailsSendOtp = '//*[@type= "  "]';
+        this.dontHaveAdharEnterDetailsPan = '//label[@for="pan"]';
+        this.dontHaveAdharEnterDetailsMobileNo = '//label[@for="mobile"]';
+        this.dontHaveAdharEnterDetailsSendOtp = '//button[@type="submit"]';
         this.dontHaveAadharFullName = '//*[@autocomplete="fullName"]';
         this.dontHaveAadharPan = '//*[@autocomplete="pan"]';
         this.dontHaveAadharPanIcon = '//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]';
-        this.dontHaveAadharMobilePlus91 = '//*[@class="Inputstyle__PrefixWrapper-sc-q7jno0-6 GkFRw inputbox-prefix-wrapper"]';
-        this.dontHaveAadharMobileNo = '//*[@autocomplete="mobileNumber"]'; 
-        this.dontHaveAadharMobileNo2 = '//*[@for="number_input_mobile"]' ; 
+        this.dontHaveAadharMobilePlus91 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 gdaRgt"]';
+        this.dontHaveAadharMobileNo = '//*[@autocomplete="mobile"]'; 
+        this.dontHaveAadharMobileNo2 = '//*[@for="mobile"]' ; 
         this.dontHaveAadharEmailId = '//*[@name="email"]'  ;
-        this.thankYouText = '//*[@class ="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-gQirvS fDCxED"]';
+        this.thankYouText = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 fsJScf"]';
         this.panIcon  = '//*[@class="Inputstyle__InputIconWrapper-sc-q7jno0-9 hZYNPa"]';
-        this.dontHaveAadharEmail = '//*[@for="number_input_email"]';
-        this.sendOtpBtnNotDisplayed = '//*[@class ="Buttonstyle__Wrapper-sc-6p72tp-0 iYmufh sc-SBYpD xzIFt"]';
-        this.rightArrowDisplayed = '//*[@class="IconButtonstyle__IconButtonWrapper-sc-1qfzwt7-0 jjGPUg"]';
-        this.otpErrorMsg = '//*[@for="input_otp"]';
-        this.timer = '//*[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-dAvZuH fLcpMZ"]'
+        this.dontHaveAadharEmail = '//*[@for="email"]';
+        this.sendOtpBtnNotDisplayed = '//button[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 gEWFEF"]';
+        this.rightArrowDisplayed = '//*[@class="IconButtonstyle__IconButtonElement-sc-1qfzwt7-2 ftqsWd"]';
+        this.otpErrorMsg = '//*[@for="otp"]';
+        this.timer2 = '//*[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-dAvZuH fLcpMZ"]'
         this.otpField = '//*[@type="password"]';
         this.thankYouPageText = '//strong[text()="We will contact you soon"]';
-        this.thankYouPageText2 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 PBeXk"]';
-        this.visitBankBtn = '//*[@class="Buttonstyle__Wrapper-sc-6p72tp-0 fhUqql sc-fspXqA cLuSUk"]';
+        this.thankYouPageText2 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 gmnkgx"]';
+        this.visitBankBtn = '//*[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 llmeRh"]';
         this.welcomeBanner = '//*[@alt="Welcome banner"]';
         this.expiredOtpTitle = '//*[@data-testid = "ERROR_TITLE"]';
         this.expiredOtpMsg = '//*[@data-testid = "ERROR_MESSAGE"]';
-       
+       this.mothersText = '//*[@id="motherFullName"]';
         
+        this.cancel = '//*[@id="resumeModalCloseBtn"]';
+        this.pan = '//*[@id="panNumber"]';
+        this.aadhaar = '//*[@id="aadhaar"]';
+        this.getOtp = '//*[@data-testid="VerifyAadhaarBtn"]';
+        this.verifyOtp = '//*[@id="verifyAadharBtn"]';
+        this.company = '(//input[@type="text"])[11]';
+        this.mother = '//*[@id="motherFullName"]';
+        this.gross = '//input[@id="grossAnualIncome"]';
+        this.professional = '//strong[normalize-space()="professional & personal details"]';
+        this.viewScheduleText = '//button[normalize-space()="View Schedule of Charges"]';
+        this.eye = '//*[@data-testid = "IconEye2Off"]';
+        this.explore = '//*[@id="exploreOtherOptionBtn"]';
+        this.UID = '//*[@id="visitUid"]';
+        this.resend = '//button[@id="resendBtn"]';
+        this.sep = '//*[text()="Self Employed Professional"]';
+        this.checkBox2 = '//*[@for="checkbox_comm_address"]';
+        this.proceedToAadhar = '//*[@id="proceedAadharAddressBtn"]';
+        this.preferredBranch = '//input[@id="select_prefered_branch"]';
+        this.proceed2OpenAccount = '//*[@form="formName"]';
+        this.sepDropValue = '//*[text()="Self Employed Professional"]';
+        this.spValue = '//*[text()="Sole Proprietorship"]';
+        this.businessVal = '//*[text()="Business"]';
+        this.commCheckBox = '//*[@for="checkbox_comm_address"]';
+        this.prcdButton = '//*[@id="proceedAadharAddressBtn"]';
+        this.branch = '//*[text() ="WARANGAL BRANCH"]';
 
-        
-        
-        
+
+
+
+
+
     }
 
     async waitUntilHomepageLoad() {
@@ -174,7 +202,94 @@ class Homepage {
             return await $(this.mobileNumber).isDisplayed() == true;
         });
     }
+// New
+   async resendButton(){
+    return await $(this.resend).click();
+   }
+   async SelfEmployedProfessional(){
+    return await $(this.sep).click();
+   }
+   
+   async brachValueWrgl(){
+    return await $(this.branch).click();
+   }
+   async proceedToAadharButton(){
+    return await $(this.prcdButton).click();
+   }
 
+    async proceedToOpenAccountButton(){
+        return await $(this.proceed2OpenAccount).click();
+    }
+
+    async mobileNumberField(){
+        return await $(this.mobileNumber).click();
+    }
+    async emailIdField(){
+        return await $(this.emailId).click();
+    }
+    async popUpCancel(){
+        return await $(this.cancel).click();
+    }
+    async panNumberField(){
+        return await $(this.pan).click();
+    }
+    async aadhaarNumField(){
+        return await $(this.aadhaar).click();
+    }
+    async getOtpButton(){
+        return await $(this.getOtp).click();
+    }
+    async verifyOtpBtn(){
+        return await $(this.verifyOtp).click();
+    }
+    async comapanyNameField(){
+        return await $(this.company).click();
+    }
+    async mothersNameField(){
+        return await $(this.mother).click();
+    }
+    async grossIncomeField(){
+        return await $(this.gross).click();
+    }
+    async getProfessionalDetailsText2(){
+        return await $(this.professional).getText();
+    }
+    async viewScheduleRedirectOnlyText(){
+        return await $(this.viewScheduleText).getText();
+    }
+    async eyeIcon(){
+        return await $(this.eye).click();
+    }
+    async exploreOptionsButton(){
+        return await $(this.explore).click();
+    }
+    async visitUid(){
+        return await $(this.UID).click();
+    }
+    async checkBoxField(){
+        return await $(this.checkBox2).click();
+    }
+    async proceedToAadharBtn(){
+        return await $(this.proceedToAadhar).click();
+    }
+    async preferBranch(){
+        return await $(this.preferredBranch).click();
+    }
+    async sepDropDownValue(){
+        return await $(this.sepDropValue).click();
+    }
+    async solePropValue(){
+        return await $(this.spValue).click();
+    }
+async businessValue(){
+    return await $(this.businessVal).click();
+}
+
+
+
+    async checkBoxComm(){
+        return await $(this.commCheckBox).click();
+    }
     async isIdfcLogoDisplayed() {
         return await $(this.idfcLogo).isDisplayed();
     }
@@ -194,7 +309,7 @@ class Homepage {
         return await $(this.adharNumber).getValue(value);
     }
     async getMobileNumberHintText(value) {
-        return await $(this.mobileNumber).getValue(value);
+        return await $(this.mobileNumber2).getText(value);
     }
 
     // anand_changes
@@ -446,7 +561,10 @@ class Homepage {
         return await $(this.sourceIncomePlaceHolder).getValue();
     }
     async getMothersName(){
-        return await $(this.mothersNameText).getText();
+        return await $(this.mothersErrorText).getText();
+    }
+    async getMotherName(){
+        return await $(this.mother).getValue();
     }
     async getMothersErrorText(){
         return await $(this.mothersErrorText).getText();
@@ -483,7 +601,7 @@ class Homepage {
         return await $(this.userAuthenticated).getText();
     }
     async setValueToMothersName(value) {
-        return await $(this.mothersNameText).setValue(value);
+        return await $(this.mothersText).setValue(value);
     }
     async setValueToCompanyName(value){
         return await $(this.companyName).setValue(value);
@@ -523,7 +641,7 @@ class Homepage {
         return await $(this.viewScheduleRedirectPageLogo).isDisplayed();
     }
     async viewScheduleRedirectText(){
-        return await $(this.vsRedirectText).getText();
+        return await $(this.vsRedirectText).isDisplayed();
     }
     async viewScheduleRedirectOpenBtn(){
         return await $(this.viewScheduleOpenBtn).isDisplayed();
@@ -534,7 +652,7 @@ class Homepage {
     }
 
     async termsAndConditionPoints(){
-        return await $(this.termsConditions).getText()
+        return await $(this.termsConditions).isDisplayed()
     }
     async getGrossIncome(){
         return await $(this.grossIncome).getValue();
@@ -550,7 +668,7 @@ class Homepage {
         return await $(this.occupationDropDown).click();
     }
     async salaried(){
-        return await $(this.salariedText).getText()
+        return await $(this.salariedText).getValue()
     }
     async soleProprietorship(){
         return await $(this.solePropText).getText()
@@ -560,6 +678,12 @@ class Homepage {
     }
     async selfEmployedProffesional(){
         return await $(this.selfEmployedText).getText()
+    }
+    async selfEmployedProffesional2(){
+        return await $(this.selfEmployedText).getValue()
+    }
+    async soleProp(){
+        return await $(this.spValue).getValue()
     }
     async homeMaker(){
         return await $(this.homeMakerText).getText()
@@ -577,7 +701,7 @@ class Homepage {
         return await $(this.sourceOfIncomeDropDown).click();
     }
     async salary(){
-        return await $(this.salaryText).getText()
+        return await $(this.salaryText).getValue()
     }
     async familyWealth(){
         return await $(this.familyWealthText).getText()
@@ -592,7 +716,7 @@ class Homepage {
         return await $(this.investmentsText).getText()
     }
     async professionalFee(){
-        return await $(this.professionalFeeText).getText()
+        return await $(this.professionalFeeText).getValue()
     }
     async setValueToOccupation(){
         return await $(this.occupationPlaceHolder).setValue()

@@ -30,7 +30,7 @@ describe("Aadhar authentication validation", function () {
 
         await util.mochaAddContext(this, response);
 
-        await expect(response.status).to.eql(200);
+        await expect(response.status).to.be.eql(200);
 
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationIncompleteData_response.status);
     });
@@ -58,7 +58,6 @@ describe("Aadhar authentication validation", function () {
         console.log(response);
 
         await expect(response.status).to.be.not.eql(200);
-
         await expect(response.data.status).to.be.eql(expLayerData.Aadhar_Authentication.aadharAuthenticationWithoutUid_response.status);
     });
 });

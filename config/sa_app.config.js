@@ -1,4 +1,4 @@
-//const allure = require("allure-commandline");
+// const allure = require("allure-commandline");
 const { ReportAggregator } = require("wdio-html-nice-reporter");
 require("dotenv").config();
 
@@ -41,10 +41,11 @@ exports.config = {
     //"./test/specs/web/homepage.spec.js",
     //"./test/specs/web/exploreOtherOptions.spec.js"
     //"./test/specs/web/accouuntOpening.spec.js"
-    "./test/specs/web/accountDetails.spec.js"
+    //"./test/specs/web/accountDetails.spec.js"
     //"./test/specs/web/referralLink.spec.js"
-    //"./test/specs/web/preferredBranch.spec.js"
+    "./test/specs/web/preferredBranch.spec.js"
     // "./test/specs/web/csHomePage.spec.js"
+    // "./test/specs/web/ErrorMsg.spec.js"
   ],
 
 
@@ -123,7 +124,8 @@ exports.config = {
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
   //baseUrl: process.env.SFDC_QA_URL,
-  baseUrl: "https://qa-opt.idfcfirstbank.com",
+  baseUrl: "https://qa-ntb.idfcfirstbank.com",
+
   // baseUrl2: "https://www.ref-r.com/campaign_user/p?brandid=13850&campaignid=12572&widget=popup&ir_url=https://idfcfirst.ref-r.com/",
   // Default timeout for all waitFor* commands.
   waitforTimeout: 30000,

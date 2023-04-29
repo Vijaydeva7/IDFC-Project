@@ -32,7 +32,8 @@
     "decimal": "43.456"
   },
   "invalidAadhaar":{
-    "aadhaar": "466102489432"
+    "aadhaar": "466102489432",
+    "aadhaar2": "403837012554"
   },
   "mothersName":{
     "moreThan40Char": "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
