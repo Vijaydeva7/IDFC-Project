@@ -36,7 +36,9 @@
       "uniqueIdentifier": ""
     },
     "aadharAuthenticationWithoutUid_response": {
-      "status": "ERROR"
+      "status": "ERROR",
+      "message": "Please provide mandatory fields.",
+      "responseCd": "04"
     },
     "aadharAuthenticationWithoutclient_id_request": {
       "uid": "DULR2ls/Mjg/==",

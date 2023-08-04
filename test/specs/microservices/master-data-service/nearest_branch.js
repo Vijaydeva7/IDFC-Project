@@ -12,7 +12,7 @@ describe("Nearest branch validations", function () {
         await util.mochaAddContext(this, response);
 
         await expect(response.status).to.be.eql(200);
-        await expect(response.data.defaultBranchDetails).to.eql(masterData.Nearest_Branch.validPincode_response.defaultBranchDetails);
+        await expect(response.data.defaultBranchDetails).to.be.eql(masterData.Nearest_Branch.validPincode_response.defaultBranchDetails);
     });
 
     it("Validate whether getting error response with empty pincode", async function () {
@@ -20,8 +20,8 @@ describe("Nearest branch validations", function () {
         await util.mochaAddContext(this, response);
 
         console.log(response);
-        await expect(response.status).to.not.eql(200);
-        await expect(response.data).to.equal(undefined);
+        await expect(response.status).to.be.not.eql(200);
+        await expect(response.data).to.be.equal(undefined);
     });
 
     it("Validate whether getting success response but not getting list of branches with invalid pincode", async function () {

@@ -37,6 +37,8 @@
   "numericMothersNameErrorText" : "Please enter the full name separated by spaces.",
   "companyNameMatch": "COGN",
   "viewScheduleText": "View Schedule of Charges",
+  "sevenInterest":"Up to 7% p.a. interest",
+  "sevenInterest1":"Up to\n7%\np.a. interest",
   "occupationDropDownValues":{ 
     "salaried": "Salaried",
     "soleProprietorship": "Sole Proprietorship",
@@ -51,6 +53,62 @@
 
         
   },
+  "onhc5360":{
+    "monthlyCredit":"Monthly",
+    "monthlyCredit2":"interest credit",
+    "noCharges":"on 28+ services",
+    "noCharges2":"No Charges",
+    "airport":"Airport Lounge Access",
+    "cashback":"2% on ALL Debit Card Spends",
+    "clearTrip":"Up to\n\n20% Off\non Yatra\non flights and hotels",
+    "skechersField":"10% Off\non SKECHERS\nat both stores and online",
+    "accidentCover":"Personal Accident Cover",
+    "cardText":"Lost Card Liability",
+    "cardText2":"Daily Cash Withdrawal",
+    "cardText3":"Daily Purchase Limit",
+    "cardText4":"Purchase Protection",
+    "cardText5":"Purchase Protection",
+    "selectPText":"Select your product",
+    "tenKText":"₹10,000",
+    "para1":"Average Monthly Balance",
+    "para2":"VISA Classic Debit card",
+    "para3":"₹5 Lakhs",
+    "popularText":"Popular",
+    "twentyFive":"₹25,000",
+    "twentyFivePara":"Average Monthly Balance",
+    "twentyFivePara2":"VISA Platinum Debit card",
+    "thirtyFiveLakhText":"₹35 Lakhs"
+    
+
+
+
+  },
+  "mobileTextTelecaller":"Mobile number registered with Aadhaar",
+  "telecallerEmail":"vijjuiris@gmail.com",
+  "telecallerEmail2":"anil@gmail.com",
+  "telecallerEmail3":"anuja@gmail.com",
+  "telecallerEmail4":"pranita@gmail.com",
+  "telecallerEmail5":"rambabu@gmail.com",
+  "telecallerEmail6":"saikumar@gmail.com",
+"emailErrorMessage":"Please enter a valid email address",
+"grossErrorMsg":"Gross annual income should be max ₹100 Cr to proceed",
+"motherErrorMsg":"Please enter the full name separated by spaces.",
+"pincodeErrorMsg":"Please enter valid pincode.",
+  "salaryTele":"Salary",
+  "BusinessTele":"Business",
+  "ProfessionalTele":"Professional fees",
+  "savingsTele":"Savings",
+  "farmerTele":"Agriculture",
+  "mainHeadingTelePopUp":"Save details before abandoning",
+  "subHeadingInPopupTele":"Select the reason for abandoning the journey",
+  "grossTele":"123456",
+  "grossTeleIncome":"₹1,23,456",
+  "companyTele":"Persistent Systems",
+  "mothersTele":"DeepaMuppidi",
+  "mothersTele2":"Amrutha",
+  "mothersTele3":"varalaxmi",
+
+
   "grossAnualIncomeErrorText":"Gross annual income should be max ₹100 Cr to proceed",
   "sourceOfIncomeDropDownValues":{
 
@@ -95,13 +153,17 @@
    
 
    
+
+   
   
   },
   "cityName": "RANGAREDDI",
   "professionalFeesText": "Professional fees",
   "AccountOpeningDetails":{
     "popUpText": "Please enter the funding amount",
-    "congoText": "Congratulations!"
+    "congoText": "Congratulations!",
+    "HeadingMessageText" : "Initiate Verification",
+    "Message" : "Congratulations! Your savings account has been opened"
   },
   "detailsPage": {
 
@@ -115,6 +177,19 @@
     "moreInterestText"  : "Earn 30-70% more interest than most banks"
 
   },
+  "resumeFlowTexts": {
+    "aadhaarErrorMsg":"Please enter a valid 12-digit Aadhaar number or 16-digit Virtual ID",
+    "subText":"By clicking Validate OTP, I confirm that all the details furnished by me during account opening are still valid and correct.\nI. also allow IDFC FIRST to fetch KYC details using my Aadhaar.",
+    "timer":"03:29",
+    "specialErr":"Special Character not allowed",
+    "incorrectOtpMsg":"Please enter correct OTP",
+    "welcomeText":"Welcome Back!",
+    "paraText":"Please enter the mobile number last entered",
+    "mobileText":"Mobile number",
+    "errorText":"Please enter Mobile No",
+    "mobileNumber":"8142662462",
+    "errorMobileText":"Please enter a valid 10-digit mobile number"
+  },
   "referralPage": {
     "tncText": "Terms & conditions",
     "howItsWorkPopUpText": "How it works",
@@ -122,16 +197,16 @@
     "copiedText": "Copied",
     "whatsAppText": "Send the following on WhatsApp"
   },
-  "errorHiThereText":"Hi there!",
-  "errorMessage":"We are unable to open a savings account for you.",
+  "errorHiThereText":"Hi There!",
+  "errorMessage":"We are unable to open a savings account for you!",
   "apologiesText1":"Apologies, we are not able to open a savings account for you at this moment.",
   "apologiesText2":"You may visit your nearest branch or call us on 180 010 888 to contact our bank representative for further assistance. Thank you for showing interest in our savings bank account.",
   "notLinkedText":"Mobile number linked to your Aadhaar must be used to open savings account",
-  "notLinkedText2":"Please provide the mobile number linked to your Aadhaar to continue with account opening or visit the nearest branch to open account. ", 
+  "notLinkedText2":"Please provide the mobile number linked to your Aadhaar to continue with account opening or visit the nearest branch to open account. Click here to locate the nearest branch.", 
   "nameMismatchErrorText":"The name as per your PAN & Aadhaar are not matching",
   "nameMismatchErrorText2":"Please re-check your PAN & Aadhaar details or visit the nearest branch to open account. "
  
-
+  
 
 
   

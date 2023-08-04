@@ -38,14 +38,25 @@ exports.config = {
   // },
 
   specs: [
-    //"./test/specs/web/homepage.spec.js",
+    // "./test/specs/web/homepage.spec.js",
     //"./test/specs/web/exploreOtherOptions.spec.js"
     //"./test/specs/web/accouuntOpening.spec.js"
     //"./test/specs/web/accountDetails.spec.js"
     //"./test/specs/web/referralLink.spec.js"
-    "./test/specs/web/preferredBranch.spec.js"
+    // "./test/specs/web/preferredBranch.spec.js"
     // "./test/specs/web/csHomePage.spec.js"
-    // "./test/specs/web/ErrorMsg.spec.js"
+    // "./test/specs/web/errorMsg.spec.js"
+    // "./test/specs/web/selfDeclared.spec.js"
+    // "./test/specs/web/preAccResumeFlow.spec.js"
+    // "./test/specs/web/commonTestcases.spec.js"
+    // "./test/specs/web/resumeFlowMobile.spec.js"
+    // "./test/specs/web/onhc5360.spec.js"
+    // "./test/specs/web/onhc5360.spec.js"
+    // "./test/specs/web/onhc5362.spec.js"
+    // "./test/specs/web/csds.spec.js"
+    //"./test/specs/web/telecaller.spec.js"
+    // "./test/specs/web/telecallerUsers.spec.js"
+    "./test/specs/web/jsonConverter.spec.js"
   ],
 
 
@@ -124,6 +135,7 @@ exports.config = {
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
   //baseUrl: process.env.SFDC_QA_URL,
+  // baseUrl: "https://qa-ntb.idfcfirstbank.com",
   baseUrl: "https://qa-ntb.idfcfirstbank.com",
 
   // baseUrl2: "https://www.ref-r.com/campaign_user/p?brandid=13850&campaignid=12572&widget=popup&ir_url=https://idfcfirst.ref-r.com/",

@@ -32,8 +32,11 @@
     "decimal": "43.456"
   },
   "invalidAadhaar":{
-    "aadhaar": "466102489432",
-    "aadhaar2": "403837012554"
+    "aadhaar": "466102489",
+    "aadhaar2": "052699611651",
+    "aadhaar3":"152699611651",
+    "aadhaar4":"152699611651566"
+
   },
   "mothersName":{
     "moreThan40Char": "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
@@ -41,7 +44,10 @@
   } ,
   "occupationValue": "IDFC Bank",
 
-
+"teleInvalidEmail":"vijju@",
+"teleGrossInvalidIncome":"8675678767",
+"teleMothersInvalidName":"Deepa34",
+"telePincode":"0123",
 
   "exploreOtherOptionsField": {
     "invalidFullName": "VijayKumar",

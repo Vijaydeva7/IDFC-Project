@@ -9,6 +9,6 @@ describe("Master Branch of State", function () {
         const response = await util.getApiCall(process.env.STATE_MASTER);
         await util.mochaAddContext(this, response);
         await expect(response.status).to.be.eql(200);
-        await expect(response.data).to.eql(masterData.State_Master.state_master_response);
+        await expect(response.data).to.be.eql(masterData.State_Master.state_master_response);
     });
 });

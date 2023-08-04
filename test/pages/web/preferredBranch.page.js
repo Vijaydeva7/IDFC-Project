@@ -43,7 +43,13 @@ class Preferredpage {
         this.cvvLband = '//*[@id="CVVNumberDebitCard"]';
         this.selectYear = '//*[@value="2029"]';
         this.lBand = '//*[@id="fundingProceedBtn"]';
-        this.dateSelect = '//*[@aria-label="Choose Friday, April 28th, 2023"]';
+        this.dateSelect = '//*[@aria-label="Choose Wednesday, May 3rd, 2023"]';
+        this.checkBoxSelectedOrNot  = '//*[@id="checkbox_comm_address"]';
+        this.pincode = '#pincode';
+        this.address = '//*[@id="address1"]';
+        this.uncheckcommaddress = '//div[@class = "Checkboxstyle__Box-sc-ins62l-1 blcGGD"]';
+
+
     }
 
 
@@ -151,8 +157,16 @@ class Preferredpage {
         return await $(this.cancel).click();
     }
    
+    async UncheckCommAddress() {
+        return await $(this.uncheckcommaddress).click();
+    }
 
-
+    async Pincode(value) {
+        return await $(this.pincode).setValue(value);
+    }
+    async Address(value) {
+        return await $(this.address).setValue(value);
+    }
 
 async mobileNumberField(){
     return await $(this.mobileNumber).click();
@@ -211,7 +225,9 @@ async date(){
 async fundingBtn(){
     return await $(this.lBand).click();
 }
-
+async checkBoxSelected(){
+    return await $(this.checkBoxSelectedOrNot).isSelected();
+}
 
    
 

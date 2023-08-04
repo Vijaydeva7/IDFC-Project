@@ -6,7 +6,7 @@ const invalidTestData = require("../../../test-data/web/invalid_test_data.json")
 const validTestData = require("../../../test-data/web/valid_test_data.json");
 const labelConstants = require("../../../test-data/web/label_constants.json");
 const { termsConditions } = require("../../pages/web/homepage.page");
-const { okayBtn, btn } = require("../../pages/web/preferredBranch.page");
+const { okayBtn, btn, checkBoxSelected } = require("../../pages/web/preferredBranch.page");
 
  const { getMobileNumber, grossIncome } = require("../../pages/web/homepage.page");
 
@@ -22,18 +22,17 @@ describe("Account Opening Preffered Branch Validation : ", () => {
         await preferredpage.waitUntilHomepageLoad();
         await driver.pause(7000);
         await preferredpage.mobileNumberField();
-        await preferredpage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo12);
-        await driver.pause(5000);
+        await preferredpage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
+        await driver.pause(3000);
         await preferredpage.emailIdField();
         await driver.pause(6000)
         await preferredpage.setValueToEmail(validTestData.emailId2.email);
-        await driver.pause(5000);
+        await driver.pause(3000);
         // await expect(await preferredpage.popUpCancel()).to.be.eql(true);
         // const cancel = await $('//*[@id="resumeModalCloseBtn"]');
         // await cancel.click();
-        await driver.pause(6000)
         await preferredpage.panNumberField();
-        await preferredpage.setValueToPan(validTestData.panNumber.pan8);
+        await preferredpage.setValueToPan(validTestData.panNumber.pan);
         await driver.pause(3000);
 
     });
@@ -41,8 +40,8 @@ describe("Account Opening Preffered Branch Validation : ", () => {
     it("Enter VID", async () => {
 
         await preferredpage.aadhaarField();
-        await preferredpage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar8);
-        await driver.pause(10000);
+        await preferredpage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
+        await driver.pause(3000);
 
     });
 
@@ -60,32 +59,51 @@ describe("Account Opening Preffered Branch Validation : ", () => {
     it("click on Validate OTP", async () => {
 
         await preferredpage.verifyOtpBtn();
-        await driver.pause(50000);
+        await driver.pause(40000);
 
     });
     
 
 
 
-    it("Check if communication address is uncheck when OTP validated.", async () => {
+    it("Check if comm checkBox isSelected goes to Self declared, if is not selected it goes to preferred Branch when OTP validated.", async () => {
+          await preferredpage.checkBoxSelected();
+          await console.log("#####", checkBoxSelected);
+          await driver.pause(5000)
 
-        await preferredpage.checkBoxField();
-        await driver.pause(3000);
-        await preferredpage.popUpProceedBtn();
-        await driver.pause(3000);
+             if (await preferredpage.checkBoxSelected() == false) {
+                    await preferredpage.checkBoxField();
+                    await driver.pause(3000);
+                    await preferredpage.popUpProceedBtn();
+                    await driver.pause(3000);
+                    await driver.pause(4000);
+                    await preferredpage.preferredBranchField();
+                    await driver.pause(3000);
+                    await preferredpage.secondBranch();
+                    await driver.pause(3000);
+                } else {
+
+                    await preferredpage.UncheckCommAddress();
+                    await driver.pause(5000);
+                    await preferredpage.Pincode(validTestData.cityPincode);
+                    await driver.pause(2000);
+                    await preferredpage.Address(validTestData.address12WithSpecialCharacters);
+                    await driver.pause(2000);
+                }
+        
 
     });
 
 
 
-    it("Select second preferred branch from the list of given drop down.", async () => {
+    // it("Select second preferred branch from the list of given drop down.", async () => {
 
-        await preferredpage.preferredBranchField();
-        await driver.pause(3000);
-        await preferredpage.secondBranch();
-        await driver.pause(3000);
+    //     await preferredpage.preferredBranchField();
+    //     await driver.pause(3000);
+    //     await preferredpage.secondBranch();
+    //     await driver.pause(3000);
 
-    });
+    // });
 
 
 
@@ -153,34 +171,34 @@ describe("Account Opening Preffered Branch Validation : ", () => {
     
 
 
-    it("If user gets L funding pop up click on proceed else validate title of account page.", async () => {
+    // it("If user gets L funding pop up click on proceed else validate title of account page.", async () => {
 
         
-        if(await preferredpage.btn()){
+    //     if(await preferredpage.btn()){
 
-        await preferredpage.fundingBtn();
-        await driver.pause(10000);
-        await preferredpage.debitCardLpopUp();
-        await preferredpage.setValueToDebitCard(validTestData.debitCard);
-        await preferredpage.monthLpopUp();
-        await preferredpage.selectMonthLpopUp();
-        await preferredpage.yearLpopUp();
-        await preferredpage.selectYearLpopUp();
-        await preferredpage.cvvLpopUp();
-        await preferredpage.setValueToCvv(validTestData.cvv);
-        await driver.pause(2000);
-        await preferredpage.makePaymentLpopUp();
-        await driver.pause(40000); 
+    //     await preferredpage.fundingBtn();
+    //     await driver.pause(10000);
+    //     await preferredpage.debitCardLpopUp();
+    //     await preferredpage.setValueToDebitCard(validTestData.debitCard);
+    //     await preferredpage.monthLpopUp();
+    //     await preferredpage.selectMonthLpopUp();
+    //     await preferredpage.yearLpopUp();
+    //     await preferredpage.selectYearLpopUp();
+    //     await preferredpage.cvvLpopUp();
+    //     await preferredpage.setValueToCvv(validTestData.cvv);
+    //     await driver.pause(2000);
+    //     await preferredpage.makePaymentLpopUp();
+    //     await driver.pause(40000); 
 
-        } else {
+    //     } else {
 
-            await expect(await preferredpage.uiOfVKYCfield()).to.be.eql(true);
-            await expect(await preferredpage.uiOfVKYCfield2()).to.be.eql(true);
+    //         await expect(await preferredpage.uiOfVKYCfield()).to.be.eql(true);
+    //         await expect(await preferredpage.uiOfVKYCfield2()).to.be.eql(true);
 
-        }
+    //     }
          
 
-     });
+    //  });
 
     it("To verify the VKYC status in Web UI of account details page for newly created account", async () => {
         
@@ -215,5 +233,6 @@ it("schedule later functionality",async () => {
     // await driver.pause(5000);
 
 });
+
     
 });

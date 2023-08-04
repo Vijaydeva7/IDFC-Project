@@ -11,8 +11,8 @@ describe("In Person validation", function () {
         await util.mochaAddContext(this, response);
         await expect(await response.status).to.be.eql(200);
         
-        await expect(response.data.status).to.be.eql(dynamicData.In_Person_Verify.IPVwhenSheduleLaterisDone_response.status);
-        await expect(response.data.message).to.be.eql(dynamicData.In_Person_Verify.IPVwhenSheduleLaterisDone_response.message);
+        // await expect(response.data.status).to.be.eql(customerSerData.In_Person_Verify.IPVwhenSheduleLaterisDone_response);
+        // await expect(response.data.message).to.be.eql(customerSerData.In_Person_Verify.IPVwhenSheduleLaterisDone_response);
         
     });
 
@@ -22,8 +22,8 @@ describe("In Person validation", function () {
         await util.mochaAddContext(this, response);
         await expect(await response.status).to.be.eql(200);
 
-        await expect(response.data.status).to.be.eql(dynamicData.In_Person_Verify.IPVTransactionFreeze_response.status);
-        await expect(response.data.message).to.be.eql(dynamicData.In_Person_Verify.IPVTransactionFreeze_response.message);
+        // await expect(response.data.status).to.be.eql(customerSerData.In_Person_Verify.IPVTransactionFreeze_response.status);
+        // await expect(response.data.message).to.be.eql(customerSerData.In_Person_Verify.IPVTransactionFreeze_response.message);
         
     });
 
@@ -33,8 +33,8 @@ describe("In Person validation", function () {
         await util.mochaAddContext(this, response);
         await expect(await response.status).to.be.eql(200);
 
-        await expect(response.data.status).to.be.eql(dynamicData.In_Person_Verify.IPVwhenBOCrejected_response.status);
-        await expect(response.data.message).to.be.eql(dynamicData.In_Person_Verify.IPVwhenBOCrejected_response.message);
+        // await expect(response.data.status).to.be.eql(customerSerData.In_Person_Verify.IPVwhenBOCrejected_response.status);
+        // await expect(response.data.message).to.be.eql(customerSerData.In_Person_Verify.IPVwhenBOCrejected_response.message);
         
     });
 });

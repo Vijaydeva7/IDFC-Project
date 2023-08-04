@@ -1,13 +1,15 @@
 const homepage = require("../../pages/web/homepage.page");
+const basicDetails = require("../../specs/web/basicDetails.spec");
+
 const { expect } = require("chai");
 //const validTestData = require("../../../test-data/web/valid_test_data.json");
 const invalidTestData = require("../../../test-data/web/invalid_test_data.json");
 const validTestData = require("../../../test-data/web/valid_test_data.json");
 const labelConstants = require("../../../test-data/web/label_constants.json");
-const { getMobileNumber, grossIncome } = require("../../pages/web/homepage.page");
+//const { getMobileNumber, grossIncome } = require("../../pages/web/homepage.page");
 
 describe("Homepage Validation : ", () => {
-    it.only("Validate whether idfc logo is present on screen", async () => {
+    it("Validate whether idfc logo is present on screen", async () => {
         await driver.url("/apply/savings");
         await driver.maximizeWindow();
 
@@ -19,6 +21,7 @@ describe("Homepage Validation : ", () => {
     it("Validate whether term's and condition hint text is present on screen", async () => {
         await driver.pause(2000);
         await expect(await homepage.isTermsAndCondHintTextIsDisplayed()).to.be.eql(true);
+        await basicDetails.basicDetails();
     });
 
     it("Validate whether +91 appended on mobile number after entering it", async () => {
@@ -340,30 +343,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate whether User should be able to proceed with professional details if Aadhaar address is serviceable", async () => {
         await driver.pause(3000);
-        await driver.refresh();
-        await homepage.mobileNumberField()
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-        await driver.pause(5000);
-        await homepage.emailIdField();
-        // await driver.pause(2000);
-        // await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        //await homepage.popUpCancel();
-        await driver.pause(30000);
-
-        // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-        // await resumeVerify.click();
-        // await driver.pause(20000);
-        await homepage.setValueToEmail(validTestData.emailId2.email);
-
-        await homepage.panNumberField();
-        await homepage.setValueToPan(validTestData.panNumber.pan);
-        await homepage.aadhaarNumField();
-        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-        await driver.pause(10000);
-        await homepage.getOtpButton();
-        await driver.pause(20000);
-        await homepage.verifyOtpBtn();
-        await driver.pause(50000);
+        await basicDetails.basicDetails();//Optimized Code
         await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
         await driver.pause(2000);
         await homepage.comapanyNameField();
@@ -603,34 +583,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate User Verify the required values should be displayed in your Occupation drop down.", async () => {
             await driver.refresh();
-            await driver.pause(4000);
-            await homepage.mobileNumberField()
-            await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-            await driver.pause(5000);
-            await homepage.emailIdField();
-            await driver.pause(50000)
-
-            // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-            // await resumeVerify.click();
-            // await driver.pause(20000);
-            
-           
-
-            await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-            await homepage.popUpCancel();
-            await driver.pause(3000);
-            await homepage.setValueToEmail(validTestData.emailId2.email);
-
-            await homepage.panNumberField();
-            await homepage.setValueToPan(validTestData.panNumber.pan);
-            await homepage.aadhaarNumField();
-            await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-            await driver.pause(10000);
-            await homepage.getOtpButton();
-            await driver.pause(20000);
-            await homepage.verifyOtpBtn();
-            await driver.pause(20000)
-
+            await basicDetails.basicDetails(); //Optimized Code
             await homepage.occDropDown();
             await driver.pause(3000);
             await expect(await homepage.salaried()).to.be.eql(labelConstants.occupationDropDownValues.salaried);
@@ -652,31 +605,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate User Verify the required values should be displayed in your source of income drop down.", async () => {
             await driver.refresh();
-            await driver.pause(4000);
-            await homepage.mobileNumberField()
-            await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo9);
-            await driver.pause(5000);
-            await homepage.emailIdField();
-            await driver.pause(50000)
-            // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-            // await resumeVerify.click();
-            // await driver.pause(20000);
-
-            await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-            await homepage.popUpCancel();
-            await driver.pause(3000);
-            await homepage.setValueToEmail(validTestData.emailId2.email);
-
-            await homepage.panNumberField();
-            await homepage.setValueToPan(validTestData.panNumber.pan);
-            await homepage.aadhaarNumField();
-            await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-            await driver.pause(10000);
-            await homepage.getOtpButton();
-            await driver.pause(20000);
-            await homepage.verifyOtpBtn();
-            await driver.pause(20000)
-            
+            await basicDetails.basicDetails(); //Optimized Code
             await homepage.sourceOfIncomeDD();
             await driver.pause(3000);
             await expect(await homepage.salary()).to.be.eql(labelConstants.sourceOfIncomeDropDownValues.salary);
@@ -782,30 +711,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate User should get authenticated successfull.", async () => {
         await driver.refresh();
-        await driver.pause(4000);
-        await homepage.mobileNumberField()
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-        await driver.pause(5000);
-        await homepage.emailIdField();
-        await driver.pause(55000)
-
-        // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-        // await resumeVerify.click();
-        // await driver.pause(20000);
-
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        await homepage.popUpCancel();
-        await driver.pause(3000);
-        await homepage.setValueToEmail(validTestData.emailId2.email);
-        await homepage.panNumberField();
-        await homepage.setValueToPan(validTestData.panNumber.pan);
-        await homepage.aadhaarNumField();
-        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-        await driver.pause(10000);
-        await homepage.getOtpButton();
-        await driver.pause(30000);
-        await homepage.verifyOtpBtn();
-        await driver.pause(20000)
+        await basicDetails.basicDetails(); //Optimized Code
         await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
 
         
@@ -983,29 +889,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate whether Respective source of income should be by default selected when user selects specific occupation", async () => { 
         await driver.refresh();
-        await driver.pause(4000);
-        await homepage.mobileNumberField()
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-        await driver.pause(5000);
-        await homepage.emailIdField();
-        await driver.pause(50000)
-        // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-        // await resumeVerify.click();
-        // await driver.pause(20000);
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        await homepage.popUpCancel();
-        await driver.pause(3000);
-        await homepage.setValueToEmail(validTestData.emailId2.email);
-
-        await homepage.panNumberField();
-        await homepage.setValueToPan(validTestData.panNumber.pan);
-        await homepage.aadhaarNumField();
-        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-        await driver.pause(10000);
-        await homepage.getOtpButton();
-        await driver.pause(20000);
-        await homepage.verifyOtpBtn();
-        await driver.pause(5000)
+        await basicDetails.basicDetails(); //Optimized Code
         await expect(await homepage.salaried()).to.be.eql(labelConstants.occupationDropDownValues.salaried);
         await expect(await homepage.salary()).to.be.eql(labelConstants.sourceOfIncomeDropDownValues.salary);
         await driver.pause(3000);
@@ -1021,29 +905,7 @@ describe("Homepage Validation : ", () => {
 
     it(" Validate whether User should not be able to add values manually in Occupation field.", async () => {
         await driver.refresh();
-        await driver.pause(4000);
-        await homepage.mobileNumberField()
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-        await driver.pause(5000);
-        await homepage.emailIdField();
-        await driver.pause(50000)
-        // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-        // await resumeVerify.click();
-        // await driver.pause(20000);
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        await homepage.popUpCancel();
-        await driver.pause(3000);
-        await homepage.setValueToEmail(validTestData.emailId2.email);
-
-        await homepage.panNumberField();
-        await homepage.setValueToPan(validTestData.panNumber.pan);
-        await homepage.aadhaarNumField();
-        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-        await driver.pause(10000);
-        await homepage.getOtpButton();
-        await driver.pause(20000);
-        await homepage.verifyOtpBtn();
-        await driver.pause(50000)
+        await basicDetails.basicDetails(); //Optimized
         await homepage.occDropDown();
         await driver.pause(3000)
     // await driver.keys(['Enter']);
@@ -1075,29 +937,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate User If user enters all the above fields correctly, Proceed to open account button should be enable and clickable.", async () => {
         await driver.refresh();
-        await driver.pause(4000);
-        await homepage.mobileNumberField()
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-        await driver.pause(5000);
-        await homepage.emailIdField();
-        // await driver.pause(50000)
-        // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-        // await resumeVerify.click();
-        await driver.pause(5000);
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        await homepage.popUpCancel();
-        // await driver.pause(3000);
-        await homepage.setValueToEmail(validTestData.emailId2.email);
-
-        await homepage.panNumberField();
-        await homepage.setValueToPan(validTestData.panNumber.pan);
-        await homepage.aadhaarNumField();
-        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-        await driver.pause(10000);
-        await homepage.getOtpButton();
-        await driver.pause(30000);
-        await homepage.verifyOtpBtn();
-        await driver.pause(20000)
+        await basicDetails.basicDetails();//Optimized Code
         await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
         await driver.pause(3000);
         await homepage.checkBoxField();
@@ -1205,30 +1045,7 @@ describe("Homepage Validation : ", () => {
 
     it("Validate whether Verify when user adds values between ₹1000 to ₹1,00,00,000  in Gross annual income field values should be accepted", async () => { 
         await driver.refresh();
-        await driver.pause(4000);
-        await homepage.mobileNumberField()
-        await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-        await driver.pause(2000);
-        await homepage.emailIdField();
-        await driver.pause(50000);
-        // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-        // await resumeVerify.click();
-        // await driver.pause(20000);
-        await driver.pause(1000)
-        await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-        await homepage.popUpCancel();
-        await driver.pause(3000);
-        await homepage.setValueToEmail(validTestData.emailId2.email);
-
-        await homepage.panNumberField();
-        await homepage.setValueToPan(validTestData.panNumber.pan);
-        await homepage.aadhaarNumField();
-        await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-        await driver.pause(10000);
-        await homepage.getOtpButton();
-        await driver.pause(30000);
-        await homepage.verifyOtpBtn();
-        await driver.pause(30000);
+        await basicDetails.basicDetails(); //Optimized Code
         await homepage.grossIncomeField();
         await homepage.setValueToGrossIncome(validTestData.grossIncome.income);
         await driver.pause(2000);
@@ -1262,29 +1079,7 @@ describe("Homepage Validation : ", () => {
         
     it("Validate Checkbox should be by default selected when user lands on personal details page using servicable data.", async () => {
             await driver.refresh();
-            await driver.pause(4000);
-            await homepage.mobileNumberField()
-            await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-            await driver.pause(5000);
-            await homepage.emailIdField();
-            await driver.pause(50000)
-            // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-            // await resumeVerify.click();
-            // await driver.pause(20000);
-            await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-            await homepage.popUpCancel();
-            await driver.pause(3000);
-            await homepage.setValueToEmail(validTestData.emailId2.email);
-
-            await homepage.panNumberField();
-            await homepage.setValueToPan(validTestData.panNumber.pan);
-            await homepage.aadhaarNumField();
-            await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-            await driver.pause(10000);
-            await homepage.getOtpButton();
-            await driver.pause(30000);
-            await homepage.verifyOtpBtn();
-            await driver.pause(20000)
+            await basicDetails.basicDetails(); // Optimized Code
             await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
             await driver.pause(3000);
             const checkBox = $('//*[@for="checkbox_comm_address"]');
@@ -1431,32 +1226,10 @@ it("To verify PAN-Aadhaar mismatch condition after all 2 attempts.",async () => 
     // await driver.pause(2000);
 })
 
-it.only("To verify for occupation-Salaried,Sole Proprietorship and SEP, respective source of income is by default selected or not.",async () => {
+it("To verify for occupation-Salaried,Sole Proprietorship and SEP, respective source of income is by default selected or not.",async () => {
    
     await driver.refresh();
-    await driver.pause(4000);
-    await homepage.mobileNumberField()
-    await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-    await driver.pause(5000);
-    await homepage.emailIdField();
-    await driver.pause(5000)
-    // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-    // await resumeVerify.click();
-    // await driver.pause(20000);
-    await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-    await homepage.popUpCancel();
-    await driver.pause(3000);
-    await homepage.setValueToEmail(validTestData.emailId2.email4);
-
-    await homepage.panNumberField();
-    await homepage.setValueToPan(validTestData.panNumber.pan);
-    await homepage.aadhaarNumField();
-    await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-    await driver.pause(10000);
-    await homepage.getOtpButton();
-    await driver.pause(30000);
-    await homepage.verifyOtpBtn();
-    await driver.pause(20000)
+    await basicDetails.basicDetails(); //Optimized Code
     await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
     await driver.pause(3000);
     await homepage.checkBoxComm();
@@ -1489,28 +1262,7 @@ it("To verify the 'Company name' field is added or not when occupation = 'Salari
 
     await driver.refresh();
     await driver.pause(4000);
-    await homepage.mobileNumberField()
-    await homepage.setValueToMobileNum(validTestData.mobileNumber2.mobileNo);
-    await driver.pause(5000);
-    await homepage.emailIdField();
-    await driver.pause(5000)
-    // const resumeVerify = await $("//button[@class='Buttonstyle__Wrapper-sc-bbdsxl-0 bZQfzg']");
-    // await resumeVerify.click();
-    // await driver.pause(20000);
-    await expect(await homepage.isPopUpDisplayed()).to.be.eql(true);
-    await homepage.popUpCancel();
-    await driver.pause(3000);
-    await homepage.setValueToEmail(validTestData.emailId2.email4);
-
-    await homepage.panNumberField();
-    await homepage.setValueToPan(validTestData.panNumber.pan);
-    await homepage.aadhaarNumField();
-    await homepage.setValueToAadhaar(validTestData.aadhaarNumber.aadhaar);
-    await driver.pause(10000);
-    await homepage.getOtpButton();
-    await driver.pause(30000);
-    await homepage.verifyOtpBtn();
-    await driver.pause(20000)
+    await basicDetails.basicDetails(); // Optimized File
     await expect(await homepage.userAuthenticatedSuccessful()).to.be.eql(labelConstants.myAddressCommunicaionText);
     await driver.pause(3000);
     await homepage.checkBoxComm();
@@ -1528,9 +1280,6 @@ it("To verify the 'Company name' field is added or not when occupation = 'Salari
      
 })
 
-it("", async () => {
-
-});
 
 
 

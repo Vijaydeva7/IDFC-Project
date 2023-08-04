@@ -17,15 +17,16 @@ class Errorpage {
         this.nearestBranch = '//button[@class="Buttonstyle__Wrapper-sc-bbdsxl-0 eJSvHo"]';
         this.logo = '//img[@class="sc-hmbsMR ejsngC"]';
         this.notLinked = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 eoUXjy"]';
-        this.this.notLinked2 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 jVbKrH sc-gsWdvU cGnDyB"]';
+        this.notLinked2 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 jVbKrH sc-gsWdvU cGnDyB"]';
         this.nameMisMatch = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 eoUXjy"]';
         this.nameMisMatch2 = '//*[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 jVbKrH sc-gsWdvU cGnDyB"]';
-
-
-
-
-
-
+        this.intRates = '//*[text()="Interest Rates"]';
+        this.faqLink = '//*[text()="FAQ"]';
+        this.privacyPolicyLink = '//*[text()="Privacy Policy"]';
+        this.desclaimerLink = '//*[text()="Disclaimer"]';
+        this.bankingOmbudsmanLink = '//*[text()="Banking Ombudsman"]';
+        this.termsAndConditionLink = '//*[text()="Terms & Conditions"]';
+        this.regulatoryLink = '//*[text()="Regulatory"]';
     }
 
     async waitUntilHomepageLoad() {
@@ -106,8 +107,27 @@ class Errorpage {
     async nameMisMatchError2(){
         return await $(this.nameMisMatch2).getText();
     }
-    async notLinkedText2(){
-        return await $(this.notLinked2).getText();
+    async interestRates(){
+        return await $(this.intRates).click();
+    }
+    async faq(){
+        return await $(this.faqLink).click();
+    }
+    async privacyPolicy(){
+        return await $(this.privacyPolicyLink).click();
+    }
+    async desclaimer(){
+        return await $(this.desclaimerLink).click();
+    }
+    async bankingOmbudsman(){
+        return await $(this.bankingOmbudsmanLink).click();
+    }
+    async termsAndCondition(){
+        return await $(this.termsAndConditionLink).click();
+    }
+
+    async regulatory(){
+        return await $(this.regulatoryLink).getText();
     }
 
    

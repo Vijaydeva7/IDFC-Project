@@ -44,10 +44,15 @@
     "mobileNo9": "8766411127",
     "mobileNo10":"9705925543",
     "mobileNo11":"8660439348",
-    "mobileNo12":"8106283521"
+    "mobileNo12":"8106283521",
+    "mobileNo13":"814266246277",
+    "mobileNo14":"81.42.662462",
+    "mobileNo15":"            ",
+    "mobileNo16":"0000000000",
+    "mobileNo17":"8142662"
   },
   "emailId2":{
-      "email":"naveen23@gmail.com",
+      "email":"vijjuk3@gmail.com",
       "email2": "tragnarok569@gmail.com",
       "email3": "pittalarajkumar185@gmail.com",
       "email4": "vdev34@gmail.com",
@@ -61,7 +66,8 @@
     "pan5": "GKDPP4101E",
     "pan6":"AWRPC6295L",
     "pan7":"CPGPK8962L",
-    "pan8":"HFTPK3930R"
+    "pan8":"HFTPK3930R",
+    "pan9":"BFOPM6732D"
   },
   "aadhaarNumber": {
     "aadhaar": "526996116515",
@@ -71,11 +77,14 @@
     "aadhaar5": "313912039718",
     "aadhaar6":"939106450965",
     "aadhaar7":"617277657327",
-    "aadhaar8":"403837012554"
+    "aadhaar8":"403837012554",
+    "aadhaar9":"871321141284",
+    "otp":"@@#$%^",
+    "otp2":"230000"
     
   },
   "grossIncome": {
-    "income": "₹1,000",
+    "income": "1000",
     "income2": "₹1,00,00,000",
     "income3": "₹25,000",
     "income4": "20000000000",
@@ -84,7 +93,7 @@
   "mothersNameField": "Deepa Muppidi",
   "mothersNameField1": "sameeksha parashar",
   "companyName": "Rajkumar Travells Pvt Ltd",
-  "companyName2": "cogn",
+  "companyName2": "persis",
 
 
 
@@ -117,7 +126,8 @@
     "name": "Vijay Kumar",
     "email": "vdeva236@gmail.com",
     "mobile": "8142662462"
-  }
-      
+  },
+  "cityPincode":"380005",
+  "address12WithSpecialCharacters":"1-55, Markode"
   
 }

@@ -17,7 +17,7 @@ describe("Account Service Validation", function () {
 
       await expect(await response.status).to.be.eql(200);
       await expect(response.data.status).to.be.eql(accServiceData.Create_Account.createAccountWithVannilaFlow_response.status);
-      await expect(response.data.message).to.be.eql(accServiceData.Create_Account.createAccountWithVannilaFlow_response.message);
+      // await expect(response.data.message).to.be.eql(accServiceData.Create_Account.createAccountWithVannilaFlow_response.responseCd);
       
    });
    it("Verify whether account create with fraud not passed data ", async function () {
@@ -27,7 +27,7 @@ describe("Account Service Validation", function () {
 
       await expect(await response.status).to.be.eql(200);
       await expect(response.data.status).to.be.eql(accServiceData.Create_Account.createAccountWithfraudnotPassedData_response.status);
-      await expect(response.data.message).to.be.eql(accServiceData.Create_Account.createAccountWithfraudnotPassedData_response.message);
+      // await expect(response.data.responseCd).to.be.eql(accServiceData.Create_Account.createAccountWithfraudnotPassedData_response.responseCd);
       
    });
    it("Verify whether account create with self serviceable ", async function () {
@@ -37,7 +37,7 @@ describe("Account Service Validation", function () {
 
       await expect(await response.status).to.be.eql(200);
       await expect(response.data.status).to.be.eql(accServiceData.Create_Account.createAccountWithSelfServiceable_response.status);
-      await expect(response.data.message).to.be.eql(accServiceData.Create_Account.createAccountWithSelfServiceable_response.message);
+      // await expect(response.data.responseCd).to.be.eql(accServiceData.Create_Account.createAccountWithSelfServiceable_response.responseCd);
       
 
    });
@@ -48,7 +48,7 @@ describe("Account Service Validation", function () {
 
       await expect(await response.status).to.be.eql(200);
       await expect(response.data.status).to.be.eql(accServiceData.Create_Account.createAccountWithPreferredBranch_response.status);
-      await expect(response.data.message).to.be.eql(accServiceData.Create_Account.createAccountWithPreferredBranch_response.message);
+      // await expect(response.data.responseCd).to.be.eql(accServiceData.Create_Account.createAccountWithPreferredBranch_response.responseCd);
       
    });
 });

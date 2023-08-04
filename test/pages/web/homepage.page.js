@@ -44,7 +44,7 @@ class Homepage {
         this.aadharNumber = '//*[@id="aadhaar"]'
         this.byProceedText = '//p[@class="StyledTextstyle__TextItem-sc-9k2kxs-0 hQVrYt"]'; 
         this.dontHaveAadhar = '//*[@id="app"]/div[1]/div/div/div[2]/div[1]/div/div[1]/p[2]';
-        this.timer = '//p[@class="Textstyle__TextWrapper-sc-fopj1k-0 dTBRgK sc-cbeQSR faRvJV"]';
+        this.timer = '(//p)[5]';
         this.panAadharDontMatch = '//*[text()="The name on your PAN and Aadhaar do not match"]';
         this.checkBox = '//*[@id="checkbox_comm_address"]';
         this.checkBoxPopUp = '//body/div[7]/div[1]/div[1]/div[1]';
@@ -188,10 +188,12 @@ class Homepage {
         this.branch = '//*[text() ="WARANGAL BRANCH"]';
 
 
-
-
-
-
+        this.scheduleLaterBtn = '/html/body/div/div[1]/div[4]/div[2]/div[1]/div[3]/div/p';
+        this.scheduleCalender = '//*[@data-testid="dateIconWrapper"]';
+        this.dateCalander = '//*[@aria-label="Choose Thursday, June 8th, 2023"]';
+        this.setTime = '//*[@aria-labelledby="timeslot-Label"]';
+        this.confirmBtn = '//*[@id="confirmAppointmentBtn"]';
+        this.slotTime = '/html/body/div[5]/div/div/div/div[2]/div/div[4]/div/div/div/div/div[1]/ul/li[3]';
     }
 
     async waitUntilHomepageLoad() {
@@ -201,6 +203,25 @@ class Homepage {
         await driver.waitUntil(async () => {
             return await $(this.mobileNumber).isDisplayed() == true;
         });
+    }
+
+    async scheduleLtrBtn(){
+        return await $(this.scheduleLaterBtn).click();
+    }
+    async calander(){
+        return await $(this.scheduleCalender).click();
+    }
+    async calanderDate(){
+        return await $(this.dateCalander).click();
+    }
+    async timeSet(){
+        return await $(this.setTime).click();
+    }
+    async timeSlot(){
+        return await $(this.slotTime).click();
+    }
+    async confirmButtonSchedule(){
+        return await $(this.confirmBtn).click();
     }
 // New
    async resendButton(){
